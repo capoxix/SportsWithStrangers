@@ -30,57 +30,54 @@ class UserForm extends React.Component {
       link = <Link to ='/signup'>Sign Up</Link>;
     }
     else {
-      link= <Link to = '/login'>Login</Link>;
+      link= <Link to = '/login'>If you've already done this before, click here to log in</Link>;
     }
 
     return(
-      <div>
+      <div class="signup">
         <ul>
           {errorsList}
         </ul>
-        {link}
-        <h1>{this.props.formType}</h1>
+
+        <h1>Join for sports time</h1>
+        <p>1000s of strangers across the world have come together for sports. Create an account and you'll be on your way to join the community.</p>
         <form onSubmit={this.handleSubmit}>
-          <label>name:
             <input
               type="text"
               onChange={this.update("name")}
               value={this.state.name}
+              placeholder="First name (or nickname)"
               />
-          </label>
 
-        <label>email:
           <input
             type="text"
             onChange={this.update("email")}
             value={this.state.email}
+            placeholder="Email address"
             />
-        </label>
 
-        <label>password:
           <input
-            type="text"
+            type="password"
             onChange={this.update("password")}
             value={this.state.password}
+            placeholder="Password (at least 6 characters you won't forget!)"
             />
-        </label>
 
-        <label>catchphrase:
           <textarea
             onChange={this.update("user_catchphrase")}
-            value={this.state.user_catchphrase}>
+            value={this.state.user_catchphrase}
+            placeholder="Catchphrase">
           </textarea>
-        </label>
 
-        <label>description:
           <textarea
             onChange={this.update("user_description")}
-            value={this.state.user_description}>
+            value={this.state.user_description}
+            placeholder="Description">
           </textarea>
-        </label>
 
         <input type='submit' value={this.props.formType}/>
         </form>
+          {link}
       </div>
     );
   }

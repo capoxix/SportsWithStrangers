@@ -1,0 +1,39 @@
+.signup {
+  display:flex;
+  width:600px;
+  flex-direction:column;
+  margin: 0 auto;
+}
+
+.signup input{
+  background-color: white;
+  width: 500px;
+  border: 1px solid lightgray;
+  height: 50px;
+  padding: 5px 10px 5px 10px
+}
+.signup textarea{
+  width:500px;
+  height:100px;
+  background-color: white;
+  border: 1px solid lightgray;
+  padding: 5px 10px 5px 10px
+
+}
+
+.signup h1{
+  color: red;
+
+}
+
+@media screen and (max-width: 600px) {
+  .signup {
+    width: 100%;
+  }
+  .signup input{
+    width: 95%;
+  }
+  .signup textarea{
+    width: 95%;
+  }
+}
