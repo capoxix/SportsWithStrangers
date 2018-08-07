@@ -34,7 +34,7 @@ class UserForm extends React.Component {
     }
 
     return(
-      <div class="signup">
+      <div className="signup">
         <ul>
           {errorsList}
         </ul>

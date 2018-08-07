@@ -5,24 +5,42 @@
   margin: 0 auto;
 }
 
-.signup input{
+.signup p {
+  font-size: 18px;
+  color: #000000ad
+
+}
+
+.signup input[type="text"], input[type="password"]{
   background-color: white;
   width: 500px;
   border: 1px solid lightgray;
   height: 50px;
-  padding: 5px 10px 5px 10px
+  padding: 5px 10px 5px 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+
 }
 .signup textarea{
   width:500px;
   height:100px;
   background-color: white;
   border: 1px solid lightgray;
-  padding: 5px 10px 5px 10px
+  padding: 5px 10px 5px 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+
 
 }
 
 .signup h1{
-  color: red;
+  color: #FF5722;
+  font-weight: 900;
+  font-size: 23px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
 }
 
