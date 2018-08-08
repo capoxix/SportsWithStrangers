@@ -12,7 +12,7 @@ class Greeting extends React.Component{
       return(
         <div className='header-nav'>
           <nav className="left">
-            <p>Sports With Strangers</p>
+            <Link to ='/'>Sports With Strangers</Link>
           </nav>
           <nav className="right">
             <Link to='/events'>SPORT EVENTS</Link>
