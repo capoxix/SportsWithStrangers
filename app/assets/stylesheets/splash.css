@@ -13,16 +13,36 @@
     background-color: #fdbb5e;
     color: white;
     height: 400px;
+    background-image: url("/assets/sports-3cd8fc97f017d07bcf0f8658ad6403ad878d3cfb714b31b9cb82c7633def1b90.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 
 .splash .row-1 h2{
     color: white;
+    font-size: 30px;
 }
 
 .splash .row-1 .inner{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-    height: 100px;
-    background-color: blue;
+    height: 180px;
+    padding-top: 110px;
+    padding-bottom: 110px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.splash a{
+  background-color: #EF6236;
+ padding: 1em;
+ border-radius: 5px;
+ width: 500px;
+ text-align: center;
+ color: white;
+ letter-spacing: 3px;
+ font-weight: 400;
+ margin: 0 auto;
 }

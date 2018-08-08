@@ -74,7 +74,7 @@ class UserForm extends React.Component {
 
         <input type='submit' value="LET'S DO SPORTS"/>
         </form>
-        <Link className="link" to = '/login'>If you've already done this before, click here to log in</Link>
+        <Link to = '/login'>If you've already done this before, click here to log in</Link>
 
       </div>
     );

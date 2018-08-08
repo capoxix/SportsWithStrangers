@@ -6,7 +6,7 @@ const Splash = () => (
     <div className="row-1">
       <div className="inner">
         <h2>Everyone is interesting</h2>
-        <p>But you don't discover that whhen you're starting at a sreen.</p>
+        <span>But you don't discover that whhen you're starting at a sreen.</span>
         <Link to='/'>LET'S PLAY SPORTS TOGETHER</Link>
       </div>
     </div>
