@@ -15,25 +15,31 @@ class Greeting extends React.Component{
             <p>Sports With Strangers</p>
           </nav>
           <nav className="right">
-            <Link to='/events'>Sport Events</Link>
-            <Link to='/events/new'>Hosting</Link>
-            <Link to='/about'>About</Link>
-            <Link to='/signup'>Sign Up</Link>
-            <Link to='/login'>Sign In</Link>
+            <Link to='/events'>SPORT EVENTS</Link>
+            <Link to='/events/new'>HOSTING</Link>
+            <Link to='/about'>ABOUT</Link>
+            <Link to='/login'>SIGN IN</Link>
+            <Link to='/signup' className='signup-button'>SIGN UP</Link>
+            <button onClick={() => this.props.login()}>DEMO LOGIN</button>
           </nav>
         </div>
       );
     } else {
       return (
-        <div>
-            <p>Hello, {this.props.currentUser.name}</p>
-              <Link to='/events'>Sport Events</Link>
-              <Link to='/events/new'>Hosting</Link>
-              <Link to='/users/dashboard'>Dashboard</Link>
-              <Link to='/signup'>Sign Up</Link>
-              <Link to='/login'>Sign In</Link>
-            <button onClick={this.props.logout}>logout</button>
-        </div>
+        <header>
+          <div className='header-nav'>
+            <nav className="left">
+              <Link to='/'>Sports With Strangers</Link>
+              <p>Hello, {this.props.currentUser.name}</p>
+            </nav>
+            <nav className="right">
+              <Link to='/events'>SPORT EVENTS</Link>
+              <Link to='/events/new'>HOSTING</Link>
+              <Link to='/users/dashboard'>DASHBOARD</Link>
+              <button onClick={this.props.logout}>LOGOUT</button>
+            </nav>
+          </div>
+        </header>
       );
     }
   }
