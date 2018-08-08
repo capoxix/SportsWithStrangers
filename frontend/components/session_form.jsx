@@ -55,9 +55,9 @@ class SessionForm extends React.Component {
             />
 
 
-        <input type='submit' value={this.props.formType}/>
+          <input type='submit' value='SIGN IN'/>
         </form>
-        <Link to ='/signup'>If you've never signed up before, click here and do that</Link>
+        <Link className="link" to ='/signup'>If you've never signed up before, click here and do that</Link>
       </div>
     );
   }

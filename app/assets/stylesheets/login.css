@@ -1,18 +1,18 @@
-.signup {
+.login {
   display:flex;
   width:600px;
   flex-direction:column;
   margin: 0 auto;
 }
 
-.signup p {
+.login p {
   font-size: 18px;
   color: #000000ad;
   width: 525px;
   margin-bottom: 10px;
 }
 
-.signup input[type="text"], input[type="password"]{
+.login input[type="text"], input[type="password"]{
   background-color: white;
   width: 500px;
   border: 1px solid lightgray;
@@ -23,20 +23,8 @@
   border-radius: 5px;
 
 }
-.signup textarea{
-  width:500px;
-  height:100px;
-  background-color: white;
-  border: 1px solid lightgray;
-  padding: 5px 10px 5px 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 5px;
 
-
-}
-
-.signup h1{
+.login h1{
   color: #EF6236;
   font-weight: 900;
   font-size: 23px;
@@ -44,7 +32,7 @@
   margin-bottom: 20px;
 }
 
-.signup input[type="submit"]{
+.login input[type="submit"]{
  background-color: #EF6236;
  padding: 1em;
  border-radius: 5px;
@@ -54,25 +42,23 @@
  letter-spacing: 3px;
  font-weight: 400;
 
-
 }
 
-.signup .link{
+.login .link{
   color: #EF6236;
   text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
-
 }
 
 @media screen and (max-width: 600px) {
-  div.signup {
+  div.login {
     width: 100%;
   }
-  .signup input{
+  .login input{
     width: 95%;
   }
-  .signup textarea{
+  .login textarea{
     width: 95%;
   }
   /* weird media query...first few ones, width do not change...*/
