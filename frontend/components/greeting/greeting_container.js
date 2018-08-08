@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {logout, login} from '../../actions/session_actions';
+import {logout, login, clearErrors} from '../../actions/session_actions';
 import Greeting from './greeting';
 
 const msp = (state) => ({
@@ -8,7 +8,8 @@ const msp = (state) => ({
 
 const mdp = (dispatch) => ({
   logout: ()=> dispatch(logout()),
-  login: () => dispatch(login({email: 'garbocheng93@gmail.com', password:'123456'}))
+  login: () => dispatch(login({email: 'garbocheng93@gmail.com', password:'123456'})),
+  clearErrors: () => dispatch(clearErrors())
 });
 
 export default connect(msp, mdp)(Greeting);

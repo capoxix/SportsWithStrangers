@@ -18,8 +18,8 @@ class Greeting extends React.Component{
             <Link to='/events'>SPORT EVENTS</Link>
             <Link to='/events/new'>HOSTING</Link>
             <Link to='/about'>ABOUT</Link>
-            <Link to='/login'>SIGN IN</Link>
-            <Link to='/signup' className='signup-button'>SIGN UP</Link>
+            <button onClick={() => this.props.clearErrors()}><Link to='/login'>SIGN IN</Link></button>
+            <button onClick={() => this.props.clearErrors()}><Link to='/signup' className='signup-button'>SIGN UP</Link></button>
             <button onClick={() => this.props.login()}>DEMO LOGIN</button>
           </nav>
         </div>

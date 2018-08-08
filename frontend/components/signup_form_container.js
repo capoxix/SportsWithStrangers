@@ -14,7 +14,7 @@ const msp = (state, ownProps) => ({
 });
 
 const mdp = (dispatch, ownProps) => ({
-  processForm: (user) => dispatch(signup(user))
+  processForm: (user) => dispatch(signup(user)),
 });
 
 export default connect(msp, mdp)(UserForm);
