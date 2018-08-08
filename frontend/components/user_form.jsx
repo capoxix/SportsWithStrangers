@@ -22,7 +22,7 @@ class UserForm extends React.Component {
   }
 
   render(){
-    const errorsList = this.props.errors.session.map((error) =>
+    const errorsList = this.props.errors.user.map((error) =>
       <li>{error}</li>
     );
 
