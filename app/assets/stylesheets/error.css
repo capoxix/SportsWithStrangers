@@ -1,0 +1,12 @@
+.error {
+  background-color: #EF6236;
+  width: 530px;
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-width: 530px) {
+  .error {
+    width: 100%;
+  }
+}

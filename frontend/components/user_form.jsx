@@ -23,7 +23,7 @@ class UserForm extends React.Component {
 
   render(){
     const errorsList = this.props.errors.session.map((error) =>
-      <li>error</li>
+      <li>{error}</li>
     );
 
       <Link to = '/login'>If you've already done this before, click here to log in</Link>;
@@ -31,13 +31,14 @@ class UserForm extends React.Component {
 
     return(
       <div className="signup">
-        <ul>
+
+        <ul className="error">
           {errorsList}
         </ul>
-
         <h1>Join for sports time</h1>
         <p>1000s of strangers across the world have come together for sports. Create an account and you'll be on your way to join the community.</p>
         <form onSubmit={this.handleSubmit}>
+
             <input
               type="text"
               onChange={this.update("name")}
