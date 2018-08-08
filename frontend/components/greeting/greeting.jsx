@@ -7,22 +7,37 @@ class Greeting extends React.Component{
   }
 
   render(){
+
     if(this.props.currentUser === undefined){
-      return (
-        <div>
-          <Link to='/signup'>Sign Up</Link>
-          <Link to='/login'>Log In</Link>
+      return(
+        <div className='header-nav'>
+          <nav className="left">
+            <p>Sports With Strangers</p>
+          </nav>
+          <nav className="right">
+            <Link to='/events'>Sport Events</Link>
+            <Link to='/events/new'>Hosting</Link>
+            <Link to='/about'>About</Link>
+            <Link to='/signup'>Sign Up</Link>
+            <Link to='/login'>Sign In</Link>
+          </nav>
         </div>
       );
     } else {
       return (
         <div>
-          <p>Hello, {this.props.currentUser.name}</p>
-          <button onClick={this.props.logout}>logout</button>
+            <p>Hello, {this.props.currentUser.name}</p>
+              <Link to='/events'>Sport Events</Link>
+              <Link to='/events/new'>Hosting</Link>
+              <Link to='/users/dashboard'>Dashboard</Link>
+              <Link to='/signup'>Sign Up</Link>
+              <Link to='/login'>Sign In</Link>
+            <button onClick={this.props.logout}>logout</button>
         </div>
       );
     }
   }
 }
+
 
 export default Greeting;
