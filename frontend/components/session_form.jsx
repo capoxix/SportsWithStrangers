@@ -30,40 +30,34 @@ class SessionForm extends React.Component {
     const errorsList = this.props.errors.session.map((error) =>
       <li>error</li>
     );
-    let link;
-    if (this.props.formType === 'login') {
-      link = <Link to ='/signup'>Sign Up</Link>;
-    }
-    else {
-      link= <Link to = '/login'>Login</Link>;
-    }
-
     return(
-      <div>
+      <div className='login'>
         <ul>
           {errorsList}
         </ul>
-        {link}
-        <h1>{this.props.formType}</h1>
+        <h1>Hey stranger!</h1>
+        <p>It's good to have you back. Sign in here and sign up for your next sport time!</p>
+
         <form onSubmit={this.handleSubmit}>
-        <label>email:
+
           <input
             type="text"
             onChange={this.update("email")}
             value={this.state.email}
+            placeholder="Email Address"
             />
-        </label>
 
-        <label>password:
           <input
             type="text"
             onChange={this.update("password")}
             value={this.state.password}
+            placeholder="Password"
             />
-        </label>
+
 
         <input type='submit' value={this.props.formType}/>
         </form>
+        <Link to ='/signup'>If you've never signed up before, click here and do that</Link>
       </div>
     );
   }

@@ -25,13 +25,9 @@ class UserForm extends React.Component {
     const errorsList = this.props.errors.session.map((error) =>
       <li>error</li>
     );
-    let link;
-    if (this.props.formType === 'login') {
-      link = <Link to ='/signup'>Sign Up</Link>;
-    }
-    else {
-      link= <Link to = '/login'>If you've already done this before, click here to log in</Link>;
-    }
+
+      <Link to = '/login'>If you've already done this before, click here to log in</Link>;
+
 
     return(
       <div className="signup">
@@ -75,9 +71,10 @@ class UserForm extends React.Component {
             placeholder="Description">
           </textarea>
 
-        <input type='submit' value={this.props.formType}/>
+        <input type='submit' value="LET'S DO SPORTS"/>
         </form>
-          {link}
+        <Link className="link" to = '/login'>If you've already done this before, click here to log in</Link>
+
       </div>
     );
   }

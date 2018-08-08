@@ -7,8 +7,9 @@
 
 .signup p {
   font-size: 18px;
-  color: #000000ad
-
+  color: #000000ad;
+  width: 525px;
+  margin-bottom: 10px;
 }
 
 .signup input[type="text"], input[type="password"]{
@@ -36,16 +37,31 @@
 }
 
 .signup h1{
-  color: #FF5722;
+  color: #EF6236;
   font-weight: 900;
   font-size: 23px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
 
+.signup input[type="submit"]{
+ background-color: #EF6236;
+ padding: 1em;
+ border-radius: 5px;
+ width: 500px;
+ text-align: center;
+ color: white;
+}
+
+.signup .link{
+  color: #EF6236;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 600px) {
-  .signup {
+  div.signup {
     width: 100%;
   }
   .signup input{
@@ -54,4 +70,5 @@
   .signup textarea{
     width: 95%;
   }
+  /* weird media query...first few ones, width do not change...*/
 }
