@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'jquery-rails'
+gem 'bcrypt'
 
 
 group :development, :test do
@@ -52,7 +53,6 @@ group :development do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'annotate'
-  gem 'bcrypt'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
