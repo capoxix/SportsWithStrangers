@@ -1,11 +1,28 @@
-.splash1{
-
+.splash {
+    width: 100%;
 }
 
-.splash2{
-
+.splash [class^="row"] {
+    margin: 0 auto;
+}
+[class^="row"] h2 {
+    color: #fd5e3e;
 }
 
-.splash3{
+.splash .row-1{
+    background-color: #fdbb5e;
+    color: white;
+    height: 400px;
+}
 
+.splash .row-1 h2{
+    color: white;
+}
+
+.splash .row-1 .inner{
+    width: 80%;
+    margin: 0 auto;
+    height: 100px;
+    background-color: blue;
+    text-align: center;
 }
