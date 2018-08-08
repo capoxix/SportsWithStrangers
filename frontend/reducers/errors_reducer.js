@@ -4,7 +4,7 @@ import userErrorsReducer from './user_errors_reducer';
 
 const errorsReducer = combineReducers ({
   session: sessionErrorsReducer,
-  user: userErrorsReducer
+  signup: userErrorsReducer
 });
 
 export default errorsReducer;
