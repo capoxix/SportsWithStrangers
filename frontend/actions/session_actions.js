@@ -20,10 +20,12 @@ export const receiveErrors = errors => ({
 });
 
 export const signup = formUser => dispatch => API.signup(formUser)
-  .then((user) => dispatch(receiveCurrentUser(user)));
+  .then((user) => dispatch(receiveCurrentUser(user)))
+  .fail((errors) => dispatch(receiveErrors(errors.responseJSON)));
 
 export const login = formUser => dispatch => API.login(formUser)
-  .then((user) => dispatch(receiveCurrentUser(user)));
+  .then((user) => dispatch(receiveCurrentUser(user)))
+  .fail((errors) => dispatch(receiveErrors(errors.responseJSON)));
 
 export const logout = () => dispatch => API.logout()
   .then(() => dispatch(logoutCurrentUser()));

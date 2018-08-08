@@ -7,7 +7,7 @@ import Root from './components/root';
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   // window.logout = SessionAPI.logout;
-  // window.login = SessionAPI.login;
+  window.login = SessionAPI.login;
 
   let store;
   if (window.currentUser) {

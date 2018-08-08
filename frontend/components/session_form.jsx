@@ -28,7 +28,7 @@ class SessionForm extends React.Component {
 
   render(){
     const errorsList = this.props.errors.session.map((error) =>
-      <li>error</li>
+      <li>{error}</li>
     );
     return(
       <div className='login'>
@@ -48,7 +48,7 @@ class SessionForm extends React.Component {
             />
 
           <input
-            type="text"
+            type="password"
             onChange={this.update("password")}
             value={this.state.password}
             placeholder="Password"
@@ -58,6 +58,9 @@ class SessionForm extends React.Component {
           <input type='submit' value='SIGN IN'/>
         </form>
         <Link className="link" to ='/signup'>If you've never signed up before, click here and do that</Link>
+          <ul>
+            {errorsList}
+          </ul>
       </div>
     );
   }
