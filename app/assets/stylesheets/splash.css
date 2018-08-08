@@ -1,48 +1,76 @@
 .splash {
-    width: 100%;
+  width: 100%;
 }
 
 .splash [class^="row"] {
-    margin: 0 auto;
+  margin: 0 auto;
 }
+
 [class^="row"] h2 {
-    color: #fd5e3e;
+  color: #fd5e3e;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 15px;
 }
 
 .splash .row-1{
-    background-color: #fdbb5e;
-    color: white;
-    height: 400px;
-    background-image: url("/assets/sports-3cd8fc97f017d07bcf0f8658ad6403ad878d3cfb714b31b9cb82c7633def1b90.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-color: #fdbb5e;
+  color: white;
+  height: 400px;
+  background-image: url("/assets/sports-3cd8fc97f017d07bcf0f8658ad6403ad878d3cfb714b31b9cb82c7633def1b90.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
 .splash .row-1 h2{
-    color: white;
-    font-size: 30px;
+  color: white;
+  font-size: 30px;
+  margin-bottom:10px;
+}
+
+.splash .row-1 span{
+  margin-bottom: 30px;
 }
 
 .splash .row-1 .inner{
-    width: 100%;
-    margin: 0 auto;
-    height: 180px;
-    padding-top: 110px;
-    padding-bottom: 110px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  height: 180px;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .splash a{
   background-color: #EF6236;
- padding: 1em;
- border-radius: 5px;
- width: 500px;
- text-align: center;
- color: white;
- letter-spacing: 3px;
- font-weight: 400;
- margin: 0 auto;
+  padding: 1em;
+  border-radius: 5px;
+  width: 500px;
+  text-align: center;
+  color: white;
+  letter-spacing: 3px;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+.splash .row-2 {
+  padding-top:30px;
+  padding-bottom: 20px;
+  background-color: #f5ebd0;
+  display: flex;
+  text-align:  center;
+  height: 80px;
+}
+
+.splash .row-2 .inner {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 500px) {
+  .splash a{
+      width: 100%;
+  }
 }
