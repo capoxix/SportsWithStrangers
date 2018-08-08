@@ -6,10 +6,21 @@
   margin: 0 auto;
 }
 
+.splash [class^="row"] img{
+  width: 300px;
+  height: 300px;
+}
+
+
 [class^="row"] h2 {
   color: #fd5e3e;
   font-size: 20px;
   font-weight: 900;
+  margin-bottom: 15px;
+}
+
+[class^="row"] span {
+  font-size: 18px;
   margin-bottom: 15px;
 }
 
@@ -66,6 +77,27 @@
 }
 
 .splash .row-2 .inner {
+  margin: 0 auto;
+}
+
+.splash .row-3 {
+  display:flex;
+  flex-direction: column;
+}
+
+.splash .row-3 h3{
+  text-align: center;
+}
+
+.splash .row-3 .inner {
+  display: flex;
+  margin: 0 auto;
+  width: 700px;
+  margin-bottom: 40px;
+}
+
+.splash .row-3 .content{
+  witdh: 800px;
   margin: 0 auto;
 }
 
