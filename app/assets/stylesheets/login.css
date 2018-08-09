@@ -34,7 +34,7 @@
 
 .login input[type="submit"]{
  background-color: #EF6236;
- padding: 1em;
+ padding: 12px;
  border-radius: 5px;
  width: 500px;
  text-align: center;
@@ -46,9 +46,10 @@
 
 .login a{
   color: #EF6236;
-  text-align: center;
+  margin-left: 80px;
   margin-top: 30px;
   margin-bottom: 30px;
+  display: block;
 }
 
 @media screen and (max-width: 600px) {

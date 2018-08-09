@@ -46,7 +46,7 @@
 
 .signup input[type="submit"]{
  background-color: #EF6236;
- padding: 1em;
+ padding: 12px;
  border-radius: 5px;
  width: 500px;
  text-align: center;
@@ -59,9 +59,10 @@
 
 .signup a{
   color: #EF6236;
-  text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
+  display: block;
+  margin-left: 85px;
 
 }
 

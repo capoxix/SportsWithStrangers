@@ -73,8 +73,8 @@ class UserForm extends React.Component {
           </textarea>
 
         <input type='submit' value="LET'S DO SPORTS"/>
-        </form>
         <Link onClick={() => this.props.clearErrors()} to = '/login'>If you've already done this before, click here to log in</Link>
+        </form>
 
       </div>
     );
