@@ -7,12 +7,12 @@ class EventForm extends React.Component {
     super(props);
     this.state = {
       dateTime: new Date(Date.now('UTC')),//need to add datetime
-      userId: 1, //need to get information of user somehow
+      user_id: 1, //need to get information of user somehow
       address: '',
       country: '',
-      cityId: 1,
-      categoryId: 1,
-      numOfMembers: 2,
+      city_id: 1,
+      category_id: 1,
+      num_of_members: 2,
       description: '',
     };//this.props.event;
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -73,7 +73,7 @@ class EventForm extends React.Component {
                   <option value="1">Basketball</option>
                   <option value="2">Soccer</option>
                   <option value="3">Tennis</option>
-                  <option value="4"></option>
+                  <option value="4">Badminton</option>
                 </select>
 
                 <select>

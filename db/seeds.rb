@@ -39,3 +39,12 @@ serena = User.create!(
   user_catchphrase: "You like watching me play on TV? Would you like to play against me?",
   user_description: "The queen of tennis."
 )
+
+la = City.create!(name: "Los Angeles")
+sf = City.create!(name: "San Francisco")
+oakland = City.create!(name: "Oakland")
+
+bball = Category.create!(name: "Basketball")
+soccer = Category.create!(name: "Soccer")
+tennis = Category.create!(name: "Tennis")
+badminton = Category.create!(name: "Badminton")
