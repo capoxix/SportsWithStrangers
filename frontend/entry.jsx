@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import * as SessionAPI from './util/session_api_util';
 import configureStore from './store/store';
 import Root from './components/root';
+import * as EventAPI from './util/event_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   // window.logout = SessionAPI.logout;
   window.login = SessionAPI.login;
+  window.createEvent = EventAPI.createEvent;
 
   let store;
   if (window.currentUser) {
@@ -29,3 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ReactDOM.render(<h1>WELCOME!!!!!! </h1>, root);
 });
+
+/*
+  event = {
+  city_id: 2,
+  category_id: 1,
+  date_time: String(new Date(Date.now())).slice(0,24),
+  address: '1122 street',
+  country: 'USA',
+  description: 'Testing',
+  num_of_members: 3
+  }
+*/
