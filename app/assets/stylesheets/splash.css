@@ -25,7 +25,8 @@
 }
 
 .splash .row-1{
-  background-color: rgb(253,187,94,0.6);
+  background-color: rgb(253,187,94);
+  opacity: 0.8;
   color: white;
   height: 400px;
   background-image: url("/assets/sports-3cd8fc97f017d07bcf0f8658ad6403ad878d3cfb714b31b9cb82c7633def1b90.png");
