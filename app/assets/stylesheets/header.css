@@ -59,3 +59,38 @@ div .header-nav{
   font-weight: 500;
   margin-left: 5px;
 }
+
+.header-nav .right .hamburger-dropdown {
+  display: none;
+}
+/*
+@media all and (max-width: 900px) {
+  .header-nav .right .hamburger-dropdown {
+    display: block;
+
+  }
+  .hamburger-dropdown  li {
+    background-color: lightgray;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    width: 150px;
+    height: 60px;
+    /* nearest relatively positioned parent of absolute positioned child */
+/*
+    position: relative;
+    cursor: pointer;
+
+
+  }
+  .hamburger-dropdown ul {
+    /* Every time we position an element absolutely we should be thinking about
+    which parent element we need to position relatively */
+/*
+    top: 50px;
+    left: 0;
+    flex-direction: column;
+    cursor: pointer;
+    box-shadow: black 5px 5px 10px;
+  }
+}
+*/
