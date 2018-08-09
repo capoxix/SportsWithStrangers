@@ -12,8 +12,8 @@ class Greeting extends React.Component{
       return(
         <div className='header-nav'>
           <nav className="left">
-            <img src={window.images.logo}></img>
-            <Link to ='/'>Sports With Strangers</Link>
+
+            <Link to ='/'><img src={window.images.logo}></img></Link>
           </nav>
           <nav className="right">
             <Link to='/events'>SPORT EVENTS</Link>
@@ -30,7 +30,7 @@ class Greeting extends React.Component{
         <header>
           <div className='header-nav'>
             <nav className="left">
-              <Link to='/'>Sports With Strangers</Link>
+              <Link to ='/'><img src={window.images.logo}></img></Link>
               <p>Hello, {this.props.currentUser.name}</p>
             </nav>
             <nav className="right">

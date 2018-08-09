@@ -16,8 +16,10 @@ div .header-nav{
 
 .header-nav .left img{
   height: 50px;
-  width: 50px;
+  width: 200px;
   float:left;
+  margin-top: -15px;
+  margin-right: 15px;
 }
 
 .header-nav p {

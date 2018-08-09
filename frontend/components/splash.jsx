@@ -7,7 +7,7 @@ const Splash = () => (
     <div className="row-1">
       <div className="inner">
         <h2>Everyone is interesting</h2>
-        <span>But you don't discover that when you're staring at a sreen.</span>
+        <span>But you don't discover that when you're staring at a screen.</span>
         <Link to='/'>LET'S PLAY SPORTS TOGETHER</Link>
       </div>
     </div>
