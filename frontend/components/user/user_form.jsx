@@ -30,8 +30,8 @@ class UserForm extends React.Component {
 
 
     return(
-      <div className= "signup-container">
-        <div className="signup">
+      <div className= "form-container">
+        <div className="form">
 
           <ul className="error">
             {errorsList}

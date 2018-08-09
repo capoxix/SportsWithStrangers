@@ -31,8 +31,8 @@ class SessionForm extends React.Component {
       <li>{error}</li>
     );
     return(
-      <div className='login-container'>
-        <div className='login'>
+      <div className='form-container'>
+        <div className='form'>
           <ul className='error'>
             {errorsList}
           </ul>

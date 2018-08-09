@@ -36,15 +36,15 @@ class EventForm extends React.Component {
     // );
 
     return(
-      <div className= "event-container">
-        <div className="event">
+      <div className= "form-container">
+        <div className="form">
 
 
           <form onSubmit={this.handleSubmit}>
               <div className="full-address">
                 <input
                   type="text"
-                  // onChange={this.update("address")}
+                  onChange={this.update("address")}
                   value={this.state.address}
                   placeholder="Street Address (Ex. 1111 Name Street)"
                   />
@@ -75,7 +75,8 @@ class EventForm extends React.Component {
             <input
               type="number"
               onChange={this.update("num_of_members")}
-              value={this.state.num_of_members}
+              value={this.state.numberOfMembers}
+              min="2"
               />
 
               <textarea

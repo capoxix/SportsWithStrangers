@@ -1,0 +1,84 @@
+.form-container{
+  background-color: #f5ebd0;
+}
+
+.form {
+  display:flex;
+  width:600px;
+  flex-direction:column;
+  margin: 0 auto;
+}
+
+.form p {
+  font-size: 18px;
+  color: #000000ad;
+  width: 525px;
+  margin-bottom: 10px;
+}
+
+.form input[type="text"], input[type="password"]{
+  background-color: white;
+  width: 500px;
+  border: 1px solid lightgray;
+  height: 50px;
+  padding: 5px 10px 5px 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+
+}
+.form textarea{
+  width:500px;
+  height:100px;
+  background-color: white;
+  border: 1px solid lightgray;
+  padding: 5px 10px 5px 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+
+
+}
+
+.form h1{
+  color: #EF6236;
+  font-weight: 900;
+  font-size: 23px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form input[type="submit"]{
+ background-color: #EF6236;
+ padding: 12px;
+ border-radius: 5px;
+ width: 500px;
+ text-align: center;
+ color: white;
+ letter-spacing: 3px;
+ font-weight: 400;
+
+
+}
+
+.form a{
+  color: #EF6236;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: block;
+  margin-left: 85px;
+
+}
+
+@media screen and (max-width: 600px) {
+  div.form {
+    width: 100%;
+  }
+  .form input{
+    width: 95%;
+  }
+  .form textarea{
+    width: 95%;
+  }
+  /* weird media query...first few ones, width do not change...*/
+}
