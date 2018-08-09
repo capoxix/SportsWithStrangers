@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-class Greeting extends React.Component{
+class Header extends React.Component{
   constructor(props){
     super(props);
   }
@@ -47,4 +47,4 @@ class Greeting extends React.Component{
 }
 
 
-export default Greeting;
+export default Header;

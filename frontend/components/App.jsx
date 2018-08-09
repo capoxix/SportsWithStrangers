@@ -1,4 +1,4 @@
-import GreetingContainer from './greeting/greeting_container';
+import HeaderContainer from './header/header_container';
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import LoginFormContainer from './login_form_container';
@@ -11,7 +11,7 @@ import Splash from './splash';
 const App = () => (
   <div>
     <header className='header'>
-      <GreetingContainer />
+      <HeaderContainer />
     </header>
       <Switch>
         <AuthRoute exact path="/login" component={LoginFormContainer} />

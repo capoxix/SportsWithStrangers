@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {logout, login, clearErrors} from '../../actions/session_actions';
-import Greeting from './greeting';
+import Header from './header';
 
 const msp = (state) => ({
   currentUser: state.entities.users[state.session.id]
@@ -12,4 +12,4 @@ const mdp = (dispatch) => ({
   clearErrors: () => dispatch(clearErrors())
 });
 
-export default connect(msp, mdp)(Greeting);
+export default connect(msp, mdp)(Header);
