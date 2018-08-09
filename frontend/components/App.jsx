@@ -20,7 +20,7 @@ const App = () => (
         <Route exact path= "/" component= {Splash} />
         <Redirect to='/'/>
       </Switch>
-    <footer>
+    <footer className='footer'>
       <Footer/>
     </footer>
   </div>

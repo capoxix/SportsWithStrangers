@@ -1,0 +1,30 @@
+.footer {
+   background-color: #fdbb5e;
+   height: 300px;
+}
+
+.footer .container{
+    padding-top: 50px;
+    display: flex;
+    width: 800px;
+    margin: 0 auto;
+    color: white;
+    font-size: 18px;
+}
+
+.footer .container .footer-links li{
+    margin-top: 10px;
+    padding-right: 10px;
+    margin-right: 30px;
+}
+
+.footer .container .footer-info {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .container .footer-info span{
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
