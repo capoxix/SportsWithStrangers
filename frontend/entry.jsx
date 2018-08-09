@@ -9,7 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   // window.logout = SessionAPI.logout;
   window.login = SessionAPI.login;
-  window.createEvent = EventAPI.createEvent;
+  window.createEvent = EventAPI.createEvent; //confirmed
+  window.updateEvent = EventAPI.updateEvent; //confirmed
+  window.getEvent = EventAPI.getEvent; //confirmed
+  window.getAllEvents = EventAPI.getAllEvents; //confirmed
+  window.deleteEvent = EventAPI.deleteEvent; //confirmed
 
   let store;
   if (window.currentUser) {
@@ -33,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /*
-  event = {
+  {
   city_id: 2,
   category_id: 1,
   date_time: String(new Date(Date.now())).slice(0,24),

@@ -14,17 +14,17 @@ export const updateEvent = event => {
   });
 };
 
-export const deleteEvent = event => {
+export const deleteEvent = id => {
   return $.ajax({
     method: 'DELETE',
-    url: `/api/events/${event.id}`,
+    url: `/api/events/${id}`,
   });
 };
 
 export const getEvent = (id) => {
   return $.ajax({
     method: 'GET',
-    url: `/api/events/${event.id}`,
+    url: `/api/events/${id}`,
   });
 };
 
