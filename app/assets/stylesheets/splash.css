@@ -74,6 +74,7 @@
   display: flex;
   text-align:  center;
   height: 80px;
+  margin-bottom: 30px;
 }
 
 .splash .row-2 .inner {
@@ -87,6 +88,7 @@
 
 .splash .row-3 h3{
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .splash .row-3 .inner {
@@ -96,9 +98,28 @@
   margin-bottom: 40px;
 }
 
-.splash .row-3 .content{
-  witdh: 800px;
+.splash .row-3 [class^="content"]{
+  margin-top: 30px;
+  line-height: 1.6;
+}
+
+.splash .row-3 .content-right{
+  margin-left: 50px
+}
+
+.splash .row-3 .content-left{
+  margin-right: 50px
+}
+
+.splash .row-4{
+ background-color:#f5ebd0;
+ height: 200px;
+}
+
+.splash .row-4 .content{
   margin: 0 auto;
+  width: 200px;
+  padding-top: 20px;
 }
 
 @media screen and (max-width: 500px) {
