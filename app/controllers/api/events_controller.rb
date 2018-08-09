@@ -3,7 +3,7 @@ class Api::EventsController < ApplicationController
 
   def index
     @events = Event.all
-    render json: @events
+    render :index
   end
 
   def create
@@ -29,7 +29,8 @@ class Api::EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     if @event
-      render json: @event
+      #render json: @event
+      render :show
     else
       render json: @event.errors.full_messages, status: 422
     end

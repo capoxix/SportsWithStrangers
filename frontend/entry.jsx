@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.login = SessionAPI.login;
   // window.createEvent = EventAPI.createEvent; //confirmed
   // window.updateEvent = EventAPI.updateEvent; //confirmed
-  // window.getEvent = EventAPI.getEvent; //confirmed
-  // window.getAllEvents = EventAPI.getAllEvents; //confirmed
+  window.getEvent = EventAPI.getEvent; //confirmed
+  window.getAllEvents = EventAPI.getAllEvents; //confirmed
   // window.deleteEvent = EventAPI.deleteEvent; //confirmed
 
   let store;

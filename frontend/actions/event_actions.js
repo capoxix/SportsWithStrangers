@@ -5,11 +5,16 @@ export const RECEIVE_ALL_EVENT = 'RECEIVE_ALL_EVENT';
 export const CREATE_EVENT = 'CREATE_EVENT';
 export const RECEIVE_EVENT_ERRORS = 'RECEIVE_EVENT_ERRORS';
 export const REMOVE_EVENT = 'REMOVE_EVENT';
+export const RECEIVE_SINGLE_EVENT_SHOW = 'RECEIVE_SINGLE_EVENT_SHOW';
 
 
 //fetch info events with missing user stuff(user_catchphrase and user_description)
-const receiveSingleEvent = payload => ({
-  type: RECEIVE_SINGLE_EVENT,
+
+/*
+  {event: id, country, description}
+*/
+const receiveSingleEventShow = payload => ({
+  type: RECEIVE_SINGLE_EVENT_SHOW,
   payload
 });
 
@@ -17,6 +22,11 @@ const receiveSingleEvent = payload => ({
 const receiveAllEvents = payload => ({
   type: RECEIVE_ALL_EVENT,
   payload
+});
+
+const receiveSingleEvent = event => ({
+  type: RECEIVE_SINGLE_EVENT,
+  event
 });
 
 const receiveEventErrors = errors => ({
@@ -34,10 +44,10 @@ export const fetchEvents = () => dispatch => API.getAllEvents()
   .then(payload => dispatch(receiveAllEvents(payload)));
 
 export const fetchEvent = (id) => dispatch => API.getEvent(id)
-  .then(payload => dispatch(receiveSingleEvent(payload)));
+  .then(payload => dispatch(receiveSingleEventShow(payload)));
 
 export const updateEvent = (event) => dispatch => API.updateEvent(event)
-  .then(payload => dispatch(receiveSingleEvent(payload)));
+  .then(eventServer => dispatch(receiveSingleEvent(eventServer)));
 
 export const createEvent = (event) => dispatch => API.createEvent(event)
   .then(eventServer => dispatch(receiveSingleEvent(eventServer)));
