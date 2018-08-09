@@ -25,7 +25,7 @@
 }
 
 .splash .row-1{
-  background-color: #fdbb5e;
+  background-color: rgb(253,187,94,0.6);
   color: white;
   height: 400px;
   background-image: url("/assets/sports-3cd8fc97f017d07bcf0f8658ad6403ad878d3cfb714b31b9cb82c7633def1b90.png");
@@ -113,13 +113,28 @@
 
 .splash .row-4{
  background-color:#f5ebd0;
- height: 200px;
+ height: 100px;
+ text-align: center;
+ padding-top: 35px;
+ padding-bottom: 35px;
+
+
 }
 
 .splash .row-4 .content{
+  width: 500px;
   margin: 0 auto;
-  width: 200px;
-  padding-top: 20px;
+}
+
+.splash .row-4 .content h2{
+  color: black;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.splash .row-4 .content a{
+  padding-left: 200px;
+  padding-right: 200px;
 }
 
 @media screen and (max-width: 500px) {

@@ -10,7 +10,7 @@ import Splash from './splash';
 
 const App = () => (
   <div>
-    <header>
+    <header className='header'>
       <GreetingContainer />
     </header>
       <Switch>
