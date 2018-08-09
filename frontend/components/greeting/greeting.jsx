@@ -12,6 +12,7 @@ class Greeting extends React.Component{
       return(
         <div className='header-nav'>
           <nav className="left">
+            <img src={window.images.logo}></img>
             <Link to ='/'>Sports With Strangers</Link>
           </nav>
           <nav className="right">

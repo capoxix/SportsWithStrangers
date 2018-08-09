@@ -14,6 +14,12 @@ div .header-nav{
   float: left;
 }
 
+.header-nav .left img{
+  height: 50px;
+  width: 50px;
+  float:left;
+}
+
 .header-nav p {
   float: left;
 }
