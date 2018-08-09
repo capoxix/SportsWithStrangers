@@ -31,34 +31,36 @@ class SessionForm extends React.Component {
       <li>{error}</li>
     );
     return(
-      <div className='login'>
-        <ul className='error'>
-          {errorsList}
-        </ul>
-        <h1>Hey stranger!</h1>
-        <p>It's good to have you back. Sign in here and sign up for your next sport time!</p>
+      <div className='login-container'>
+        <div className='login'>
+          <ul className='error'>
+            {errorsList}
+          </ul>
+          <h1>Hey stranger!</h1>
+          <p>It's good to have you back. Sign in here and sign up for your next sport time!</p>
 
-        <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit}>
 
-          <input
-            type="text"
-            onChange={this.update("email")}
-            value={this.state.email}
-            placeholder="Email Address"
-            />
+            <input
+              type="text"
+              onChange={this.update("email")}
+              value={this.state.email}
+              placeholder="Email Address"
+              />
 
-          <input
-            type="password"
-            onChange={this.update("password")}
-            value={this.state.password}
-            placeholder="Password"
-            />
+            <input
+              type="password"
+              onChange={this.update("password")}
+              value={this.state.password}
+              placeholder="Password"
+              />
 
 
-          <input type='submit' value='SIGN IN'/>
-            <Link onClick={() => this.props.clearErrors()} to ='/signup'>If you've never signed up before, click here and do that</Link>
+            <input type='submit' value='SIGN IN'/>
+              <Link onClick={() => this.props.clearErrors()} to ='/signup'>If you've never signed up before, click here and do that</Link>
 
-        </form>
+          </form>
+        </div>
       </div>
     );
   }

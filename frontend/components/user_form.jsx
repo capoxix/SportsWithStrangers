@@ -30,52 +30,54 @@ class UserForm extends React.Component {
 
 
     return(
-      <div className="signup">
+      <div className= "signup-container">
+        <div className="signup">
 
-        <ul className="error">
-          {errorsList}
-        </ul>
-        <h1>Join for sports time</h1>
-        <p>1000s of strangers across the world have come together for sports. Create an account and you'll be on your way to join the community.</p>
-        <form onSubmit={this.handleSubmit}>
+          <ul className="error">
+            {errorsList}
+          </ul>
+          <h1>Join for sports time</h1>
+          <p>1000s of strangers across the world have come together for sports. Create an account and you'll be on your way to join the community.</p>
+          <form onSubmit={this.handleSubmit}>
+
+              <input
+                type="text"
+                onChange={this.update("name")}
+                value={this.state.name}
+                placeholder="First name (or nickname)"
+                />
 
             <input
               type="text"
-              onChange={this.update("name")}
-              value={this.state.name}
-              placeholder="First name (or nickname)"
+              onChange={this.update("email")}
+              value={this.state.email}
+              placeholder="Email address"
               />
 
-          <input
-            type="text"
-            onChange={this.update("email")}
-            value={this.state.email}
-            placeholder="Email address"
-            />
+            <input
+              type="password"
+              onChange={this.update("password")}
+              value={this.state.password}
+              placeholder="Password (at least 6 characters you won't forget!)"
+              />
 
-          <input
-            type="password"
-            onChange={this.update("password")}
-            value={this.state.password}
-            placeholder="Password (at least 6 characters you won't forget!)"
-            />
+            <textarea
+              onChange={this.update("user_catchphrase")}
+              value={this.state.user_catchphrase}
+              placeholder="Catchphrase">
+            </textarea>
 
-          <textarea
-            onChange={this.update("user_catchphrase")}
-            value={this.state.user_catchphrase}
-            placeholder="Catchphrase">
-          </textarea>
+            <textarea
+              onChange={this.update("user_description")}
+              value={this.state.user_description}
+              placeholder="Description">
+            </textarea>
 
-          <textarea
-            onChange={this.update("user_description")}
-            value={this.state.user_description}
-            placeholder="Description">
-          </textarea>
+          <input type='submit' value="LET'S DO SPORTS"/>
+          <Link onClick={() => this.props.clearErrors()} to = '/login'>If you've already done this before, click here to log in</Link>
+          </form>
 
-        <input type='submit' value="LET'S DO SPORTS"/>
-        <Link onClick={() => this.props.clearErrors()} to = '/login'>If you've already done this before, click here to log in</Link>
-        </form>
-
+        </div>
       </div>
     );
   }

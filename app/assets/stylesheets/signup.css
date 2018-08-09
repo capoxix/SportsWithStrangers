@@ -1,3 +1,7 @@
+.signup-container{
+  background-color: #f5ebd0;
+}
+
 .signup {
   display:flex;
   width:600px;

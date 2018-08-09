@@ -1,3 +1,7 @@
+.login-container{
+  background-color: #f5ebd0;
+}
+
 .login {
   display:flex;
   width:600px;
