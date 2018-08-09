@@ -8,12 +8,12 @@ import * as EventAPI from './util/event_api_util';
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   // window.logout = SessionAPI.logout;
-  window.login = SessionAPI.login;
-  window.createEvent = EventAPI.createEvent; //confirmed
-  window.updateEvent = EventAPI.updateEvent; //confirmed
-  window.getEvent = EventAPI.getEvent; //confirmed
-  window.getAllEvents = EventAPI.getAllEvents; //confirmed
-  window.deleteEvent = EventAPI.deleteEvent; //confirmed
+  // window.login = SessionAPI.login;
+  // window.createEvent = EventAPI.createEvent; //confirmed
+  // window.updateEvent = EventAPI.updateEvent; //confirmed
+  // window.getEvent = EventAPI.getEvent; //confirmed
+  // window.getAllEvents = EventAPI.getAllEvents; //confirmed
+  // window.deleteEvent = EventAPI.deleteEvent; //confirmed
 
   let store;
   if (window.currentUser) {
