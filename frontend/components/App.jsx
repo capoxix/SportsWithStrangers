@@ -5,6 +5,7 @@ import LoginFormContainer from './login_form_container';
 import SignupFormContainer from './signup_form_container';
 import {AuthRoute} from '../util/route_util';
 import Splash from './splash';
+import Footer from './footer/footer';
 // import SitIndexContainer from './sit/sit_index_container';
 // import SearchContainer from './search_container';
 
@@ -19,6 +20,9 @@ const App = () => (
         <Route exact path= "/" component= {Splash} />
         <Redirect to='/'/>
       </Switch>
+    <footer>
+      <Footer/>
+    </footer>
   </div>
 );
 
