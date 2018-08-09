@@ -1,11 +1,12 @@
 import HeaderContainer from './header/header_container';
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import LoginFormContainer from './login_form_container';
-import SignupFormContainer from './signup_form_container';
+import LoginFormContainer from './session/login_form_container';
+import SignupFormContainer from './user/signup_form_container';
 import {AuthRoute} from '../util/route_util';
 import Splash from './splash';
 import Footer from './footer/footer';
+import EventForm from './events/event_form';
 // import SitIndexContainer from './sit/sit_index_container';
 // import SearchContainer from './search_container';
 
@@ -17,6 +18,7 @@ const App = () => (
       <Switch>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
+        <Route exact path="/events/new" component={EventForm}/>
         <Route exact path= "/" component= {Splash} />
         <Redirect to='/'/>
       </Switch>
