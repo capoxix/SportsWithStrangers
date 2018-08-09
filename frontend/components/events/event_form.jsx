@@ -6,7 +6,7 @@ class EventForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      //need to add datetime
+      dateTime: new Date(Date.now('UTC')),//need to add datetime
       userId: 1, //need to get information of user somehow
       address: '',
       country: '',
@@ -34,6 +34,10 @@ class EventForm extends React.Component {
     // const errorsList = this.props.errors.event.map((error) =>
     //   <li>{error}</li>
     // );
+    let members = [];
+    for (let i = 1; i <= 10; i++){
+      members.push(<option value={`${i}`}>{`${i}`}</option>);
+    }
 
     return(
       <div className= "form-container">
@@ -72,12 +76,10 @@ class EventForm extends React.Component {
                   <option value="4"></option>
                 </select>
 
-            <input
-              type="number"
-              onChange={this.update("num_of_members")}
-              value={this.state.numberOfMembers}
-              min="2"
-              />
+                <select>
+                  <option value="" disabled selected>Select Number of Members</option>
+                  {members}
+                </select>
 
               <textarea
                 onChange={this.update("description")}
@@ -86,7 +88,7 @@ class EventForm extends React.Component {
               </textarea>
 
 
-          <input type='submit' value="LET'S DO SPORTS"/>
+          <input type='submit' value="CREATE SPORTS TIME"/>
           </form>
 
         </div>
