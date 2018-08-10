@@ -7,7 +7,7 @@
 .index-item-wrapper{
   display: grid;
   grid-template-rows: 75px 20px 40px;
-  border: 1px solid orange;
+  border: 1px solid #DDD;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 15px;
@@ -17,13 +17,13 @@
    display: grid;
    grid-template-columns: 40px 75px;
    text-align: center;
-   border: 1px solid red;
+   //border: 1px solid red;
    column-gap: 40px;
 
  }
 
 .index-item-wrapper .date-wrapper{
-  border: 1px solid blue;
+  //border: 1px solid blue;
   width: 70px;
   padding-left: 5px;
   padding-right: 5px;
@@ -32,10 +32,17 @@
 
 .user{
     border-radius: 3px;
-     border: 1px solid black;
+     border: 1px solid #F7BF4D;
      width: 75px;
      height: 75px;
      margin: 0 0 0.5em 0.75em;
+}
+
+.day {
+  font-weight: 600;
+  font-size: 0.6em;
+  color: #929292;
+  text-transform: uppercase;
 }
 
 .address{
@@ -47,9 +54,18 @@
 }
 
 hr {
-      border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
     border-left: none;
     border-right: none;
     border-top: none;
     margin: 0.8125em 0;
+}
+
+.date{
+  text-transform: uppercase;
+  font-size: 1.25em;
+  font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.25;
 }
