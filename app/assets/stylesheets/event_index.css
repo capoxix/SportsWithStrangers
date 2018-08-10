@@ -3,3 +3,10 @@
     grid-template-columns: repeat(5, 200px);
     grid-template-rows: 190px;
 }
+
+.index-item-wrapper{
+
+  .date-wrapper{
+    width: 48%;
+  }
+}

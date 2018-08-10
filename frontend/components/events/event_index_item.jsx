@@ -1,15 +1,26 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const EventIndexItem = (props) => (
-  <div className='index-item-wrapper'>
+const EventIndexItem = (props) => {
+  let date = new Date(props.event.date_time);
+  let days = ['Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday'];
+  let day = days[date.getDay()];
+  let hour = date.getHours();
+  let dateArr = date.toString().split(" ");
 
-    <div>{props.event.category_id}</div>
-    <div>{props.user.name}</div>
-    <div>Datetime: {props.event.date_time}</div>
-    <li>Address: {props.event.address}</li>
-    <li>City Id: {props.event.city_id}</li>
+  return(
+  <div className='index-item-wrapper'>
+      <div>{props.event.category_id}</div>
+
+      <div className='date-wrapper'>
+        <div>{day}</div>
+        <div>{`${dateArr[1]} ${dateArr[2]}`}</div>
+        <div>{hour}</div>
+      </div>
+        <div>{props.user.name}</div>
+      <div>{`${props.event.address}  ${props.event.city_id}`}</div>
   </div>
-);
+  );
+};
 
 export default EventIndexItem;
