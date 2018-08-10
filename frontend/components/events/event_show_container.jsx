@@ -1,11 +1,11 @@
 import {connect} from 'react-redux';
-import EventIndex from './event_index';
-import {fetchEvents} from '../../actions/event_actions';
+import EventShow from './event_index';
+import {fetchEvent} from '../../actions/event_actions';
 
-const msp = (state) => ({
+const msp = (state, ownProps) => ({
   errors: state.errors,
-  events: state.entities.events,
-  users: state.entities.users,
+  event: state.entities.events[ownProps.match.params.eventId],
+  user: {},
   cities: Object.values({
     1 : {id: 1, name: 'San Francisco'},
     2 : {id: 2, name: 'Oakland'},
@@ -19,7 +19,7 @@ const msp = (state) => ({
 });
 
 const mdp = (dispatch) => ({
-  fetchEvents: () => dispatch(fetchEvents())
+  fetchEvent: (id) => dispatch(fetchEvent(id))
 });
 
-export default connect(msp, mdp)(EventIndex);
+export default connect(msp, mdp)(EventShow);
