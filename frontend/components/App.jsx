@@ -9,7 +9,7 @@ import Footer from './footer/footer';
 import CreateEventContainer from './events/create_event_container';
 import UpdateEventContainer from './events/update_event_container';
 import EventIndexContainer from  './events/event_index_container';
-// import SitIndexContainer from './sit/sit_index_container';
+import EventShowContainer from './events/event_show_container';
 // import SearchContainer from './search_container';
 
 const App = () => (
@@ -20,6 +20,7 @@ const App = () => (
       <Switch>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
+        <Route exact path="/events/:eventId" component={EventShowContainer}/>
         <Route exact path="/events" component={EventIndexContainer}/>
         <Route exact path="/events/new" component={CreateEventContainer}/>
         <Route exact path="/events/:eventId/edit" component={UpdateEventContainer}/>

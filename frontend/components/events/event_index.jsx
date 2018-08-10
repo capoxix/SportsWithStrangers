@@ -14,6 +14,11 @@ class EventIndex extends React.Component{
   }
 
   render(){
+    console.log("EVENT INDEX");
+    if (this.props.events === undefined){
+      return <div>Loading.....</div>;
+    }
+
     const eventIndex = Object.values(this.props.events).map(event => (
       <ul>
         <li>Author: {this.props.users[event.user_id].name}</li>
@@ -24,9 +29,7 @@ class EventIndex extends React.Component{
       </ul>
     ));
 
-    if (this.props.events === undefined){
-      return <div>Loading.....</div>;
-    }
+
     return(
       <div>
         {eventIndex}
