@@ -14,6 +14,8 @@
 }
 .rdtOpen .rdtPicker {
   display: block;
+  margin-left: 130px;
+
 }
 .rdtStatic .rdtPicker {
   box-shadow: none;

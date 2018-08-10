@@ -27,6 +27,11 @@
   border-radius: 5px;
 }
 
+.form input[type="text"].form-control{
+  text-align: center;
+}
+
+
 .form textarea{
   width:500px;
   height:100px;

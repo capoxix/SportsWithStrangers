@@ -10,16 +10,17 @@ class EventForm extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      date_time: new Date(Date.now('UTC')), //moment().format('MMMM Do YYYY, h:mm:ss a'),//need to add datetime
-      user_id: 1, //need to get information of user somehow
-      address: '',
-      country: '',
-      city_id: 1,
-      category_id: 1,
-      num_of_members: 2,
-      description: '',
-    };//this.props.event;
+    this.state = this.props.event;
+    // {
+    //   date_time: new Date(Date.now('UTC')), //moment().format('MMMM Do YYYY, h:mm:ss a'),//need to add datetime
+    //   user_id: 1, //need to get information of user somehow
+    //   address: '',
+    //   country: '',
+    //   city_id: 1,
+    //   category_id: 1,
+    //   num_of_members: 2,
+    //   description: '',
+    // };//this.props.event;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
     this.handleDate = this.handleDate.bind(this);
@@ -31,7 +32,6 @@ class EventForm extends React.Component {
     // this.props.processForm(event);
     this.state.date_time = this.state.date_time.toString();
     window.state = this.state;
-    console.log(this.state);
   }
 
   update(field){
@@ -52,6 +52,16 @@ class EventForm extends React.Component {
     for (let i = 1; i <= 10; i++){
       members.push(<option value={`${i}`}>{`${i}`}</option>);
     }
+    let cities = [<option value="" disabled selected>Select City</option>];
+
+    this.props.cities.forEach((city) => cities.push(
+      <option value={`${city.id}`}>{city.name}</option>
+    ));
+
+    let categories = [ <option value="" disabled selected>Select Sports Category</option>];
+    this.props.categories.forEach((category) => cities.push(
+      <option value={`${category.id}`}>{category.name}</option>
+    ));
     // console.log(this.state.date_time, "datetime");
 
     return(
@@ -69,10 +79,7 @@ class EventForm extends React.Component {
                   />
 
                 <select onChange={this.update("city_id")}>
-                    <option value="" disabled selected>Select City</option>
-                    <option value="1">Los Angeles</option>
-                    <option value="2">San Francisco</option>
-                    <option value="3">Oakland</option>
+                  {cities}
                   </select>
 
                 <input
@@ -85,10 +92,7 @@ class EventForm extends React.Component {
 
                 <select onChange={this.update("category_id")}>
                  <option value="" disabled selected>Select Sports Category</option>
-                  <option value="1">Basketball</option>
-                  <option value="2">Soccer</option>
-                  <option value="3">Tennis</option>
-                  <option value="4">Badminton</option>
+                 {categories}
                 </select>
 
                 <select onChange={this.update("num_of_members")}>
@@ -102,7 +106,7 @@ class EventForm extends React.Component {
                 placeholder="Description">
               </textarea>
 
-          <Datetime value={this.state.date_time} onChange={this.handleDate} />
+          <Datetime value={this.state.date_time} onChange={this.handleDate}/>
           <input type='submit' value="CREATE SPORTS TIME"/>
           </form>
 
