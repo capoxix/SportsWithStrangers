@@ -28,11 +28,8 @@ class EventForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    // const event = Object.assign({}, this.state); //need to add category_id & city_id
-    // this.props.processForm(event);
     this.state.date_time = this.state.date_time.toString();
     this.props.processForm(this.state);
-    // window.state = this.state;
   }
 
   update(field){
@@ -68,7 +65,6 @@ class EventForm extends React.Component {
     while (this.props.event === undefined){
       return(<div>Loading......</div>);
     }
-    console.log("STATE:", this.state);
     return(
       <div className= "form-container">
         <div className="form">
