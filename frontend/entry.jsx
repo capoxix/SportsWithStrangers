@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.deleteEvent = EventAPI.deleteEvent; //confirmed
 
 
-  window.fetchEvents = EventACTION.fetchEvents;
+  window.fetchEvents = EventACTION.fetchEvents; //confirmed
+  window.fetchEvent = EventACTION.fetchEvent; //confirmed
 
   let store;
   if (window.currentUser) {
