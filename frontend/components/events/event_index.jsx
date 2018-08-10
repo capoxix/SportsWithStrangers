@@ -31,7 +31,7 @@ class EventIndex extends React.Component{
 
 
     return(
-      <div>
+      <div className='index-wrapper'>
         {eventIndex}
       </div>
     );
