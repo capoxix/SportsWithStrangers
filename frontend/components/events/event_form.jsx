@@ -29,7 +29,8 @@ class EventForm extends React.Component {
     e.preventDefault();
     // const event = Object.assign({}, this.state); //need to add category_id & city_id
     // this.props.processForm(event);
-    this.setState({date_time: this.state.date_time.format('MMMM Do YYYY, h:mm:ss a')});
+    this.state.date_time = this.state.date_time.toString();
+    window.state = this.state;
     console.log(this.state);
   }
 
