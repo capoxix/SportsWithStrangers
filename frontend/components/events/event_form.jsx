@@ -59,7 +59,7 @@ class EventForm extends React.Component {
     ));
 
     let categories = [ <option value="" disabled selected>Select Sports Category</option>];
-    this.props.categories.forEach((category) => cities.push(
+    this.props.categories.forEach((category) => categories.push(
       <option value={`${category.id}`}>{category.name}</option>
     ));
     // console.log(this.state.date_time, "datetime");
@@ -91,7 +91,6 @@ class EventForm extends React.Component {
               </div>
 
                 <select onChange={this.update("category_id")}>
-                 <option value="" disabled selected>Select Sports Category</option>
                  {categories}
                 </select>
 

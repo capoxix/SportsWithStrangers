@@ -15,16 +15,16 @@ const msp = (state) => ({
     num_of_members: '',
     description: '',
   },
-  cities: {
+  cities: Object.values({
     1 : {id: 1, name: 'San Francisco'},
     2 : {id: 2, name: 'Oakland'},
     3 : {id: 3, name: 'Los Angeles'}
-  },
-  categories: {
+  }),
+  categories: Object.values({
     2: {id: 2, name: 'Basketball'},
     3: {id: 3, name: 'Soccer'},
     4: {id: 4, name: 'Tennis'}
-  },
+  }),
 });
 
 const mdp = (dispatch, ownProps) => ({
