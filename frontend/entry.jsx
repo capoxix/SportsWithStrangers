@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   // window.logout = SessionAPI.logout;
   // window.login = SessionAPI.login;
-  window.createEvent = EventAPI.createEvent; //confirmed
+  //window.createEvent = EventAPI.createEvent; //confirmed
   // window.updateEvent = EventAPI.updateEvent; //confirmed
   window.getEvent = EventAPI.getEvent; //confirmed
   window.getAllEvents = EventAPI.getAllEvents; //confirmed
@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.fetchEvents = EventACTION.fetchEvents; //confirmed
   window.fetchEvent = EventACTION.fetchEvent; //confirmed
+  window.createEvent = EventACTION.createEvent; //confirmed
 
   let store;
   if (window.currentUser) {
