@@ -31,7 +31,8 @@ class EventForm extends React.Component {
     // const event = Object.assign({}, this.state); //need to add category_id & city_id
     // this.props.processForm(event);
     this.state.date_time = this.state.date_time.toString();
-    window.state = this.state;
+    this.props.processForm(this.state);
+    // window.state = this.state;
   }
 
   update(field){
