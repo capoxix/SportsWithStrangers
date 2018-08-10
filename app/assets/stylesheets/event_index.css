@@ -1,5 +1,5 @@
 .index-wrapper {
     display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: 190px;
 }
