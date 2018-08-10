@@ -49,6 +49,7 @@ class EventForm extends React.Component {
     // const errorsList = this.props.errors.event.map((error) =>
     //   <li>{error}</li>
     // );
+
     let members = [];
     for (let i = 1; i <= 10; i++){
       members.push(<option value={`${i}`}>{`${i}`}</option>);
@@ -64,7 +65,10 @@ class EventForm extends React.Component {
       <option value={`${category.id}`}>{category.name}</option>
     ));
     // console.log(this.state.date_time, "datetime");
-
+    while (this.props.event === undefined){
+      return(<div>Loading......</div>);
+    }
+    console.log("STATE:", this.state);
     return(
       <div className= "form-container">
         <div className="form">

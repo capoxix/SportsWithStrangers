@@ -7,6 +7,7 @@ import {AuthRoute} from '../util/route_util';
 import Splash from './splash';
 import Footer from './footer/footer';
 import CreateEventContainer from './events/create_event_container';
+import UpdateEventContainer from './events/update_event_container';
 // import SitIndexContainer from './sit/sit_index_container';
 // import SearchContainer from './search_container';
 
@@ -19,6 +20,7 @@ const App = () => (
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <Route exact path="/events/new" component={CreateEventContainer}/>
+        <Route exact path="/events/:eventId/edit" component={UpdateEventContainer}/>
         <Route exact path= "/" component= {Splash} />
         <Redirect to='/'/>
       </Switch>
