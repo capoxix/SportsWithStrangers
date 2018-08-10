@@ -68,7 +68,7 @@ class EventForm extends React.Component {
                   placeholder="Street Address (Ex. 1111 Name Street)"
                   />
 
-                  <select>
+                <select onChange={this.update("city_id")}>
                     <option value="" disabled selected>Select City</option>
                     <option value="1">Los Angeles</option>
                     <option value="2">San Francisco</option>
@@ -83,7 +83,7 @@ class EventForm extends React.Component {
                   />
               </div>
 
-                <select>
+                <select onChange={this.update("category_id")}>
                  <option value="" disabled selected>Select Sports Category</option>
                   <option value="1">Basketball</option>
                   <option value="2">Soccer</option>
@@ -91,7 +91,7 @@ class EventForm extends React.Component {
                   <option value="4">Badminton</option>
                 </select>
 
-                <select>
+                <select onChange={this.update("num_of_members")}>
                   <option value="" disabled selected>Select Number of Members</option>
                   {members}
                 </select>
