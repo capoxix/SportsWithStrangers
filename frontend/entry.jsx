@@ -4,6 +4,7 @@ import * as SessionAPI from './util/session_api_util';
 import configureStore from './store/store';
 import Root from './components/root';
 import * as EventAPI from './util/event_api_util';
+import * as EventACTION from  './actions/event_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -14,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getEvent = EventAPI.getEvent; //confirmed
   window.getAllEvents = EventAPI.getAllEvents; //confirmed
   // window.deleteEvent = EventAPI.deleteEvent; //confirmed
+
+
+  window.fetchEvents = EventACTION.fetchEvents;
 
   let store;
   if (window.currentUser) {
