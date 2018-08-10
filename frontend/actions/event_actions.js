@@ -78,4 +78,4 @@ export const createEvent = (event) => dispatch => API.createEvent(event)
   .then(eventServer => dispatch(receiveSingleEvent(eventServer)));
 
 export const deleteEvent = (eventId) => dispatch => API.deleteEvent(eventId)
-  .then(() => removeEvent(eventId));
+  .then(() => dispatch(removeEvent(eventId)));

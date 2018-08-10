@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   // window.logout = SessionAPI.logout;
   // window.login = SessionAPI.login;
-  // window.updateEvent = EventAPI.updateEvent; //confirmed
-  // window.deleteEvent = EventAPI.deleteEvent; //confirmed
+  window.updateEvent = EventACTION.updateEvent; //confirmed
+  window.deleteEvent = EventACTION.deleteEvent; //confirmed
 
 
   window.fetchEvents = EventACTION.fetchEvents; //confirmed
