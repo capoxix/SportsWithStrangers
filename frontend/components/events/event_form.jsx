@@ -1,12 +1,17 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
+import Datetime from 'react-datetime';
+var moment = require('moment');
+
+//Npm install -- save react-datetime
+// Npm installl moment -- save
 
 class EventForm extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      dateTime: new Date(Date.now('UTC')),//need to add datetime
+      date_time: new Date(Date.now('UTC')), //moment().format('MMMM Do YYYY, h:mm:ss a'),//need to add datetime
       user_id: 1, //need to get information of user somehow
       address: '',
       country: '',
@@ -16,18 +21,26 @@ class EventForm extends React.Component {
       description: '',
     };//this.props.event;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
+    this.handleDate = this.handleDate.bind(this);
   }
 
   handleSubmit(e){
     e.preventDefault();
-    const event = Object.assign({}, this.state); //need to add category_id & city_id
-    this.props.processForm(event);
+    // const event = Object.assign({}, this.state); //need to add category_id & city_id
+    // this.props.processForm(event);
+    this.setState({date_time: this.state.date_time.format('MMMM Do YYYY, h:mm:ss a')});
+    console.log(this.state);
   }
 
   update(field){
     return (e) => (
       this.setState({[field]: e.target.value})
     );
+  }
+
+  handleDate(date){
+    this.setState({date_time: date});
   }
 
   render(){
@@ -38,6 +51,7 @@ class EventForm extends React.Component {
     for (let i = 1; i <= 10; i++){
       members.push(<option value={`${i}`}>{`${i}`}</option>);
     }
+    // console.log(this.state.date_time, "datetime");
 
     return(
       <div className= "form-container">
@@ -87,7 +101,7 @@ class EventForm extends React.Component {
                 placeholder="Description">
               </textarea>
 
-
+          <Datetime value={this.state.date_time} onChange={this.handleDate} />
           <input type='submit' value="CREATE SPORTS TIME"/>
           </form>
 
