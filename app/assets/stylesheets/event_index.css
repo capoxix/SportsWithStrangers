@@ -1,12 +1,55 @@
 .index-wrapper {
     display: grid;
-    grid-template-columns: repeat(5, 200px);
-    grid-template-rows: 190px;
+    grid-template-columns: repeat(5, 180px);
+    grid-template-rows: 180px;
 }
 
 .index-item-wrapper{
+  display: grid;
+  grid-template-rows: 75px 20px 40px;
+  border: 1px solid orange;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 15px;
+}
 
-  .date-wrapper{
-    width: 48%;
+.index-item-wrapper .date-user-wrapper{
+   display: grid;
+   grid-template-columns: 40px 75px;
+   text-align: center;
+   border: 1px solid red;
+   column-gap: 40px;
+
+ }
+
+.index-item-wrapper .date-wrapper{
+  border: 1px solid blue;
+  width: 70px;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 75px;
   }
+
+.user{
+    border-radius: 3px;
+     border: 1px solid black;
+     width: 75px;
+     height: 75px;
+     margin: 0 0 0.5em 0.75em;
+}
+
+.address{
+  text-align: center;
+}
+
+.spots {
+  text-align: center;
+}
+
+hr {
+      border-bottom: 1px solid #DDD;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin: 0.8125em 0;
 }
