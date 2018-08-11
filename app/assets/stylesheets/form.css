@@ -4,7 +4,7 @@
 
 .form {
   display:flex;
-  width:600px;
+  width: 520px;
   flex-direction:column;
   margin: 0 auto;
 }
@@ -29,6 +29,7 @@
 
 .form input[type="text"].form-control{
   text-align: center;
+  margin-bottom: 15px;
 }
 
 
@@ -78,21 +79,29 @@
   border: 1px solid lightgray;
 }
 
-.form select, .form input[type="text"].country{
+.form select {
   background-color: white;
   width: 255px;
-  height: 50px;
+  height: 60px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-@media screen and (max-width: 600px) {
-  div.form {
-    width: 100%;
-  }
-  .form input{
-    width: 95%;
-  }
-  .form textarea{
-    width: 95%;
-  }
-  /* weird media query...first few ones, width do not change...*/
+.form-city-country {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.form input[type="text"].form-country{
+  width:  235px;
+}
+
+.form-category-members{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-create-button{
+  margin-bottom: 20px;
 }
