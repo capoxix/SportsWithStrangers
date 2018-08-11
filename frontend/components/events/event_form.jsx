@@ -11,16 +11,6 @@ class EventForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.event;
-    // {
-    //   date_time: new Date(Date.now('UTC')), //moment().format('MMMM Do YYYY, h:mm:ss a'),//need to add datetime
-    //   user_id: 1, //need to get information of user somehow
-    //   address: '',
-    //   country: '',
-    //   city_id: 1,
-    //   category_id: 1,
-    //   num_of_members: 2,
-    //   description: '',
-    // };//this.props.event;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
     this.handleDate = this.handleDate.bind(this);

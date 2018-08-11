@@ -8,6 +8,8 @@
   grid-template-rows: 180px;
   width: 800px;
   margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .index-item-wrapper{
@@ -16,7 +18,8 @@
   border: 1px solid #DDD;
   margin-left: 5px;
   margin-right: 5px;
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   background: #FEFEFE;
 }
 
