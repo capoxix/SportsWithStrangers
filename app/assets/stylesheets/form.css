@@ -61,6 +61,7 @@
  color: white;
  letter-spacing: 3px;
  font-weight: 400;
+ text-transform: uppercase;
 }
 
 .form a{

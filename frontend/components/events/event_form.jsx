@@ -29,7 +29,7 @@ class EventForm extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     this.state.date_time = this.state.date_time.toString();
-    this.props.processForm(this.state);
+    this.props.processForm(this.state).then(() => this.props.history.push('/events'));
   }
 
   update(field){
@@ -46,21 +46,35 @@ class EventForm extends React.Component {
     // const errorsList = this.props.errors.event.map((error) =>
     //   <li>{error}</li>
     // );
+    console.log("event form, event props", this.props.event);
 
     let members = [];
     for (let i = 1; i <= 10; i++){
+      if (this.props.event.num_of_members === i) {
+        members.push(<option value={`${i}`} selected>{`${i}`}</option>);
+      } else {
       members.push(<option value={`${i}`}>{`${i}`}</option>);
     }
-    let cities = [<option value="" disabled selected>Select City</option>];
+    }
+    let cities = [<option value="" disabled>Select City</option>];
 
-    this.props.cities.forEach((city) => cities.push(
-      <option value={`${city.id}`}>{city.name}</option>
-    ));
+    this.props.cities.forEach((city) => {
+      if(this.props.event.city_id === city.id){
+        cities.push(<option value={`${city.id}`} selected>{city.name}</option>);
+      } else{
+        cities.push(<option value={`${city.id}`}>{city.name}</option>);
+        }
+    });
 
-    let categories = [ <option value="" disabled selected>Select Sports Category</option>];
-    this.props.categories.forEach((category) => categories.push(
-      <option value={`${category.id}`}>{category.name}</option>
-    ));
+    let categories = [ <option value="" disabled>Select Sports Category</option>];
+    this.props.categories.forEach((category) => {
+      if(this.props.event.category_id === category.id) {
+        categories.push(<option value={`${category.id}`} selected>{category.name}</option>);
+
+      } else {
+      categories.push(<option value={`${category.id}`}>{category.name}</option>);
+      }
+    });
     // console.log(this.state.date_time, "datetime");
     while (this.props.event === undefined){
       return(<div>Loading......</div>);
@@ -119,7 +133,7 @@ class EventForm extends React.Component {
             </div>
 
             <div className="form-create-button">
-              <input type='submit' value="CREATE SPORTS TIME"/>
+              <input type='submit' value={this.props.formType}/>
             </div>
         </form>
 
