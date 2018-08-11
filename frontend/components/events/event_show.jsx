@@ -38,17 +38,21 @@ class EventShow extends React.Component{
 
           <div className="event-date">
             <div className="emoji"></div>
+            <div className="">{`${dateArr[1]} ${dateArr[2]}`}</div>
           </div>
 
           <div className="event-time">
             <div className="emoji"></div>
+            <div className="">{`${hour}-${until}`}</div>
           </div>
           <div className="event-address">
             <div className="emoji"></div>
+            <div className="">{event.address}</div>
           </div>
 
           <div className="event-city-country">
             <div className="emoji"></div>
+            <div className="">{event.city_id}, {event.country}</div>
           </div>
 
           <div className='event-spots'>
@@ -58,10 +62,6 @@ class EventShow extends React.Component{
         <ul>
           <li>Event Info</li>
           <li>Sport Category Id: {event.category_id}</li>
-          <li>Datetime: {event.date_time}</li>
-          <li>Address: {event.address}</li>
-          <li>City Id: {event.city_id}</li>
-          <li>Country: {event.country}</li>
           <li>Description: {event.description}</li>
         </ul>
 
