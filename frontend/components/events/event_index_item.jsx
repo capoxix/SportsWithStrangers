@@ -26,6 +26,7 @@ const EventIndexItem = (props) => {
       <div className='address'>{`${props.event.address},  ${props.event.city_id}`}</div>
         <hr></hr>
       <div className='spots'>{`${props.event.num_of_members} spots left`}</div>
+      <div className='show-link'><Link to={`/events/${props.event.id}`}> THIS ONE → </Link></div>
   </div>
   );
 };
