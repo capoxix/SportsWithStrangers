@@ -14,7 +14,7 @@ export default (state = {}, action) => {
     case RECEIVE_ALL_EVENT:
       return merge({}, state, action.payload.events);
     case RECEIVE_SINGLE_EVENT_SHOW:
-      return merge({}, state,
+      return Object.assign({}, state,
         {[action.payload.event.id]: action.payload.event});
     case REMOVE_EVENT:
       let newState = merge({}, state);

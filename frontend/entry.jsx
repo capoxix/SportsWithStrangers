@@ -10,19 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   // window.logout = SessionAPI.logout;
   // window.login = SessionAPI.login;
-  window.updateEvent = EventACTION.updateEvent; //confirmed
-  window.deleteEvent = EventACTION.deleteEvent; //confirmed
-
-
-  window.fetchEvents = EventACTION.fetchEvents; //confirmed
-  window.fetchEvent = EventACTION.fetchEvent; //confirmed
-  window.createEvent = EventACTION.createEvent; //confirmed
-
+  // window.updateEvent = EventACTION.updateEvent; //confirmed
+  // window.deleteEvent = EventACTION.deleteEvent; //confirmed
+  //
+  //
+  // window.fetchEvents = EventACTION.fetchEvents; //confirmed
+  // window.fetchEvent = EventACTION.fetchEvent; //confirmed
+  // window.createEvent = EventACTION.createEvent; //confirmed
+  // EventAPI.getAllEvents().then(response => (window.events = response.events));
   let store;
   if (window.currentUser) {
     const preloadedState = {
       entities: {
-        users: { [window.currentUser.id]: window.currentUser }
+        users: { [window.currentUser.id]: window.currentUser },
       },
       session: { id: window.currentUser.id }
     };
