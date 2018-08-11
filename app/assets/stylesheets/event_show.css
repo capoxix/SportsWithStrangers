@@ -1,0 +1,17 @@
+.event-show-container{
+    background-color: #f5ebd0;
+}
+
+.event-show-wrapper{
+    display: grid;
+    width: 900px;
+    grid-template-columns: 500px 500px;
+    margin: 0 auto;
+}
+
+.event-info {
+    background-color: white;
+    width: 280px;
+    height: 340px;
+    padding: 15px;
+}
