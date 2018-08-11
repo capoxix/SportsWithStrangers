@@ -38,37 +38,38 @@ class EventShow extends React.Component{
     return(
       <div className= "event-show-container">
         <div className="event-show-wrapper">
-          <div className="event-info">
-            <div className="event-author">
-              Join {user.name} for sport time
-            </div>
-            <div className="event-category">
-              <div className="emoji"></div>
-              <div className="">{event.category_id}</div>
-            </div>
-            <div className="event-date">
-              <div className="emoji"></div>
-              <div className="">{`${dateArr[1]} ${dateArr[2]}`}</div>
-            </div>
+          <div className="event-sign-info">
+            <div className="event-info">
+              <div className="event-author">
+                <h2>Join {user.name} for sport time</h2>
+              </div>
+              <div className="event-category">
+                <div className="emoji"></div>
+                <div className=""><h4>{event.category_id}</h4></div>
+              </div>
+              <div className="event-date">
+                <div className="emoji"></div>
+                <div className=""><h4>{`${dateArr[1]} ${dateArr[2]}`}</h4></div>
+              </div>
 
-            <div className="event-time">
-              <div className="emoji"></div>
-              <div className="">{`${hour}-${until}`}</div>
-            </div>
-            <div className="event-address">
-              <div className="emoji"></div>
-              <div className="">{event.address}</div>
-            </div>
+              <div className="event-time">
+                <div className="emoji"></div>
+                <div className=""><h4>{`${hour}-${until}`}</h4></div>
+              </div>
+              <div className="event-address">
+                <div className="emoji"></div>
+                <div className="">{event.address}</div>
+              </div>
 
-            <div className="event-city-country">
-              <div className="emoji"></div>
-              <div className="">{event.city_id}, {event.country}</div>
-            </div>
+              <div className="event-city-country">
+                <div className="emoji"></div>
+                <div className="">{event.city_id}, {event.country}</div>
+              </div>
 
-            <div className='event-spots'>
-              {event.num_of_members} SPOTS LEFT!
+              <div className='event-spots'>
+                {event.num_of_members} SPOTS LEFT!
+              </div>
             </div>
-
 
             <div className="current-user">
               <div className="user-info">
@@ -81,28 +82,31 @@ class EventShow extends React.Component{
             </div>
           </div>
 
-          <div className="author-info">
-            <div className=""> Meet your Host, {user.name}</div>
-            <div className="">(It'll be helpful to know what they look like
-              when you're looking for a group of confused strangers at the court.)</div>
-            <div className="author-img"></div>
+          <div className="more-info">
 
 
-          <div className="author-event-description">
-            <div className="user-catchphrase">
-              {user.user_catchphrase}
+            <div className="author-info">
+              <div className=""><h2> Meet your Host, {user.name}</h2></div>
+              <div className="">(It'll be helpful to know what they look like
+                when you're looking for a group of confused strangers at the court.)</div>
+              <div className="author-img"></div>
             </div>
 
-            <div className="user-description">
-              <h2>What's your story?</h2>
-              <div>{user.user_description}</div>
-            </div>
+            <div className="author-event-description">
+              <div className="user-catchphrase">
+                {user.user_catchphrase}
+              </div>
 
-            <div className="event-description">
-              <h2>What might we play?</h2>
-              <div>{event.description}</div>
+              <div className="user-description">
+                <h2>What's your story?</h2>
+                <div>{user.user_description}</div>
+              </div>
+
+              <div className="event-description">
+                <h2>What might we play?</h2>
+                <div>{event.description}</div>
+              </div>
             </div>
-          </div>
         </div>
       </div>
       </div>

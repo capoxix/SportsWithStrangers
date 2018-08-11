@@ -5,13 +5,33 @@
 .event-show-wrapper{
     display: grid;
     width: 900px;
-    grid-template-columns: 500px 500px;
+    grid-template-columns: 255px 500px;
     margin: 0 auto;
 }
 
 .event-info {
     background-color: white;
-    width: 280px;
-    height: 340px;
+    width: 230px;
+    height: 330px;
     padding: 15px;
+    margin-bottom: 20px;
+}
+
+.current-user{
+
+}
+
+.author-info{
+}
+
+.more-info{
+  display: grid;
+  padding-left: 36px;
+  width: 365px;
+  margin: 0 auto;
+}
+
+.author-event-description{
+    border: 1px solid #DDD;
+    background-color: #FEFEFE;
 }
