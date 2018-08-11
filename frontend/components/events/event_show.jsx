@@ -5,6 +5,11 @@ class EventShow extends React.Component{
     super(props);
   }
 
+  componentWillReceiveProps(ownProps){
+    if (this.props.match.params.eventId != ownProps.match.params.eventId){
+      this.props.fetchEvent(ownProps.match.params.eventId);
+    }
+  }
   componentDidMount(){
     this.props.fetchEvent(this.props.match.params.eventId);
   }
