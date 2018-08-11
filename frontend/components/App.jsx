@@ -20,10 +20,11 @@ const App = () => (
       <Switch>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <Route exact path="/events/:eventId" component={EventShowContainer}/>
-        <Route exact path="/events" component={EventIndexContainer}/>
         <Route exact path="/events/new" component={CreateEventContainer}/>
         <Route exact path="/events/:eventId/edit" component={UpdateEventContainer}/>
+        <Route exact path="/events" component={EventIndexContainer}/>
+          <Route exact path="/events/:eventId" component={EventShowContainer}/>
+
         <Route exact path= "/" component= {Splash} />
         <Redirect to='/'/>
       </Switch>

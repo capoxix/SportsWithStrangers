@@ -44,6 +44,7 @@ class Header extends React.Component{
               <p>Hello, {this.props.currentUser.name}</p>
             </nav>
             <nav className="right">
+              <Link to='/events/new'>HOSTING</Link>
               <Link to='/events'>SPORT EVENTS</Link>
               <Link to='/users/dashboard'>DASHBOARD</Link>
               <button onClick={this.props.logout}>LOGOUT</button>

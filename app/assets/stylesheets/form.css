@@ -71,6 +71,19 @@
 
 }
 
+.form select{
+  background-color: white;
+  width: 255px;
+  height: 50px;
+  border: 1px solid lightgray;
+}
+
+.form select, .form input[type="text"].country{
+  background-color: white;
+  width: 255px;
+  height: 50px;
+}
+
 @media screen and (max-width: 600px) {
   div.form {
     width: 100%;

@@ -71,26 +71,31 @@ class EventForm extends React.Component {
 
 
           <form onSubmit={this.handleSubmit}>
-              <div className="full-address">
+
+              <div className="form-address">
                 <input
                   type="text"
                   onChange={this.update("address")}
                   value={this.state.address}
                   placeholder="Street Address (Ex. 1111 Name Street)"
                   />
-
-                <select onChange={this.update("city_id")}>
-                  {cities}
-                  </select>
-
-                <input
-                  type="text"
-                  onChange={this.update("country")}
-                  value={this.state.country}
-                  placeholder="Country"
-                  />
               </div>
 
+              <div className="form-city-country">
+                  <select onChange={this.update("city_id")}>
+                    {cities}
+                    </select>
+
+                  <input
+                    className="form-country"
+                    type="text"
+                    onChange={this.update("country")}
+                    value={this.state.country}
+                    placeholder="Country"
+                    />
+                </div>
+
+              <div className="form-category-members">
                 <select onChange={this.update("category_id")}>
                  {categories}
                 </select>
@@ -99,16 +104,24 @@ class EventForm extends React.Component {
                   <option value="" disabled selected>Select Number of Members</option>
                   {members}
                 </select>
+              </div>
 
-              <textarea
-                onChange={this.update("description")}
-                value={this.state.description}
-                placeholder="Description">
-              </textarea>
+              <div className="form-description">
+                <textarea
+                  onChange={this.update("description")}
+                  value={this.state.description}
+                  placeholder="Description">
+                </textarea>
+              </div>
 
-          <Datetime value={this.state.date_time} onChange={this.handleDate}/>
-          <input type='submit' value="CREATE SPORTS TIME"/>
-          </form>
+            <div className="form-date">
+              <Datetime value={this.state.date_time} onChange={this.handleDate}/>
+            </div>
+
+            <div className="form-create-button">
+              <input type='submit' value="CREATE SPORTS TIME"/>
+            </div>
+        </form>
 
         </div>
       </div>
