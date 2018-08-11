@@ -6,6 +6,7 @@ const msp = (state) => ({
   errors: state.errors,
   events: state.entities.events,
   users: state.entities.users,
+  currentUserId: state.session.id,
   cities: Object.values({
     1 : {id: 1, name: 'San Francisco'},
     2 : {id: 2, name: 'Oakland'},

@@ -19,6 +19,7 @@ class EventShow extends React.Component{
     }
     const event = this.props.events[this.props.match.params.eventId];
     const user = this.props.users[event.user_id];
+    const currentUser = this.props.users[this.props.currentUserId];
 
 
       let date = new Date(event.date_time);
@@ -30,12 +31,15 @@ class EventShow extends React.Component{
        until = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
       let dateArr = date.toString().split(" ");
     return(
-      <div>
+      <div className="event-show-container">
         <div className="event-info">
           <div className="event-author">
             Join {user.name} for sport time
           </div>
-
+          <div className="event-category">
+            <div className="emoji"></div>
+            <div className="">{event.category_id}</div>
+          </div>
           <div className="event-date">
             <div className="emoji"></div>
             <div className="">{`${dateArr[1]} ${dateArr[2]}`}</div>
@@ -59,18 +63,39 @@ class EventShow extends React.Component{
             {event.num_of_members} SPOTS LEFT!
           </div>
         </div>
-        <ul>
-          <li>Event Info</li>
-          <li>Sport Category Id: {event.category_id}</li>
-          <li>Description: {event.description}</li>
-        </ul>
 
-        <ul>
-          <li>Author Info</li>
-          <li>Name: {user.name}</li>
-          <li>user_catchphrase: {user.user_catchphrase}</li>
-          <li>user_description: {user.user_description}</li>
-        </ul>
+        <div className="current-user">
+          <div className="user-info">
+            <div>NAME</div>
+            <div>{currentUser.name}</div>
+            <div>EMAIL</div>
+            <div>{currentUser.email}</div>
+            <div><input onClick={()=> console.log(`${currentUser.id} joins event...`)} type='submit' value='SIGN ME UP'/></div>
+          </div>
+        </div>
+
+        <div className="author-info">
+          <div className=""> Meet your Host, {user.name}</div>
+          <div className="">(It'll be helpful to know what they look like
+            when you're looking for a group of confused strangers at the court.)</div>
+          <div className="author-img"></div>
+        </div>
+
+        <div className="author-event-description">
+          <div className="user-catchphrase">
+            {user.user_catchphrase}
+          </div>
+
+          <div className="user-description">
+            <h2>What's your story?</h2>
+            <div>{user.user_description}</div>
+          </div>
+
+          <div className="event-description">
+            <h2>What might we play?</h2>
+            <div>{event.description}</div>
+          </div>
+        </div>
       </div>
     );
   }
