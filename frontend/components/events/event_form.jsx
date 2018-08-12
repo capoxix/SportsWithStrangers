@@ -43,18 +43,7 @@ class EventForm extends React.Component {
     this.props.fetchCategories();
   }
 
-  render(){
-
-    // console.log("event form, event props", this.props.event);
-
-    let members = [];
-    for (let i = 1; i <= 10; i++){
-      if (this.props.event.num_of_members === i) {
-        members.push(<option value={`${i}`} selected>{`${i}`}</option>);
-      } else {
-      members.push(<option value={`${i}`}>{`${i}`}</option>);
-    }
-    }
+  getCities(){
     let cities = [<option value="" disabled selected>Select City</option>];
 
     Object.values(this.props.cities).forEach((city) => {
@@ -65,6 +54,23 @@ class EventForm extends React.Component {
         }
     });
 
+    return cities;
+  }
+
+  getMembers(){
+    let members = [];
+    for (let i = 2; i <= 10; i++){
+      if (this.props.event.num_of_members === i) {
+        members.push(<option value={`${i}`} selected>{`${i}`}</option>);
+      } else {
+      members.push(<option value={`${i}`}>{`${i}`}</option>);
+      }
+    }
+
+    return members;
+  }
+
+  getCategories(){
     let categories = [ <option value="" disabled selected>Select Sports Category</option>];
     Object.values(this.props.categories).forEach((category) => {
       if(this.props.event.category_id === category.id) {
@@ -74,6 +80,15 @@ class EventForm extends React.Component {
       categories.push(<option value={`${category.id}`}>{category.name}</option>);
       }
     });
+
+    return categories;
+  }
+
+  render(){
+    // console.log("event form, event props", this.props.event);
+    let members = this.getMembers();
+    let cities = this.getCities();
+    let categories = this.getCategories();
     // console.log(this.state.date_time, "datetime");
     // console.log("cities",cities);
     // console.log("categories", categories);
