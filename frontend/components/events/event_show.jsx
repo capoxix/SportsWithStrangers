@@ -52,8 +52,8 @@ class EventShow extends React.Component{
         options = [<input onClick={()=> console.log(`${currentUser.id} joins event...`)} type='submit' value='SIGN ME UP'/>];
       } else {
         options = [
-            <input onClick={this.sendToEditPage(this.props.match.params.eventId)} type='submit' value="EDIT"/>,
-            <input onClick={this.deleteSendToIndex(this.props.match.params.eventId)} type='submit' value="DELETE"/>
+            <input className="edit" onClick={this.sendToEditPage(this.props.match.params.eventId)} type='submit' value="EDIT"/>,
+            <input className="delete" onClick={this.deleteSendToIndex(this.props.match.params.eventId)} type='submit' value="DELETE"/>
       ];
       }
 

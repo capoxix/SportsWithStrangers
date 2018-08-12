@@ -209,3 +209,13 @@
     padding: 2em;
     box-sizing: border-box;
 }
+
+input[type="submit"].edit {
+  background-color: #F7BF4D;
+  border-color: #F7BF4D ;
+}
+
+input[type="submit"].delete {
+  background-color: red;
+  border-color: red;
+}
