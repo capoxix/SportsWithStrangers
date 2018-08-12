@@ -66,16 +66,24 @@ const removeEvent = (eventId) => ({
 
 //fetches all events and users info (at beginning and puts into state)
 export const fetchEvents = () => dispatch => API.getAllEvents()
-  .then(payload => dispatch(receiveAllEvents(payload)));
+  .then(payload => dispatch(receiveAllEvents(payload)))
+  .fail((errors) => dispatch(receiveEventErrors(errors.responseJSON)));
 
 export const fetchEvent = (id) => dispatch => API.getEvent(id)
-  .then(payload => dispatch(receiveSingleEventShow(payload)));
+  .then(payload => dispatch(receiveSingleEventShow(payload)))
+  .fail((errors) => dispatch(receiveEventErrors(errors.responseJSON)));
+
 
 export const updateEvent = (event) => dispatch => API.updateEvent(event)
-  .then(eventServer => dispatch(receiveSingleEvent(eventServer)));
+  .then(eventServer => dispatch(receiveSingleEvent(eventServer)))
+  .fail((errors) => dispatch(receiveEventErrors(errors.responseJSON)));
+
 
 export const createEvent = (event) => dispatch => API.createEvent(event)
-  .then(eventServer => dispatch(receiveSingleEvent(eventServer)));
+  .then(eventServer => dispatch(receiveSingleEvent(eventServer)))
+  .fail((errors) => dispatch(receiveEventErrors(errors.responseJSON)));
+
 
 export const deleteEvent = (eventId) => dispatch => API.deleteEvent(eventId)
-  .then(() => dispatch(removeEvent(eventId)));
+  .then(() => dispatch(removeEvent(eventId)))
+  .fail((errors) => dispatch(receiveEventErrors(errors.responseJSON)));
