@@ -68,25 +68,25 @@ class EventShow extends React.Component{
                 </div>
                 <hr></hr>
                 <div className="event-category">
-                  <div className="emoji"></div>
+                  <div className="emoji"><img src={window.images[categories[event.category_id].name]}></img></div>
                   <div className=""><h4>{categories[event.category_id].name.toUpperCase()}</h4></div>
                 </div>
                 <div className="event-date">
-                  <div className="emoji"></div>
+                  <div className="emoji"><img src={window.images.calendarIcon}></img></div>
                   <div className=""><h4>{`${day}, ${dateArr[1]} ${dateArr[2]}`}</h4></div>
                 </div>
 
                 <div className="event-time">
-                  <div className="emoji"></div>
+                  <div className="emoji"><img src={window.images.clockIcon}></img></div>
                   <div className=""><h4>{`${hour}-${until}`}</h4></div>
                 </div>
                 <div className="event-address">
-                  <div className="emoji"></div>
+                  <div className="emoji"><img src={window.images.addressIcon}></img></div>
                   <div className=""><h5>{event.address}</h5></div>
                 </div>
 
                 <div className="event-city-country">
-                  <div className="emoji"></div>
+                  <div className="emoji"><img src={window.images.cityIcon}></img></div>
                   <div className=""><h5>{cities[event.city_id].name}, {event.country}</h5></div>
                 </div>
                 <hr></hr>
