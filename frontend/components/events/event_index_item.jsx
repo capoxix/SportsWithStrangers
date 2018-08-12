@@ -27,7 +27,8 @@ const EventIndexItem = (props) => {
             </div>
             <div className= 'user'>
               <img src={props.user.imgUrl}></img>
-              {props.user.name}</div>
+              <p>{props.user.name}</p>
+            </div>
           </div>
           <div className='address'>{`${props.event.address},  ${city}`}</div>
             <hr></hr>
