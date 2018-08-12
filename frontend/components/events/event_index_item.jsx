@@ -32,7 +32,7 @@ const EventIndexItem = (props) => {
           </div>
           <div className='address'>{`${props.event.address},  ${city}`}</div>
             <hr></hr>
-          <div className='spots'>{`${props.event.num_of_members} spots left`}</div>
+          <div className='spots'>{`${props.event.num_of_members} spots left!`}</div>
           <div className='show-link'><Link to={`/events/${props.event.id}`}> THIS ONE → </Link></div>
       </div>
     );
