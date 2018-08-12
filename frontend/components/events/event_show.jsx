@@ -52,7 +52,7 @@ class EventShow extends React.Component{
                 </div>
                 <div className="event-date">
                   <div className="emoji"></div>
-                  <div className=""><h4>{`${dateArr[1]} ${dateArr[2]}`}</h4></div>
+                  <div className=""><h4>{`${day}, ${dateArr[1]} ${dateArr[2]}`}</h4></div>
                 </div>
 
                 <div className="event-time">
