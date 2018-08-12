@@ -15,5 +15,5 @@ const receiveAllCategories = categories => ({
 export const fetchCities = () => dispatch => API.getAllCities()
   .then(cities => dispatch(receiveAllCities(cities)));
 
-export const fetchCategories = () => dispatch => API.getAllCities()
+export const fetchCategories = () => dispatch => API.getAllCategories()
   .then(categories => dispatch(receiveAllCategories(categories)));
