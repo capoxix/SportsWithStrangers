@@ -78,6 +78,10 @@
   color: #929292;
   //border: 1px solid blue;
   margin-top: 13px;
+  font-weight: 400;
+  font-size: .8em;
+  text-align: left;
+  margin-left: 8px;
 }
 
 .spots {
@@ -108,4 +112,12 @@ hr {
   font-weight: 600;
   margin: 0;
   line-height: 1.25;
+}
+
+.category img{
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }

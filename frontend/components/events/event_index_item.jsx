@@ -20,7 +20,7 @@ const EventIndexItem = (props) => {
 
           <div className='date-user-wrapper'>
             <div className='date-wrapper'>
-              <div className='category'>{category}</div>
+              <div className='category'><img src={window.images[category]}></img></div>
               <div className= 'day'>{day}</div>
               <div className='date'>{`${dateArr[1]} ${dateArr[2]}`}</div>
               <div className='hour'>{`${hour}-${until}`}</div>
