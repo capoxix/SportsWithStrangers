@@ -32,6 +32,11 @@ class EventForm extends React.Component {
     this.setState({date_time: date});
   }
 
+  componentDidMount(){
+    this.props.fetchCities();
+    this.props.fetchCategories();
+  }
+
   render(){
     // const errorsList = this.props.errors.event.map((error) =>
     //   <li>{error}</li>
@@ -48,7 +53,7 @@ class EventForm extends React.Component {
     }
     let cities = [<option value="" disabled>Select City</option>];
 
-    this.props.cities.forEach((city) => {
+    Object.values(this.props.cities).forEach((city) => {
       if(this.props.event.city_id === city.id){
         cities.push(<option value={`${city.id}`} selected>{city.name}</option>);
       } else{
@@ -57,7 +62,7 @@ class EventForm extends React.Component {
     });
 
     let categories = [ <option value="" disabled>Select Sports Category</option>];
-    this.props.categories.forEach((category) => {
+    Object.values(this.props.categories).forEach((category) => {
       if(this.props.event.category_id === category.id) {
         categories.push(<option value={`${category.id}`} selected>{category.name}</option>);
 

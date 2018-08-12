@@ -12,6 +12,8 @@ class EventIndex extends React.Component{
 
   componentDidMount(){
     this.props.fetchEvents();
+    this.props.fetchCities();
+    this.props.fetchCategories();
   }
 
   render(){
@@ -23,7 +25,12 @@ class EventIndex extends React.Component{
 
     const eventIndex = Object.values(this.props.events).map(event => (
       <div>
-        <EventIndexItem event={event} user={this.props.users[event.user_id]}/>
+        <EventIndexItem
+          key={event.id}
+          event={event}
+          user={this.props.users[event.user_id]}
+          cities={Object.values(this.props.cities)}
+          categories={Object.values(this.props.categories)}/>
       </div>
     ));
 

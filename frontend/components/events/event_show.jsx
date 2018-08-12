@@ -13,6 +13,8 @@ class EventShow extends React.Component{
   }
   componentDidMount(){
     this.props.fetchEvent(this.props.match.params.eventId);
+    this.props.fetchCities();
+    this.props.fetchCategories();
   }
 
   render(){
