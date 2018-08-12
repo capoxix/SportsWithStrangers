@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import EventShow from './event_show';
-import {fetchEvent} from '../../actions/event_actions';
+import {fetchEvent, deleteEvent} from '../../actions/event_actions';
 import {fetchCities, fetchCategories} from  '../../actions/filter_actions';
 
 const msp = (state) => ({
@@ -14,6 +14,7 @@ const msp = (state) => ({
 
 const mdp = (dispatch) => ({
   fetchEvent: (id) => dispatch(fetchEvent(id)),
+  deleteEvent: (id) => dispatch(deleteEvent(id)),
   fetchCities: () => dispatch(fetchCities()),
   fetchCategories: () => dispatch(fetchCategories())
 });

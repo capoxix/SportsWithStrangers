@@ -4,6 +4,8 @@ import {Link} from 'react-router-dom';
 class EventShow extends React.Component{
   constructor(props){
     super(props);
+    this.sendToEditPage = this.sendToEditPage.bind(this);
+    this.deleteSendToIndex = this.deleteSendToIndex.bind(this);
   }
 
   componentWillReceiveProps(ownProps){
@@ -15,6 +17,14 @@ class EventShow extends React.Component{
     this.props.fetchEvent(this.props.match.params.eventId);
     this.props.fetchCities();
     this.props.fetchCategories();
+  }
+
+  sendToEditPage(id){
+    return () => this.props.history.push(`/events/${id}/edit`);
+  }
+
+  deleteSendToIndex(id){
+    return () => this.props.deleteEvent(id).then(this.props.history.push(`/events`));
   }
 
   render(){
@@ -37,6 +47,15 @@ class EventShow extends React.Component{
       let until = date.setHours((date.getHours() + 2) % 24);
        until = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
       let dateArr = date.toString().split(" ");
+      let options;
+      if (currentUser.id != event.user_id) {
+        options = [<input onClick={()=> console.log(`${currentUser.id} joins event...`)} type='submit' value='SIGN ME UP'/>];
+      } else {
+        options = [
+            <input onClick={this.sendToEditPage(this.props.match.params.eventId)} type='submit' value="EDIT"/>,
+            <input onClick={this.deleteSendToIndex(this.props.match.params.eventId)} type='submit' value="DELETE"/>
+      ];
+      }
 
       return(
         <div className= "event-show-container">
@@ -81,8 +100,8 @@ class EventShow extends React.Component{
                   <input className="attendance" value={currentUser.name}></input>
                   <label className="show-label">EMAIL</label>
                   <input className="attendance" value={currentUser.email}></input>
-                  <div className="join-container">
-                    <input onClick={()=> console.log(`${currentUser.id} joins event...`)} type='submit' value='SIGN ME UP'/>
+                  <div className="options-container">
+                    {options}
                     <Link to="/events">See Other Sport Times</Link>
                 </div>
                 </div>
