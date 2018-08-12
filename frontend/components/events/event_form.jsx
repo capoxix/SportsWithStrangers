@@ -39,9 +39,7 @@ class EventForm extends React.Component {
   }
 
   render(){
-    // const errorsList = this.props.errors.event.map((error) =>
-    //   <li>{error}</li>
-    // );
+
     // console.log("event form, event props", this.props.event);
 
     let members = [];
@@ -74,13 +72,18 @@ class EventForm extends React.Component {
     // console.log(this.state.date_time, "datetime");
     // console.log("cities",cities);
     // console.log("categories", categories);
+    const errorsList = this.props.errors.event.map((error) =>
+      <li>{error}</li>
+    );
     while (this.props.event === undefined || this.props.cities === {} || this.props.categories === {}){
       return(<div>Loading......</div>);
     }
     return(
       <div className= "form-container">
         <div className="form">
-
+          <ul className='error'>
+            {errorsList}
+          </ul>
 
           <form onSubmit={this.handleSubmit}>
 
