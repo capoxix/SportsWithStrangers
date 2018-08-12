@@ -47,6 +47,7 @@ class EventShow extends React.Component{
       let until = date.setHours((date.getHours() + 2) % 24);
        until = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
       let dateArr = date.toString().split(" ");
+
       let options;
       if (currentUser.id != event.user_id) {
         options = [<input onClick={()=> console.log(`${currentUser.id} joins event...`)} type='submit' value='SIGN ME UP'/>];

@@ -3,7 +3,7 @@ import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './user/signup_form_container';
-import {AuthRoute} from '../util/route_util';
+import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import Splash from './splash';
 import Footer from './footer/footer';
 import CreateEventContainer from './events/create_event_container';
@@ -20,10 +20,10 @@ const App = () => (
       <Switch>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <Route exact path="/events/new" component={CreateEventContainer}/>
-        <Route exact path="/events/:eventId/edit" component={UpdateEventContainer}/>
+        <ProtectedRoute exact path="/events/new" component={CreateEventContainer}/>
+        <ProtectedRoute exact path="/events/:eventId/edit" component={UpdateEventContainer}/>
         <Route exact path="/events" component={EventIndexContainer}/>
-          <Route exact path="/events/:eventId" component={EventShowContainer}/>
+        <ProtectedRoute exact path="/events/:eventId" component={EventShowContainer}/>
 
         <Route exact path= "/" component= {Splash} />
         <Redirect to='/'/>
