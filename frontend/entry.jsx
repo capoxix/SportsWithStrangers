@@ -5,7 +5,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import * as EventAPI from './util/event_api_util';
 import * as EventACTION from  './actions/event_actions';
-import * as FilterAPI from './util/filter_api_util';
+import * as FilterACTION from './actions/filter_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.createEvent = EventACTION.createEvent; //confirmed
   // EventAPI.getAllEvents().then(response => (window.events = response.events));
 
-  window.getAllCities = FilterAPI.getAllCities;
-  window.getAllCategories = FilterAPI.getAllCategories;
+  window.fetchCities = FilterACTION.fetchCities;
+  window.fetchCategories = FilterACTION.fetchCategories;
 
   let store;
   if (window.currentUser) {
