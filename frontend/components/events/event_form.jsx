@@ -20,7 +20,12 @@ class EventForm extends React.Component {
     e.preventDefault();
     // console.log("SUBMIT BUTTON HIT");
     this.state.date_time = this.state.date_time.toString();
+    if (this.props.formType === 'Update Sports Time') {
+      let id = this.props.match.params.eventId;
+      this.props.processForm(this.state).then(() => this.props.history.push(`/events/${id}`));
+    } else {
     this.props.processForm(this.state).then(() => this.props.history.push('/events'));
+    }
   }
 
   update(field){
