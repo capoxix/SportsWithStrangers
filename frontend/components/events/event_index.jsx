@@ -18,7 +18,7 @@ class EventIndex extends React.Component{
 
   render(){
 
-    console.log("EVENT INDEX");
+    // console.log("EVENT INDEX");
     if (this.props.events === undefined){
       return <div>Loading.....</div>;
     }

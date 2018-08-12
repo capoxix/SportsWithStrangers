@@ -1,5 +1,5 @@
 class Api::EventsController < ApplicationController
-  before_action :require_logged_in
+  before_action :require_logged_in, except: [:index]
 
   def index
     @events = Event.all
@@ -9,7 +9,7 @@ class Api::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.user_id = current_user.id
-
+    # debugger
     if @event.save
       render json: @event
     else

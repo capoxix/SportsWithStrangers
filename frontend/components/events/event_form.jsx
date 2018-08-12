@@ -18,14 +18,15 @@ class EventForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
+    // console.log("SUBMIT BUTTON HIT");
     this.state.date_time = this.state.date_time.toString();
     this.props.processForm(this.state).then(() => this.props.history.push('/events'));
   }
 
   update(field){
-    return (e) => (
-      this.setState({[field]: e.target.value})
-    );
+    return (e) => {
+      this.setState({[field]: e.target.value});
+    };
   }
 
   handleDate(date){
@@ -41,7 +42,7 @@ class EventForm extends React.Component {
     // const errorsList = this.props.errors.event.map((error) =>
     //   <li>{error}</li>
     // );
-    console.log("event form, event props", this.props.event);
+    // console.log("event form, event props", this.props.event);
 
     let members = [];
     for (let i = 1; i <= 10; i++){
@@ -51,7 +52,7 @@ class EventForm extends React.Component {
       members.push(<option value={`${i}`}>{`${i}`}</option>);
     }
     }
-    let cities = [<option value="" disabled>Select City</option>];
+    let cities = [<option value="" disabled selected>Select City</option>];
 
     Object.values(this.props.cities).forEach((city) => {
       if(this.props.event.city_id === city.id){
@@ -61,7 +62,7 @@ class EventForm extends React.Component {
         }
     });
 
-    let categories = [ <option value="" disabled>Select Sports Category</option>];
+    let categories = [ <option value="" disabled selected>Select Sports Category</option>];
     Object.values(this.props.categories).forEach((category) => {
       if(this.props.event.category_id === category.id) {
         categories.push(<option value={`${category.id}`} selected>{category.name}</option>);
@@ -71,7 +72,9 @@ class EventForm extends React.Component {
       }
     });
     // console.log(this.state.date_time, "datetime");
-    while (this.props.event === undefined){
+    // console.log("cities",cities);
+    // console.log("categories", categories);
+    while (this.props.event === undefined || this.props.cities === {} || this.props.categories === {}){
       return(<div>Loading......</div>);
     }
     return(
