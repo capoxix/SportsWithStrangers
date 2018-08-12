@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class EventShow extends React.Component{
   constructor(props){
@@ -42,8 +43,9 @@ class EventShow extends React.Component{
             <div className="event-sign-info">
               <div className="event-info">
                 <div className="event-author">
-                  <h2>Join {user.name} for sport time</h2>
+                  <h2>Join GARBO for sport time</h2>
                 </div>
+                <hr></hr>
                 <div className="event-category">
                   <div className="emoji"></div>
                   <div className=""><h4>{event.category_id}</h4></div>
@@ -59,26 +61,29 @@ class EventShow extends React.Component{
                 </div>
                 <div className="event-address">
                   <div className="emoji"></div>
-                  <div className="">{event.address}</div>
+                  <div className=""><h5>{event.address}</h5></div>
                 </div>
 
                 <div className="event-city-country">
                   <div className="emoji"></div>
-                  <div className="">{event.city_id}, {event.country}</div>
+                  <div className=""><h5>{event.city_id}, {event.country}</h5></div>
                 </div>
-
+                <hr></hr>
                 <div className='event-spots'>
-                  {event.num_of_members} SPOTS LEFT!
+                  <p className='description'>{event.num_of_members} SPOTS LEFT!</p>
                 </div>
               </div>
 
               <div className="current-user">
                 <div className="user-info">
-                  <div>NAME</div>
-                  <div>{currentUser.name}</div>
-                  <div>EMAIL</div>
-                  <div>{currentUser.email}</div>
-                  <div><input onClick={()=> console.log(`${currentUser.id} joins event...`)} type='submit' value='SIGN ME UP'/></div>
+                  <label className="show-label">NAME</label>
+                  <input className="attendance" value={currentUser.name}></input>
+                  <label className="show-label">EMAIL</label>
+                  <input className="attendance" value={currentUser.email}></input>
+                  <div className="join-container">
+                    <input onClick={()=> console.log(`${currentUser.id} joins event...`)} type='submit' value='SIGN ME UP'/>
+                    <Link to="/events">See Other Sport Times</Link>
+                </div>
                 </div>
               </div>
             </div>
@@ -87,9 +92,9 @@ class EventShow extends React.Component{
 
 
               <div className="author-info">
-                <div className=""><h2> Meet your Host, {user.name}</h2></div>
-                <div className="">(It'll be helpful to know what they look like
-                  when you're looking for a group of confused strangers at the court.)</div>
+                <div className=""><h2> Meet your Host, {user.name}.</h2></div>
+                <div className=""><h5>(It'll be helpful to know what they look like
+                  when you're looking for a group of confused strangers at the court.)</h5></div>
                 <div className="author-img">
                   <img></img>
                 </div>
@@ -97,22 +102,22 @@ class EventShow extends React.Component{
 
               <div className="author-event-description">
                 <div className="user-catchphrase">
-                  {user.user_catchphrase}
+                  <p>{user.user_catchphrase}</p>
                 </div>
 
                 <div className="user-description">
                   <h3>What's your story?</h3>
-                  <div>{user.user_description}</div>
+                  <p>{user.user_description}</p>
                 </div>
 
                 <div className="event-description">
                   <h3>What might we do?</h3>
-                  <div>{event.description}</div>
+                  <p>{event.description}</p>
                 </div>
               </div>
           </div>
         </div>
-        </div>
+      </div>
       );
     }
   }
