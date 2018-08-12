@@ -10,6 +10,7 @@ json.users do
   @events.each do |event|
     json.set! event.user.id do
       json.extract! event.user, :name
+      json.imgUrl url_for(event.user.photo)
     end
   end
 end

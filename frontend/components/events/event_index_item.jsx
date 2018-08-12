@@ -25,7 +25,9 @@ const EventIndexItem = (props) => {
               <div className='date'>{`${dateArr[1]} ${dateArr[2]}`}</div>
               <div className='hour'>{`${hour}-${until}`}</div>
             </div>
-            <div className= 'user'>{props.user.name}</div>
+            <div className= 'user'>
+              <img src={props.user.imgUrl}></img>
+              {props.user.name}</div>
           </div>
           <div className='address'>{`${props.event.address},  ${city}`}</div>
             <hr></hr>
