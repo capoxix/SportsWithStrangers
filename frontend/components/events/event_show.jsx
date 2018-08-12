@@ -18,39 +18,38 @@ class EventShow extends React.Component{
   }
 
   render(){
-
-
+    //when i refresh page...sometimes things do not load on time...(if statement not working?)
+    const {events, users, cities, categories} = this.props;
     // console.log("IN EVENT SHOW");
     // console.log('SHOW PROPS', this.props.events);
     // console.log(this.props.match.params.eventId);
-    if (this.props.events[this.props.match.params.eventId] === undefined) {
-      return <div>Loading....</div>;
-    } else {
-        const event = this.props.events[this.props.match.params.eventId];
-        const user = this.props.users[event.user_id];
-        const currentUser = this.props.users[this.props.currentUserId];
+    if (events[this.props.match.params.eventId] && cities != {} && categories !== {}) {
+      const event = events[this.props.match.params.eventId];
+      const user = users[event.user_id];
+      const currentUser = users[this.props.currentUserId];
 
 
-        let date = new Date(event.date_time);
-        let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-        let day = days[date.getDay()];
-        // let hour = date.getHours();
-        let hour = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
-        let until = date.setHours((date.getHours() + 2) % 24);
-         until = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
-        let dateArr = date.toString().split(" ");
+      let date = new Date(event.date_time);
+      let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+      let day = days[date.getDay()];
+      // let hour = date.getHours();
+      let hour = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
+      let until = date.setHours((date.getHours() + 2) % 24);
+       until = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
+      let dateArr = date.toString().split(" ");
+
       return(
         <div className= "event-show-container">
           <div className="event-show-wrapper">
             <div className="event-sign-info">
               <div className="event-info">
                 <div className="event-author">
-                  <h2>Join GARBO for sport time</h2>
+                  <h2>Join {user.name} for sport time</h2>
                 </div>
                 <hr></hr>
                 <div className="event-category">
                   <div className="emoji"></div>
-                  <div className=""><h4>{event.category_id}</h4></div>
+                  <div className=""><h4>{categories[event.category_id].name.toUpperCase()}</h4></div>
                 </div>
                 <div className="event-date">
                   <div className="emoji"></div>
@@ -68,7 +67,7 @@ class EventShow extends React.Component{
 
                 <div className="event-city-country">
                   <div className="emoji"></div>
-                  <div className=""><h5>{event.city_id}, {event.country}</h5></div>
+                  <div className=""><h5>{cities[event.city_id].name}, {event.country}</h5></div>
                 </div>
                 <hr></hr>
                 <div className='event-spots'>
@@ -121,6 +120,10 @@ class EventShow extends React.Component{
         </div>
       </div>
       );
+
+    }
+      else {
+        return <div>Loading....</div>;
     }
   }
 }
