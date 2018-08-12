@@ -101,17 +101,144 @@ beckham.photo.attach(
   ,filename: 'beckham.jpg'
 )
 
-la = City.create!(name: "Los Angeles")
-sf = City.create!(name: "San Francisco")
+la = City.create!(name: "LA")
+sf = City.create!(name: "SF")
 oakland = City.create!(name: "Oakland")
+london = City.create!(name: "London")
 
 bball = Category.create!(name: "Basketball")
 soccer = Category.create!(name: "Soccer")
 tennis = Category.create!(name: "Tennis")
 
-e1 =
-e2 =
-e3 =
-e4 =
-e5 =
-e6 =
+
+
+
+g1 =   {
+  user_id: garbo.id
+  city_id: sf.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,13,9),
+  address: '1122 street',
+  country: 'USA',
+  description: 'Looking to play 1v1 to practice my dribbling skills',
+  num_of_members: 2
+  }
+
+g2 =   {
+  user_id: garbo.id
+  city_id: sf.id,
+  category_id: soccer.id,
+  date_time: DateTime.new(2018,8,16,10),
+  address: '1400-1598 John F Kennedy Dr',
+  country: 'USA',
+  description: 'Looking to play half court soccer to practice my shooting skills',
+  num_of_members: 10
+  }
+
+g3 =  {
+  user_id: garbo.id
+  city_id: sf.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,8,18,10),
+  address: 'Nancy Pelosi Dr & Bowling Green Dr',
+  country: 'USA',
+  description: 'Looking to play doubles match',
+  num_of_members: 4
+  }
+
+l1 =   {
+  user_id: lebron.id
+  city_id: la.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,13,9),
+  address: '1111 S Figueroa St',
+  country: 'USA',
+  description: 'Looking to play with possible future teammates',
+  num_of_members: 10
+  }
+
+l2 = {
+  user_id: lebron.id
+  city_id: la.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,18,9),
+  address: '1111 S Figueroa St',
+  country: 'USA',
+  description: 'Looking to play with possible future teammates',
+  num_of_members: 10
+  }
+
+c1 = {
+  user_id: curry.id
+  city_id: oakland.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,18,9),
+  address: '7000 Coliseum Way',
+  country: 'USA',
+  description: 'Looking to play full court games',
+  num_of_members: 10
+  }
+c2 = {
+  user_id: curry.id
+  city_id: oakland.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,20,9),
+  address: '7000 Coliseum Way',
+  country: 'USA',
+  description: 'Looking to play 3v3 half court games',
+  num_of_members: 6
+  }
+
+r1 = {
+  user_id: roger.id
+  city_id: london.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,8,20,9),
+  address: 'The All England Lawn Tennis Club, Church Roady',
+  country: 'USA',
+  description: 'Looking to play doubles match',
+  num_of_members: 4
+  }
+r2 = {
+  user_id: roger.id
+  city_id: london.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,8,21,9),
+  address: 'The All England Lawn Tennis Club, Church Roady',
+  country: 'USA',
+  description: 'Looking to play singles match',
+  num_of_members: 2
+}
+
+r3 = {
+  user_id: roger.id
+  city_id: sf.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,8,22,9),
+  address: 'Nancy Pelosi Dr & Bowling Green Dr',
+  country: 'USA',
+  description: 'Looking to play singles match',
+  num_of_members: 2
+}
+
+s1 = {
+  user_id: serena.id
+  city_id: london.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,8,23,9),
+  address: 'The All England Lawn Tennis Club, Church Roady',
+  country: 'USA',
+  description: 'Looking to play singles match',
+  num_of_members: 2
+}
+
+s2 = {
+  user_id: serena.id
+  city_id: london.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,8,23,9),
+  address: 'The All England Lawn Tennis Club, Church Roady',
+  country: 'USA',
+  description: 'Looking to play doubles match',
+  num_of_members: 4
+}
