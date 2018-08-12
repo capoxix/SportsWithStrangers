@@ -60,12 +60,46 @@ messi = User.create!(
 beckam = User.create!(
   name: "Beckham",
   password: "123456",
-  email: "messi@hotmail.com",
-  user_catchphrase: "Would you like to learn how to get up everytime you fall?",
+  email: "beckham@hotmail.com",
+  user_catchphrase: "Would you like to learn how to completely control where the soccer
+  ball goes when you kick it?",
   user_description: "First English player to win league title in four countries: England,
   Spain, the United States and France."
 )
 
+garbo.photo.attach(
+  io: File.open('app/assets/images/users/garbocheng93.png')
+  ,filename: 'garbocheng93.png'
+)
+
+lebron.photo.attach(
+  io: File.open('app/assets/images/users/lebron.jpg')
+  ,filename: 'lebron.jpg'
+)
+curry.photo.attach(
+  io: File.open('app/assets/images/users/stephen-curry.jpg')
+  ,filename: 'stephen-curry.jpg'
+)
+
+roger.photo.attach(
+  io: File.open('app/assets/images/users/federer.jpg')
+  ,filename: 'federer.jpg'
+)
+
+serena.photo.attach(
+  io: File.open('app/assets/images/users/serena.jpg')
+  ,filename: 'serena.jpg'
+)
+
+messi.photo.attach(
+  io: File.open('app/assets/images/users/messi.jpg')
+  ,filename: 'messi.jpg'
+)
+
+beckham.photo.attach(
+  io: File.open('app/assets/images/users/beckham.jpg')
+  ,filename: 'beckham.jpg'
+)
 
 la = City.create!(name: "Los Angeles")
 sf = City.create!(name: "San Francisco")
@@ -74,3 +108,10 @@ oakland = City.create!(name: "Oakland")
 bball = Category.create!(name: "Basketball")
 soccer = Category.create!(name: "Soccer")
 tennis = Category.create!(name: "Tennis")
+
+e1 =
+e2 =
+e3 =
+e4 =
+e5 =
+e6 =
