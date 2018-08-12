@@ -4,4 +4,5 @@ end
 
 json.user do
   json.extract! @event.user, :id, :name, :user_catchphrase, :user_description
+  json.imgUrl url_for(@event.user.photo)
 end

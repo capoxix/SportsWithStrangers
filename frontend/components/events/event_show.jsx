@@ -117,7 +117,7 @@ class EventShow extends React.Component{
                 <div className=""><h5>(It'll be helpful to know what they look like
                   when you're looking for a group of confused strangers at the court.)</h5></div>
                 <div className="author-img">
-                  <img></img>
+                  <img src ={user.imgUrl}></img>
                 </div>
               </div>
 
