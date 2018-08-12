@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.createEvent = EventACTION.createEvent; //confirmed
   // EventAPI.getAllEvents().then(response => (window.events = response.events));
 
-  window.fetchCities = FilterACTION.fetchCities;
-  window.fetchCategories = FilterACTION.fetchCategories;
+  // window.fetchCities = FilterACTION.fetchCities; //confirmed
+  // window.fetchCategories = FilterACTION.fetchCategories; //confirmed
 
   let store;
   if (window.currentUser) {

@@ -3,26 +3,22 @@ import EventForm from './event_form';
 import {updateEvent} from '../../actions/event_actions';
 import {clearErrors} from '../../actions/session_actions';
 import { withRouter } from 'react-router-dom';
+import {fetchCities, fetchCategories} from  '../../actions/filter_actions';
+
 
 const msp = (state, ownProps) => ({
   errors: state.errors,
   formType: 'Update Sports Time',
   event: state.entities.events[ownProps.match.params.eventId],
-  cities: Object.values({
-    1 : {id: 1, name: 'San Francisco'},
-    2 : {id: 2, name: 'Oakland'},
-    3 : {id: 3, name: 'Los Angeles'}
-  }),
-  categories: Object.values({
-    2: {id: 2, name: 'Basketball'},
-    3: {id: 3, name: 'Soccer'},
-    4: {id: 4, name: 'Tennis'}
-  }),
+  cities: state.entities.cities,
+  categories: state.entities.categories,
 });
 //call fetchAllEvents(index page) => call fetchEvent (show page)
 const mdp = (dispatch) => ({
   processForm: (event) => dispatch(updateEvent(event)),
   clearErrors: () => dispatch(clearErrors()),
+  fetchCities: () => dispatch(fetchCities()),
+  fetchCategories: () => dispatch(fetchCategories())
 });
 
 export default connect(msp, mdp)(EventForm);
