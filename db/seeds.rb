@@ -242,3 +242,47 @@ s2 = {
   description: 'Looking to play doubles match',
   num_of_members: 4
 }
+
+b1 = {
+  user_id: beckham.id
+  city_id: sf.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,8,18,9),
+  address: '701 Oak St',
+  country: 'USA',
+  description: 'Looking to do shooting drills',
+  num_of_members: 6
+}
+
+b2 = {
+  user_id: beckham.id
+  city_id: sf.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,8,18,9),
+  address: '5 Freelon St #200',
+  country: 'USA',
+  description: 'Looking to play 5v5 soccer',
+  num_of_members: 10
+}
+
+m1 = {
+  user_id: messi.id
+  city_id: sf.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,8,17,9),
+  address: '701 Oak St',
+  country: 'USA',
+  description: 'Looking to play 5v5 soccer',
+  num_of_members: 10
+}
+
+m2 = {
+  user_id: messi.id
+  city_id: sf.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,8,15,9),
+  address: '5 Freelon St #200',
+  country: 'USA',
+  description: 'Looking to play 5v5 soccer',
+  num_of_members: 10
+}
