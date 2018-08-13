@@ -34,6 +34,7 @@ gem 'jquery-rails'
 gem 'bcrypt'
 gem 'aws-sdk-s3'
 gem 'figaro'
+gem 'pry-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -52,7 +53,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'pry-rails'
+
   gem 'annotate'
 end
 
