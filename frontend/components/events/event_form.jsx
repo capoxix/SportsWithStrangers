@@ -106,7 +106,7 @@ class EventForm extends React.Component {
           </ul>
 
           <form onSubmit={this.handleSubmit}>
-
+              <h1>{this.props.formType}</h1>
               <div className="form-address">
                 <input
                   type="text"

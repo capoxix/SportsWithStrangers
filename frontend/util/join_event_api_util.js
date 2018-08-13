@@ -12,3 +12,10 @@ export const deleteJoinedEvent = id => {
     url: `/api/joined_events/${id}`,
   });
 };
+
+// export const getJoinedEvent = (user_id) => {
+//   return $.ajax({
+//     method: 'GET',
+//     url: `/api/joined_events/${user_id}`,
+//   });
+// };
