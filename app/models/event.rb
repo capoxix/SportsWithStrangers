@@ -13,4 +13,10 @@ class Event < ApplicationRecord
   has_many :joined_users,
     through: :joined_events,
     source: :user
+
+  has_many :waitlists
+
+  has_many :waiting_users,
+    through: :waitlists,
+    source: :user
 end

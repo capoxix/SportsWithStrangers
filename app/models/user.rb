@@ -12,6 +12,12 @@
     through: :joined_events,
     source: :event
 
+  has_many :waitlists
+
+  has_many :waiting_events,
+    through: :waitlists,
+    source: :event
+
   attr_reader :password
   after_initialize :ensure_session_token
 
