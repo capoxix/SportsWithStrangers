@@ -6,6 +6,7 @@ class EventShow extends React.Component{
     super(props);
     this.sendToEditPage = this.sendToEditPage.bind(this);
     this.deleteSendToIndex = this.deleteSendToIndex.bind(this);
+    this.joinEvent = this.joinEvent.bind(this);
   }
 
   componentWillReceiveProps(ownProps){
@@ -25,6 +26,13 @@ class EventShow extends React.Component{
 
   deleteSendToIndex(id){
     return () => this.props.deleteEvent(id).then(this.props.history.push(`/events`));
+  }
+
+  joinEvent(e){
+    e.preventDefault();
+    let event = this.props.events[this.props.match.params.eventId];
+    this.props.createJoinedEvent({user_id: this.props.currentUserId, event_id: event.id})
+      .then(this.props.history.push(`/events`));
   }
 
   render(){
@@ -50,7 +58,8 @@ class EventShow extends React.Component{
 
       let options;
       if (currentUser.id != event.user_id) {
-        options = [<input onClick={()=> console.log(`${currentUser.id} joins event...`)} type='submit' value='SIGN ME UP'/>];
+        if (!currentUser.attending_event_ids.includes(event.id))
+          options = [<input onClick={this.joinEvent} type='submit' value='SIGN ME UP'/>];
       } else {
         options = [
             <input className="edit" onClick={this.sendToEditPage(this.props.match.params.eventId)} type='submit' value="EDIT"/>,

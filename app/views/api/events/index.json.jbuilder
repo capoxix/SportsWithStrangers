@@ -2,6 +2,7 @@ json.events do
   @events.each do |event|
     json.set! event.id do
       json.extract! event, :id, :category_id, :user_id, :date_time, :address, :city_id, :num_of_members
+      json.joinedCount event.joined_users.count
     end
   end
 end
