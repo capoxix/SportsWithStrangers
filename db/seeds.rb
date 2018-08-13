@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+City.destroy_all
+Category.destroy_all
+Event.destroy_all
 
 garbo = User.create!(
   name: "Garbo",
@@ -113,8 +116,8 @@ tennis = Category.create!(name: "Tennis")
 
 
 
-g1 =   {
-  user_id: garbo.id
+g1 = Event.create!(
+  user_id: garbo.id,
   city_id: sf.id,
   category_id: bball.id,
   date_time: DateTime.new(2018,8,13,9),
@@ -122,10 +125,10 @@ g1 =   {
   country: 'USA',
   description: 'Looking to play 1v1 to practice my dribbling skills',
   num_of_members: 2
-  }
+)
 
-g2 =   {
-  user_id: garbo.id
+g2 =   Event.create!(
+  user_id: garbo.id,
   city_id: sf.id,
   category_id: soccer.id,
   date_time: DateTime.new(2018,8,16,10),
@@ -133,10 +136,10 @@ g2 =   {
   country: 'USA',
   description: 'Looking to play half court soccer to practice my shooting skills',
   num_of_members: 10
-  }
+  )
 
-g3 =  {
-  user_id: garbo.id
+g3 =  Event.create!(
+  user_id: garbo.id,
   city_id: sf.id,
   category_id: tennis.id,
   date_time: DateTime.new(2018,8,18,10),
@@ -144,10 +147,10 @@ g3 =  {
   country: 'USA',
   description: 'Looking to play doubles match',
   num_of_members: 4
-  }
+  )
 
-l1 =   {
-  user_id: lebron.id
+l1 =   Event.create!(
+  user_id: lebron.id,
   city_id: la.id,
   category_id: bball.id,
   date_time: DateTime.new(2018,8,13,9),
@@ -155,10 +158,10 @@ l1 =   {
   country: 'USA',
   description: 'Looking to play with possible future teammates',
   num_of_members: 10
-  }
+  )
 
-l2 = {
-  user_id: lebron.id
+l2 = Event.create!(
+  user_id: lebron.id,
   city_id: la.id,
   category_id: bball.id,
   date_time: DateTime.new(2018,8,18,9),
@@ -166,10 +169,10 @@ l2 = {
   country: 'USA',
   description: 'Looking to play with possible future teammates',
   num_of_members: 10
-  }
+  )
 
-c1 = {
-  user_id: curry.id
+c1 = Event.create!(
+  user_id: curry.id,
   city_id: oakland.id,
   category_id: bball.id,
   date_time: DateTime.new(2018,8,18,9),
@@ -177,9 +180,9 @@ c1 = {
   country: 'USA',
   description: 'Looking to play full court games',
   num_of_members: 10
-  }
-c2 = {
-  user_id: curry.id
+  )
+c2 = Event.create!(
+  user_id: curry.id,
   city_id: oakland.id,
   category_id: bball.id,
   date_time: DateTime.new(2018,8,20,9),
@@ -187,10 +190,10 @@ c2 = {
   country: 'USA',
   description: 'Looking to play 3v3 half court games',
   num_of_members: 6
-  }
+  )
 
-r1 = {
-  user_id: roger.id
+r1 = Event.create!(
+  user_id: roger.id,
   city_id: london.id,
   category_id: tennis.id,
   date_time: DateTime.new(2018,8,20,9),
@@ -198,9 +201,9 @@ r1 = {
   country: 'USA',
   description: 'Looking to play doubles match',
   num_of_members: 4
-  }
-r2 = {
-  user_id: roger.id
+  )
+r2 = Event.create!(
+  user_id: roger.id,
   city_id: london.id,
   category_id: tennis.id,
   date_time: DateTime.new(2018,8,21,9),
@@ -208,10 +211,10 @@ r2 = {
   country: 'USA',
   description: 'Looking to play singles match',
   num_of_members: 2
-}
+)
 
-r3 = {
-  user_id: roger.id
+r3 = Event.create!(
+  user_id: roger.id,
   city_id: sf.id,
   category_id: tennis.id,
   date_time: DateTime.new(2018,8,22,9),
@@ -219,10 +222,10 @@ r3 = {
   country: 'USA',
   description: 'Looking to play singles match',
   num_of_members: 2
-}
+)
 
-s1 = {
-  user_id: serena.id
+s1 = Event.create!(
+  user_id: serena.id,
   city_id: london.id,
   category_id: tennis.id,
   date_time: DateTime.new(2018,8,23,9),
@@ -230,10 +233,10 @@ s1 = {
   country: 'USA',
   description: 'Looking to play singles match',
   num_of_members: 2
-}
+)
 
-s2 = {
-  user_id: serena.id
+s2 = Event.create!(
+  user_id: serena.id,
   city_id: london.id,
   category_id: tennis.id,
   date_time: DateTime.new(2018,8,23,9),
@@ -241,10 +244,10 @@ s2 = {
   country: 'USA',
   description: 'Looking to play doubles match',
   num_of_members: 4
-}
+)
 
-b1 = {
-  user_id: beckham.id
+b1 = Event.create!(
+  user_id: beckham.id,
   city_id: sf.id,
   category_id: tennis.id,
   date_time: DateTime.new(2018,8,18,9),
@@ -252,10 +255,10 @@ b1 = {
   country: 'USA',
   description: 'Looking to do shooting drills',
   num_of_members: 6
-}
+)
 
-b2 = {
-  user_id: beckham.id
+b2 = Event.create!(
+  user_id: beckham.id,
   city_id: sf.id,
   category_id: tennis.id,
   date_time: DateTime.new(2018,8,18,9),
@@ -263,10 +266,10 @@ b2 = {
   country: 'USA',
   description: 'Looking to play 5v5 soccer',
   num_of_members: 10
-}
+)
 
-m1 = {
-  user_id: messi.id
+m1 = Event.create!(
+  user_id: messi.id,
   city_id: sf.id,
   category_id: tennis.id,
   date_time: DateTime.new(2018,8,17,9),
@@ -274,10 +277,10 @@ m1 = {
   country: 'USA',
   description: 'Looking to play 5v5 soccer',
   num_of_members: 10
-}
+)
 
-m2 = {
-  user_id: messi.id
+m2 = Event.create!(
+  user_id: messi.id,
   city_id: sf.id,
   category_id: tennis.id,
   date_time: DateTime.new(2018,8,15,9),
@@ -285,4 +288,4 @@ m2 = {
   country: 'USA',
   description: 'Looking to play 5v5 soccer',
   num_of_members: 10
-}
+)
