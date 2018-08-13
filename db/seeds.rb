@@ -3,8 +3,8 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
+#   Character.create(name: "Luke", movie: movies.first)
 
 User.destroy_all
 City.destroy_all
@@ -15,8 +15,8 @@ garbo = User.create!(
   name: "Garbo",
   password: "123456",
   email: "garbocheng93@gmail.com",
-  user_catchphrase: "If you like to play basketball with a team player, I'm your guy!",
-  user_description: "I am an ABCD looking to have fun playing basketball."
+  user_catchphrase: "If you like to play sports with a team player, I'm your guy!",
+  user_description: "I am an ABCD looking to have fun playing sports."
 )
 
 lebron = User.create!(
@@ -60,7 +60,7 @@ messi = User.create!(
   user_description: "The men who became a superstar football player despite the odds"
 )
 
-beckam = User.create!(
+beckham = User.create!(
   name: "Beckham",
   password: "123456",
   email: "beckham@hotmail.com",
@@ -71,38 +71,25 @@ beckam = User.create!(
 )
 
 garbo.photo.attach(
-  io: File.open('app/assets/images/users/garbocheng93.png')
-  ,filename: 'garbocheng93.png'
-)
+  io: File.open("app/assets/images/users/garbocheng93.png"),filename: "garbocheng93.png")
 
 lebron.photo.attach(
-  io: File.open('app/assets/images/users/lebron.jpg')
-  ,filename: 'lebron.jpg'
-)
+  io: File.open("app/assets/images/users/lebron.jpg"), filename: "lebron.jpg")
+
 curry.photo.attach(
-  io: File.open('app/assets/images/users/stephen-curry.jpg')
-  ,filename: 'stephen-curry.jpg'
-)
+  io: File.open("app/assets/images/users/stephen-curry.jpg"), filename: "stephen-curry.jpg")
 
 roger.photo.attach(
-  io: File.open('app/assets/images/users/federer.jpg')
-  ,filename: 'federer.jpg'
-)
+  io: File.open("app/assets/images/users/federer.jpg"), filename: "federer.jpg")
 
 serena.photo.attach(
-  io: File.open('app/assets/images/users/serena.jpg')
-  ,filename: 'serena.jpg'
-)
+  io: File.open("app/assets/images/users/serena.jpg"), filename: "serena.jpg")
 
 messi.photo.attach(
-  io: File.open('app/assets/images/users/messi.jpg')
-  ,filename: 'messi.jpg'
-)
+  io: File.open("app/assets/images/users/messi.jpg"), filename: "messi.jpg")
 
 beckham.photo.attach(
-  io: File.open('app/assets/images/users/beckham.jpg')
-  ,filename: 'beckham.jpg'
-)
+  io: File.open("app/assets/images/users/beckham.jpg"), filename: "beckham.jpg")
 
 la = City.create!(name: "LA")
 sf = City.create!(name: "SF")
@@ -114,38 +101,36 @@ soccer = Category.create!(name: "Soccer")
 tennis = Category.create!(name: "Tennis")
 
 
-
-
 g1 = Event.create!(
   user_id: garbo.id,
   city_id: sf.id,
   category_id: bball.id,
-  date_time: DateTime.new(2018,8,13,9),
-  address: '1122 street',
-  country: 'USA',
-  description: 'Looking to play 1v1 to practice my dribbling skills',
+  date_time: DateTime.new(2018,8,13,15),
+  address: "1122 street",
+  country: "USA",
+  description: "Looking to play 1v1 to practice my dribbling skills",
   num_of_members: 2
 )
 
-g2 =   Event.create!(
+g2 = Event.create!(
   user_id: garbo.id,
   city_id: sf.id,
   category_id: soccer.id,
-  date_time: DateTime.new(2018,8,16,10),
-  address: '1400-1598 John F Kennedy Dr',
-  country: 'USA',
-  description: 'Looking to play half court soccer to practice my shooting skills',
+  date_time: DateTime.new(2018,8,16,16),
+  address: "1400-1598 John F Kennedy Dr",
+  country: "USA",
+  description: "Looking to play half court soccer to practice my shooting skills",
   num_of_members: 10
   )
 
-g3 =  Event.create!(
+g3 = Event.create!(
   user_id: garbo.id,
   city_id: sf.id,
   category_id: tennis.id,
-  date_time: DateTime.new(2018,8,18,10),
-  address: 'Nancy Pelosi Dr & Bowling Green Dr',
-  country: 'USA',
-  description: 'Looking to play doubles match',
+  date_time: DateTime.new(2018,8,18,18),
+  address: "Nancy Pelosi Dr & Bowling Green Dr",
+  country: "USA",
+  description: "Looking to play doubles match",
   num_of_members: 4
   )
 
@@ -153,10 +138,10 @@ l1 =   Event.create!(
   user_id: lebron.id,
   city_id: la.id,
   category_id: bball.id,
-  date_time: DateTime.new(2018,8,13,9),
-  address: '1111 S Figueroa St',
-  country: 'USA',
-  description: 'Looking to play with possible future teammates',
+  date_time: DateTime.new(2018,8,13,13),
+  address: "1111 S Figueroa St",
+  country: "USA",
+  description: "Looking to play with possible future teammates",
   num_of_members: 10
   )
 
@@ -164,10 +149,10 @@ l2 = Event.create!(
   user_id: lebron.id,
   city_id: la.id,
   category_id: bball.id,
-  date_time: DateTime.new(2018,8,18,9),
-  address: '1111 S Figueroa St',
-  country: 'USA',
-  description: 'Looking to play with possible future teammates',
+  date_time: DateTime.new(2018,8,18,12),
+  address: "1111 S Figueroa St",
+  country: "USA",
+  description: "Looking to play with possible future teammates",
   num_of_members: 10
   )
 
@@ -175,20 +160,20 @@ c1 = Event.create!(
   user_id: curry.id,
   city_id: oakland.id,
   category_id: bball.id,
-  date_time: DateTime.new(2018,8,18,9),
-  address: '7000 Coliseum Way',
-  country: 'USA',
-  description: 'Looking to play full court games',
+  date_time: DateTime.new(2018,8,18,18),
+  address: "7000 Coliseum Way",
+  country: "USA",
+  description: "Looking to play full court games",
   num_of_members: 10
   )
 c2 = Event.create!(
   user_id: curry.id,
   city_id: oakland.id,
   category_id: bball.id,
-  date_time: DateTime.new(2018,8,20,9),
-  address: '7000 Coliseum Way',
-  country: 'USA',
-  description: 'Looking to play 3v3 half court games',
+  date_time: DateTime.new(2018,8,20,20),
+  address: "7000 Coliseum Way",
+  country: "USA",
+  description: "Looking to play 3v3 half court games",
   num_of_members: 6
   )
 
@@ -196,20 +181,20 @@ r1 = Event.create!(
   user_id: roger.id,
   city_id: london.id,
   category_id: tennis.id,
-  date_time: DateTime.new(2018,8,20,9),
-  address: 'The All England Lawn Tennis Club, Church Roady',
-  country: 'USA',
-  description: 'Looking to play doubles match',
+  date_time: DateTime.new(2018,8,20,19),
+  address: "The All England Lawn Tennis Club",
+  country: "USA",
+  description: "Looking to play doubles match",
   num_of_members: 4
   )
 r2 = Event.create!(
   user_id: roger.id,
   city_id: london.id,
   category_id: tennis.id,
-  date_time: DateTime.new(2018,8,21,9),
-  address: 'The All England Lawn Tennis Club, Church Roady',
-  country: 'USA',
-  description: 'Looking to play singles match',
+  date_time: DateTime.new(2018,8,21,20),
+  address: "The All England Lawn Tennis Club",
+  country: "USA",
+  description: "Looking to play singles match",
   num_of_members: 2
 )
 
@@ -217,10 +202,10 @@ r3 = Event.create!(
   user_id: roger.id,
   city_id: sf.id,
   category_id: tennis.id,
-  date_time: DateTime.new(2018,8,22,9),
-  address: 'Nancy Pelosi Dr & Bowling Green Dr',
-  country: 'USA',
-  description: 'Looking to play singles match',
+  date_time: DateTime.new(2018,8,22,13),
+  address: "Nancy Pelosi Dr & Bowling Green Dr",
+  country: "USA",
+  description: "Looking to play singles match",
   num_of_members: 2
 )
 
@@ -228,10 +213,10 @@ s1 = Event.create!(
   user_id: serena.id,
   city_id: london.id,
   category_id: tennis.id,
-  date_time: DateTime.new(2018,8,23,9),
-  address: 'The All England Lawn Tennis Club, Church Roady',
-  country: 'USA',
-  description: 'Looking to play singles match',
+  date_time: DateTime.new(2018,8,23,15),
+  address: "The All England Lawn Tennis Club",
+  country: "UK",
+  description: "Looking to play singles match",
   num_of_members: 2
 )
 
@@ -239,53 +224,53 @@ s2 = Event.create!(
   user_id: serena.id,
   city_id: london.id,
   category_id: tennis.id,
-  date_time: DateTime.new(2018,8,23,9),
-  address: 'The All England Lawn Tennis Club, Church Roady',
-  country: 'USA',
-  description: 'Looking to play doubles match',
+  date_time: DateTime.new(2018,8,23,18),
+  address: "The All England Lawn Tennis Club",
+  country: "UK",
+  description: "Looking to play doubles match",
   num_of_members: 4
 )
 
 b1 = Event.create!(
   user_id: beckham.id,
   city_id: sf.id,
-  category_id: tennis.id,
-  date_time: DateTime.new(2018,8,18,9),
-  address: '701 Oak St',
-  country: 'USA',
-  description: 'Looking to do shooting drills',
+  category_id: soccer.id,
+  date_time: DateTime.new(2018,8,18,19),
+  address: "701 Oak St",
+  country: "USA",
+  description: "Looking to do shooting drills",
   num_of_members: 6
 )
 
 b2 = Event.create!(
   user_id: beckham.id,
   city_id: sf.id,
-  category_id: tennis.id,
-  date_time: DateTime.new(2018,8,18,9),
-  address: '5 Freelon St #200',
-  country: 'USA',
-  description: 'Looking to play 5v5 soccer',
+  category_id: soccer.id,
+  date_time: DateTime.new(2018,8,18,20),
+  address: "5 Freelon St #200",
+  country: "USA",
+  description: "Looking to play 5v5 soccer",
   num_of_members: 10
 )
 
 m1 = Event.create!(
   user_id: messi.id,
   city_id: sf.id,
-  category_id: tennis.id,
-  date_time: DateTime.new(2018,8,17,9),
-  address: '701 Oak St',
-  country: 'USA',
-  description: 'Looking to play 5v5 soccer',
+  category_id: soccer.id,
+  date_time: DateTime.new(2018,8,17,13),
+  address: "701 Oak St",
+  country: "USA",
+  description: "Looking to play 5v5 soccer",
   num_of_members: 10
 )
 
 m2 = Event.create!(
   user_id: messi.id,
   city_id: sf.id,
-  category_id: tennis.id,
-  date_time: DateTime.new(2018,8,15,9),
-  address: '5 Freelon St #200',
-  country: 'USA',
-  description: 'Looking to play 5v5 soccer',
+  category_id: soccer.id,
+  date_time: DateTime.new(2018,8,15,15),
+  address: "5 Freelon St #200",
+  country: "USA",
+  description: "Looking to play 5v5 soccer",
   num_of_members: 10
 )
