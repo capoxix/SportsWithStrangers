@@ -7,4 +7,10 @@ class Event < ApplicationRecord
     presence: true
 
   belongs_to :user
+
+  has_many :joined_events
+
+  has_many :joined_users,
+    through: :joined_events,
+    source: :user
 end

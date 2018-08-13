@@ -6,6 +6,12 @@
   has_many :events
   has_one_attached :photo
 
+  has_many :joined_events
+
+  has_many :attending_events,
+    through: :joined_events,
+    source: :event
+
   attr_reader :password
   after_initialize :ensure_session_token
 

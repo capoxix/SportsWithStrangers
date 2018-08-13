@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :cities, only: [:index]
     resources :categories, only:[:index]
+    resources :joined_events, only:[:create, :destroy]
   end
 end
