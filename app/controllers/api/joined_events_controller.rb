@@ -9,7 +9,7 @@ class Api::JoinedEventsController < ApplicationController
   end
 
   def destroy
-    joined_event = JoinedEvent.find(params[:id])
+    joined_event = current_user.joined_events.find(params[:id])
     joined_event.destroy
   end
 

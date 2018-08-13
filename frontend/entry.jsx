@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // window.fetchCities = FilterACTION.fetchCities; //confirmed
   // window.fetchCategories = FilterACTION.fetchCategories; //confirmed
-  window.createJoinedEvent = JoinedEventAPI.createJoinedEvent;
-  window.deleteJoinedEvent = JoinedEventAPI.deleteJoinedEvent;
+  window.createJoinedEvent = JoinedEventAPI.createJoinedEvent; //confirmed;
+  window.deleteJoinedEvent = JoinedEventAPI.deleteJoinedEvent; //confirmed
 
   let store;
   if (window.currentUser) {
