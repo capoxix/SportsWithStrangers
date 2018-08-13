@@ -34,7 +34,6 @@ export default (state = {}, action ) => {
       let nState = Object.assign({}, state);
       let uId = action.joinedEvent.user_id;
       let eId = action.joinedEvent.event_id;
-      debugger
       let newArray = nState[uId].attending_event_ids
                   .filter(id => id != eId);
       nState[uId].attending_event_ids = newArray;
