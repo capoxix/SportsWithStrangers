@@ -26,12 +26,19 @@ export default (state = {}, action ) => {
       //get newState
       let newState = Object.assign({}, state);
       //get array attending_events ids from user and add to it
-      let user_id = action.joinedEvent.user_id;
-      let event_id = action.joinedEvent.event_id;
-      newState[user_id].attending_event_ids.push(event_id);
+      let userId = action.joinedEvent.user_id;
+      let eventId = action.joinedEvent.event_id;
+      newState[userId].attending_event_ids.push(eventId);
       return newState;
     case REMOVE_JOINED_EVENT:
-      let newState = Object.assign({}, state);
+      let nState = Object.assign({}, state);
+      let uId = action.joinedEvent.user_id;
+      let eId = action.joinedEvent.event_id;
+      debugger
+      let newArray = nState[uId].attending_event_ids
+                  .filter(id => id != eId);
+      nState[uId].attending_event_ids = newArray;
+      return nState;
     default:
       return state;
   }

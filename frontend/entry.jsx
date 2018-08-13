@@ -6,7 +6,7 @@ import Root from './components/root';
 import * as EventAPI from './util/event_api_util';
 import * as EventACTION from  './actions/event_actions';
 import * as FilterACTION from './actions/filter_actions';
-// import * as JoinedEventAPI from './util/join_event_api_util';
+import * as JoinedEventAPI from './util/join_event_api_util';
 import * as JoinedEventACTION from './actions/joined_event_actions';
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // window.fetchCities = FilterACTION.fetchCities; //confirmed
   // window.fetchCategories = FilterACTION.fetchCategories; //confirmed
-  // window.createJoinedEvent = JoinedEventACTION.createJoinedEvent; //confirmed;
+  window.createJoinedEvent = JoinedEventACTION.createJoinedEvent; //confirmed;
   window.deleteJoinedEvent = JoinedEventACTION.deleteJoinedEvent; //confirmed
 
   let store;

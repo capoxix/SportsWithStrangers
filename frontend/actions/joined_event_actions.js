@@ -15,9 +15,9 @@ const receiveJoinedEventErrors = errors => ({
   errors
 });
 
-const removeJoinedEvent = (eventId) => ({
+const removeJoinedEvent = (joinedEvent) => ({
   type: REMOVE_JOINED_EVENT,
-  eventId
+  joinedEvent
 });
 
 
@@ -25,6 +25,6 @@ export const createJoinedEvent = (joined_event) => dispatch => API.createJoinedE
   .then(eventServer => dispatch(receiveSingleJoinedEvent(eventServer)))
   .fail((errors) => dispatch(receiveJoinedEventErrors(errors.responseJSON)));
 
-  export const deleteJoinedEvent = (eventId) => dispatch => API.deleteJoinedEvent(eventId)
-    .then(() => dispatch(removeJoinedEvent(eventId)))
-    .fail((errors) => dispatch(receiveJoinedEventErrors(errors.responseJSON)));
+export const deleteJoinedEvent = (eventId) => dispatch => API.deleteJoinedEvent(eventId)
+  .then((event) => dispatch(removeJoinedEvent(event)))
+  .fail((errors) => dispatch(receiveJoinedEventErrors(errors.responseJSON)));
