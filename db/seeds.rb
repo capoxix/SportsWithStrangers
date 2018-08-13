@@ -71,25 +71,25 @@ beckham = User.create!(
 )
 
 garbo.photo.attach(
-  io: File.open("app/assets/images/users/garbocheng93.png"),filename: "garbocheng93.png")
+  io: File.open("./app/assets/images/users/garbocheng93.png"),filename: "garbocheng93.png")
 
 lebron.photo.attach(
-  io: File.open("app/assets/images/users/lebron.jpg"), filename: "lebron.jpg")
+  io: File.open("./app/assets/images/users/lebron.jpg"), filename: "lebron.jpg")
 
 curry.photo.attach(
-  io: File.open("app/assets/images/users/stephen-curry.jpg"), filename: "stephen-curry.jpg")
+  io: File.open("./app/assets/images/users/stephen-curry.jpg"), filename: "stephen-curry.jpg")
 
 roger.photo.attach(
-  io: File.open("app/assets/images/users/federer.jpg"), filename: "federer.jpg")
+  io: File.open("./app/assets/images/users/federer.jpg"), filename: "federer.jpg")
 
 serena.photo.attach(
-  io: File.open("app/assets/images/users/serena.jpg"), filename: "serena.jpg")
+  io: File.open("./app/assets/images/users/serena.jpg"), filename: "serena.jpg")
 
 messi.photo.attach(
-  io: File.open("app/assets/images/users/messi.jpg"), filename: "messi.jpg")
+  io: File.open("./app/assets/images/users/messi.jpg"), filename: "messi.jpg")
 
 beckham.photo.attach(
-  io: File.open("app/assets/images/users/beckham.jpg"), filename: "beckham.jpg")
+  io: File.open("./app/assets/images/users/beckham.jpg"), filename: "beckham.jpg")
 
 la = City.create!(name: "LA")
 sf = City.create!(name: "SF")
