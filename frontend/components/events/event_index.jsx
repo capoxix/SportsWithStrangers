@@ -26,7 +26,8 @@ class EventIndex extends React.Component{
             event={event}
             user={this.props.users[event.user_id]}
             cities={this.props.cities}
-            categories={this.props.categories}/>
+            categories={this.props.categories}
+            currentUser = {this.props.currentUser}/>
         </div>
       ));
 

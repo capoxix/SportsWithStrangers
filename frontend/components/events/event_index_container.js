@@ -9,6 +9,7 @@ const msp = (state) => ({
   users: state.entities.users,
   cities: state.entities.cities,
   categories: state.entities.categories,
+  currentUser: state.entities.users[state.session.id]
 });
 
 const mdp = (dispatch) => ({

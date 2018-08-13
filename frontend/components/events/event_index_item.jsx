@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const EventIndexItem = (props) => {
-  let date = new Date(props.event.date_time);
+const EventIndexItem = ({event, categories, cities, user, currentUser}) => {
+  let date = new Date(event.date_time);
   let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   let day = days[date.getDay()];
   // let hour = date.getHours();
@@ -10,11 +10,31 @@ const EventIndexItem = (props) => {
   let until = date.setHours((date.getHours() + 2) % 24);
    until = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
   let dateArr = date.toString().split(" ");
-  if (props.categories[props.event.category_id] === undefined || props.cities[props.event.city_id] === undefined){
+
+
+  if (categories[event.category_id] === undefined || cities[event.city_id] === undefined){
     return <div>Loading....</div>;
   } else {
-    const category = props.categories[props.event.category_id].name;
-    const city = props.cities[props.event.city_id].name;
+
+    let showLink;
+    // console.log(user);
+    console.log("user attending events", currentUser.attending_event_ids);
+    console.log("current event id", event.id);
+    if (currentUser.attending_event_ids !== []) {
+      console.log('inside if statement');
+      if (currentUser.attending_event_ids.includes(event.id)) {
+        console.log("MATCHED");
+        showLink = <div className='signed-up-link'><Link to={`/events/${event.id}`}> SIGNED UP</Link></div>;
+      } else {
+        showLink = <div className='show-link'><Link to={`/events/${event.id}`}> THIS ONE → </Link></div>;
+      }
+    }
+    else {
+      showLink = <div className='show-link'><Link to={`/events/${event.id}`}> THIS ONE → </Link></div>;
+    }
+
+    const category = categories[event.category_id].name;
+    const city = cities[event.city_id].name;
     return(
       <div className='index-item-wrapper'>
 
@@ -26,14 +46,14 @@ const EventIndexItem = (props) => {
               <div className='hour'>{`${hour}-${until}`}</div>
             </div>
             <div className= 'user'>
-              <img src={props.user.imgUrl}></img>
-              <p>{props.user.name}</p>
+              <img src={user.imgUrl}></img>
+              <p>{user.name}</p>
             </div>
           </div>
-          <div className='address'>{`${props.event.address},  ${city}`}</div>
+          <div className='address'>{`${event.address},  ${city}`}</div>
             <hr></hr>
-          <div className='spots'>{`${props.event.num_of_members} spots left!`}</div>
-          <div className='show-link'><Link to={`/events/${props.event.id}`}> THIS ONE → </Link></div>
+          <div className='spots'>{`${event.num_of_members} spots left!`}</div>
+          {showLink}
       </div>
     );
   }
