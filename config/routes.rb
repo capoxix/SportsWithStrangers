@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     resources :cities, only: [:index]
     resources :categories, only:[:index]
     resources :joined_events, only:[:create, :destroy]
+    resources :waitlists, only:[:create]
   end
 end
