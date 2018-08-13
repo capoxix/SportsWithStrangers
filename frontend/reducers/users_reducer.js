@@ -2,6 +2,14 @@ import {RECEIVE_CURRENT_USER} from '../actions/session_actions';
 import {RECEIVE_SINGLE_EVENT_SHOW, RECEIVE_ALL_EVENT} from '../actions/event_actions';
 import merge from 'lodash/merge';
 
+import {
+  RECEIVE_SINGLE_JOINED_EVENT,
+  RECEIVE_JOINED_EVENT_ERRORS,
+  REMOVE_JOINED_EVENT
+} from '../actions/joined_event_actions';
+
+
+
 //added default state = {}
 export default (state = {}, action ) => {
   Object.freeze(state);
@@ -14,6 +22,16 @@ export default (state = {}, action ) => {
          {[action.payload.user.id]: action.payload.user});
     case RECEIVE_ALL_EVENT:
       return merge({}, state, action.payload.users);
+    case RECEIVE_SINGLE_JOINED_EVENT:
+      //get newState
+      let newState = Object.assign({}, state);
+      //get array attending_events ids from user and add to it
+      let user_id = action.joinedEvent.user_id;
+      let event_id = action.joinedEvent.event_id;
+      newState[user_id].attending_event_ids.push(event_id);
+      return newState;
+    case REMOVE_JOINED_EVENT:
+      let newState = Object.assign({}, state);
     default:
       return state;
   }
