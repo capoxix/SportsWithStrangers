@@ -55,6 +55,13 @@ class EventShow extends React.Component{
       let until = date.setHours((date.getHours() + 2) % 24);
        until = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
       let dateArr = date.toString().split(" ");
+      let count = event.num_of_members - event.joinedCount;
+
+      if (count <= 0) {
+        count = 'PACKED';
+      } else {
+        count = `${count} SPOTS LEFT!`;
+      }
 
       let options;
       if (currentUser.id != event.user_id) {
@@ -100,7 +107,7 @@ class EventShow extends React.Component{
                 </div>
                 <hr></hr>
                 <div className='event-spots'>
-                  <p className='description'>{event.num_of_members} SPOTS LEFT!</p>
+                  <p className='description'>{count}</p>
                 </div>
               </div>
 

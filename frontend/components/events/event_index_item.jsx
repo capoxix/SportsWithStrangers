@@ -20,13 +20,15 @@ const EventIndexItem = ({event, categories, cities, user, currentUser}) => {
     // console.log(user);
     // console.log("user attending events", currentUser.attending_event_ids);
     // console.log("current event id", event.id);
-    if (currentUser.attending_event_ids !== []) {
-      // console.log('inside if statement');
-      if (currentUser.attending_event_ids.includes(event.id)) {
-        // console.log("MATCHED");
-        showLink = <div className='signed-up-link'><Link to={`/events/${event.id}`}> SIGNED UP</Link></div>;
-      } else {
-        showLink = <div className='show-link'><Link to={`/events/${event.id}`}> THIS ONE → </Link></div>;
+    if (currentUser) {
+      if (currentUser.attending_event_ids !== []) {
+        // console.log('inside if statement');
+        if (currentUser.attending_event_ids.includes(event.id)) {
+          // console.log("MATCHED");
+          showLink = <div className='signed-up-link'><Link to={`/events/${event.id}`}> SIGNED UP</Link></div>;
+        } else {
+          showLink = <div className='show-link'><Link to={`/events/${event.id}`}> THIS ONE → </Link></div>;
+        }
       }
     }
     else {
@@ -34,6 +36,11 @@ const EventIndexItem = ({event, categories, cities, user, currentUser}) => {
     }
 
     let count = event.num_of_members - event.joinedCount;
+    if (count <= 0) {
+      count = 'PACKED';
+    } else {
+      count = `${count} SPOTS LEFT!`;
+    }
 
     const category = categories[event.category_id].name;
     const city = cities[event.city_id].name;
@@ -54,7 +61,7 @@ const EventIndexItem = ({event, categories, cities, user, currentUser}) => {
           </div>
           <div className='address'>{`${event.address},  ${city}`}</div>
             <hr></hr>
-          <div className='spots'>{`${count} spots left!`}</div>
+          <div className='spots'>{count}</div>
           {showLink}
       </div>
     );
