@@ -4,7 +4,7 @@
 
 .index-wrapper {
   display: grid;
-  grid-template-columns: repeat(5, 180px);
+  grid-template-columns: repeat(5, 200px);
   grid-template-rows: 180px;
   width: 800px;
   margin: 0 auto;
@@ -138,8 +138,8 @@ hr {
     background: #fcebc7;
     color: #eda20b;
     border:1px solid #F7BF4D;
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-left: 55px;
+    padding-right: 55px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-weight: 600;
@@ -148,5 +148,70 @@ hr {
 
 .index-item-wrapper .show-link a:hover{
   background-color: #eda20b;
+  color: white;
+}
+
+.index-item-wrapper .waitlist-link a{
+    width: 200px;
+    border-radius: 0 0 5px 5px;
+    letter-spacing: 0;
+    font-size: 0.8em;
+    background: #fcebc7;
+    color: #eda20b;
+    border:1px solid #F7BF4D;
+    padding-left: 46px;
+    padding-right: 46px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+.index-item-wrapper .waitlist-link a:hover{
+  background-color: #eda20b;
+  color: white;
+}
+
+
+
+.index-item-wrapper .signed-up-link a{
+    width: 200px;
+    border-radius: 0 0 5px 5px;
+    letter-spacing: 0;
+    font-size: 0.8em;
+    background: #b5e5c0;
+    color: #57C370;
+    border:1px solid #57C370;
+    padding-left: 58px;
+    padding-right: 57px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+.index-item-wrapper .signed-up-link a:hover{
+  background-color:#57C370;
+  color:white;
+}
+
+.index-item-wrapper .waitlisted-link a{
+    width: 200px;
+    border-radius: 0 0 5px 5px;
+    letter-spacing: 0;
+    font-size: 0.8em;
+    background: #d2d2d2;
+    color: #929292;
+    border:1px solid #929292;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+.index-item-wrapper .waitlisted-link a:hover{
+  background-color: #929292;
   color: white;
 }
