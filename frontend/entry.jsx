@@ -8,6 +8,7 @@ import * as EventACTION from  './actions/event_actions';
 import * as FilterACTION from './actions/filter_actions';
 import * as JoinedEventAPI from './util/join_event_api_util';
 import * as JoinedEventACTION from './actions/joined_event_actions';
+import * as WaitlistAPI from './util/waitlist_api_util';
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   // window.logout = SessionAPI.logout;
@@ -23,9 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // window.fetchCities = FilterACTION.fetchCities; //confirmed
   // window.fetchCategories = FilterACTION.fetchCategories; //confirmed
-  window.createJoinedEvent = JoinedEventACTION.createJoinedEvent; //confirmed;
-  window.deleteJoinedEvent = JoinedEventACTION.deleteJoinedEvent; //confirmed
+  // window.createJoinedEvent = JoinedEventACTION.createJoinedEvent; //confirmed;
+  // window.deleteJoinedEvent = JoinedEventACTION.deleteJoinedEvent; //confirmed
 
+  window.createWaitlist = WaitlistAPI.createWaitlist;
   let store;
   if (window.currentUser) {
     const preloadedState = {
