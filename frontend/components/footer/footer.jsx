@@ -18,7 +18,7 @@ const Footer = () => (
        </div>
        <div className="footer-info">
          <span>
-           Sport With Strangers is all about making our cities feel more
+           Sports With Strangers is all about making our cities feel more
            like neighborhoods. We're more "connected" than ever before,
            but we're also more alone. And all we want to do is bring people
            together because, well, the world is better that way.
