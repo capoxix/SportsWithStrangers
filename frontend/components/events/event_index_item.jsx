@@ -58,7 +58,7 @@ const EventIndexItem = ({event, categories, cities, user, currentUser}) => {
     let displayLink = getDisplayLink(currentUser, event, count);
 
     if (count <= 0) {
-      count = 'PACKED';
+      count = 'PACKED!';
     } else {
       count = `${count} SPOTS LEFT!`;
     }
