@@ -15,25 +15,26 @@ const getDisplayLink = (currentUser, event ,count) => {
                       <Link to={`/events/${event.id}`}> JOIN WAITLIST</Link>
                     </div>;
 
+
+  let waitlistedLink = <div className='waitlisted-link'>
+                      <Link to={`/events/${event.id}`}> WAITLISTED</Link>
+                    </div>;
   if (currentUser) {
-    if (currentUser.attending_event_ids !== []) {
-      // console.log('inside if statement');
-      if (currentUser.attending_event_ids.includes(event.id)) {
-        // console.log("MATCHED");
-        displayLink = signedUpLink;
-      }  else if (count <= 0){
-          displayLink = waitlistLink;
-        } else {
-        displayLink = showLink;
-      }
-    }
-  } else if (count <= 0){
-      displayLink = waitlistLink;
+    // console.log('inside if statement');
+    if (currentUser.attending_event_ids.includes(event.id))
+      return signedUpLink;
+    if (currentUser.waiting_event_ids.includes(event.id))
+      return waitlistedLink;
+    if (count <= 0) return waitlistLink;
+
+      return showLink;
+    } else if (count <= 0){
+      return waitlistLink;
     } else {
-    displayLink = showLink;
+      return showLink;
   }
 
-  return displayLink;
+  // return displayLink;
 };
 
 const EventIndexItem = ({event, categories, cities, user, currentUser}) => {

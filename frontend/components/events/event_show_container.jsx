@@ -3,6 +3,7 @@ import EventShow from './event_show';
 import {fetchEvent, deleteEvent} from '../../actions/event_actions';
 import {fetchCities, fetchCategories} from  '../../actions/filter_actions';
 import {createJoinedEvent} from '../../actions/joined_event_actions';
+import {createWaitlist} from '../../actions/waitlist_actions';
 
 const msp = (state) => ({
   errors: state.errors,
@@ -19,6 +20,7 @@ const mdp = (dispatch) => ({
   fetchCities: () => dispatch(fetchCities()),
   fetchCategories: () => dispatch(fetchCategories()),
   createJoinedEvent: (event) => dispatch(createJoinedEvent(event)),
+  createWaitlist: (event) => dispatch(createWaitlist(event))
 });
 
 export default connect(msp, mdp)(EventShow);

@@ -7,6 +7,7 @@ class EventShow extends React.Component{
     this.sendToEditPage = this.sendToEditPage.bind(this);
     this.deleteSendToIndex = this.deleteSendToIndex.bind(this);
     this.joinEvent = this.joinEvent.bind(this);
+    this.joinWaitlist = this.joinWaitlist.bind(this);
   }
 
   componentWillReceiveProps(ownProps){
@@ -35,18 +36,30 @@ class EventShow extends React.Component{
       .then(this.props.history.push(`/events`));
   }
 
-  getOptions(currentUser, event){
+  joinWaitlist(e){
+    e.preventDefault();
+    let event = this.props.events[this.props.match.params.eventId];
+    this.props.createWaitlist({user_id: this.props.currentUserId, event_id: event.id})
+      .then(this.props.history.push(`/events`));
+  }
+
+  getOptions(currentUser, event, count){
     let options;
     if (currentUser.id != event.user_id) {
       if (!currentUser.attending_event_ids.includes(event.id))
       //add an if statement to allow users to join waitlist if count <= 0
+        if (count <= 0){
+          options = [<input onClick={this.joinWaitlist} type='submit' value='JOIN WAITLIST'/>];
+        } else {
         options = [<input onClick={this.joinEvent} type='submit' value='SIGN ME UP'/>];
-    } else {
-      options = [
-          <input className="edit" onClick={this.sendToEditPage(this.props.match.params.eventId)} type='submit' value="EDIT"/>,
-          <input className="delete" onClick={this.deleteSendToIndex(this.props.match.params.eventId)} type='submit' value="DELETE"/>
-          ];
-    }
+        }
+      } else {
+        options = [
+            <input className="edit" onClick={this.sendToEditPage(this.props.match.params.eventId)} type='submit' value="EDIT"/>,
+            <input className="delete" onClick={this.deleteSendToIndex(this.props.match.params.eventId)} type='submit' value="DELETE"/>
+            ];
+      }
+
     return options;
   }
 
@@ -72,13 +85,14 @@ class EventShow extends React.Component{
       let dateArr = date.toString().split(" ");
       let count = event.num_of_members - event.joinedCount;
 
+      let options = this.getOptions(currentUser, event, count);
+
       if (count <= 0) {
         count = 'PACKED';
       } else {
         count = `${count} SPOTS LEFT!`;
       }
 
-      let options = this.getOptions(currentUser, event);
 
 
       return(
