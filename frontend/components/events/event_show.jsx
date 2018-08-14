@@ -40,7 +40,7 @@ class EventShow extends React.Component{
     e.preventDefault();
     let event = this.props.events[this.props.match.params.eventId];
     this.props.createWaitlist({user_id: this.props.currentUserId, event_id: event.id})
-      .then(this.props.history.push(`/events`));
+      .then(this.props.history.push(`/events`)); //modify to send to dashboard
   }
 
   getOptions(currentUser, event, count){
