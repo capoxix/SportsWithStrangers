@@ -4,7 +4,7 @@
 
 .index-wrapper {
   display: grid;
-  grid-template-columns: repeat(5, 200px);
+  grid-template-columns: repeat(4, 200px);
   grid-template-rows: 180px;
   width: 800px;
   margin: 0 auto;
