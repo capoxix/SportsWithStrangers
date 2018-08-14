@@ -33,7 +33,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'bcrypt'
 gem 'aws-sdk-s3'
-gem 'figaro'
 gem 'pry-rails'
 
 group :development, :test do
