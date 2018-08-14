@@ -2,7 +2,7 @@ import React from 'react';
 
 const Cities = ({cities}) => {
   let cityList = Object.values(cities).map(city =>
-  <a href={`#${city.name}`}>{city.name}</a>);
+  <a href={`#/events/${city.name}`}>{city.name}</a>);
 
   return(
     <div className="city-list">
