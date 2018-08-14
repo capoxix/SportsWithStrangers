@@ -70,8 +70,10 @@ beckham = User.create!(
   Spain, the United States and France."
 )
 
+# photo = open('https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/retb8Bj9kqVfQPeQzCiYgTiY');
+
 garbo.photo.attach(
-  io: File.open(asset_path("garbocheng93.png"),filename: "garbocheng93.png")
+  io: File.open("./app/assets/images/users/garbocheng93.png"),filename: "garbocheng93.png")
 
 lebron.photo.attach(
   io: File.open("./app/assets/images/users/lebron.jpg"), filename: "lebron.jpg")

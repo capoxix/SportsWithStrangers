@@ -21,14 +21,15 @@ const getDisplayLink = (currentUser, event ,count) => {
       if (currentUser.attending_event_ids.includes(event.id)) {
         // console.log("MATCHED");
         displayLink = signedUpLink;
-      } else if (count <= 0){
-        displayLink = waitlistLink;
-      } else {
+      }  else if (count <= 0){
+          displayLink = waitlistLink;
+        } else {
         displayLink = showLink;
       }
     }
-  }
-  else {
+  } else if (count <= 0){
+      displayLink = waitlistLink;
+    } else {
     displayLink = showLink;
   }
 
@@ -53,13 +54,14 @@ const EventIndexItem = ({event, categories, cities, user, currentUser}) => {
 
 
     let count = event.num_of_members - event.joinedCount;
+    let displayLink = getDisplayLink(currentUser, event, count);
+
     if (count <= 0) {
       count = 'PACKED';
     } else {
       count = `${count} SPOTS LEFT!`;
     }
 
-    let displayLink = getDisplayLink(currentUser, event, count);
     // console.log(user);
     // console.log("user attending events", currentUser.attending_event_ids);
     // console.log("current event id", event.id);

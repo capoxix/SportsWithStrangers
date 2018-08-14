@@ -35,6 +35,21 @@ class EventShow extends React.Component{
       .then(this.props.history.push(`/events`));
   }
 
+  getOptions(currentUser, event){
+    let options;
+    if (currentUser.id != event.user_id) {
+      if (!currentUser.attending_event_ids.includes(event.id))
+      //add an if statement to allow users to join waitlist if count <= 0
+        options = [<input onClick={this.joinEvent} type='submit' value='SIGN ME UP'/>];
+    } else {
+      options = [
+          <input className="edit" onClick={this.sendToEditPage(this.props.match.params.eventId)} type='submit' value="EDIT"/>,
+          <input className="delete" onClick={this.deleteSendToIndex(this.props.match.params.eventId)} type='submit' value="DELETE"/>
+          ];
+    }
+    return options;
+  }
+
   render(){
     //when i refresh page...sometimes things do not load on time...(if statement not working?)
     const {events, users, cities, categories} = this.props;
@@ -63,17 +78,8 @@ class EventShow extends React.Component{
         count = `${count} SPOTS LEFT!`;
       }
 
-      let options;
-      if (currentUser.id != event.user_id) {
-        if (!currentUser.attending_event_ids.includes(event.id))
-        //add an if statement to allow users to join waitlist if count <= 0
-          options = [<input onClick={this.joinEvent} type='submit' value='SIGN ME UP'/>];
-      } else {
-        options = [
-            <input className="edit" onClick={this.sendToEditPage(this.props.match.params.eventId)} type='submit' value="EDIT"/>,
-            <input className="delete" onClick={this.deleteSendToIndex(this.props.match.params.eventId)} type='submit' value="DELETE"/>
-      ];
-      }
+      let options = this.getOptions(currentUser, event);
+
 
       return(
         <div className= "event-show-container">
