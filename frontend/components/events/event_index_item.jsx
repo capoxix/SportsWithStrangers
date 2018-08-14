@@ -37,7 +37,7 @@ const getDisplayLink = (currentUser, event ,count) => {
   // return displayLink;
 };
 
-const EventIndexItem = ({event, categories, cities, user, currentUser}) => {
+const EventIndexItem = ({event, categories, city, user, currentUser}) => {
   let date = new Date(event.date_time);
   let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   let day = days[date.getDay()];
@@ -49,7 +49,7 @@ const EventIndexItem = ({event, categories, cities, user, currentUser}) => {
 
 
 
-  if (categories[event.category_id] === undefined || cities[event.city_id] === undefined){
+  if (categories[event.category_id] === undefined || city === undefined){
     return <div>Loading....</div>;
   } else {
 
@@ -71,7 +71,6 @@ const EventIndexItem = ({event, categories, cities, user, currentUser}) => {
 
 
     const category = categories[event.category_id].name;
-    const city = cities[event.city_id].name;
     return(
       <div className='index-item-wrapper'>
 
@@ -87,7 +86,7 @@ const EventIndexItem = ({event, categories, cities, user, currentUser}) => {
               <p>{user.name}</p>
             </div>
           </div>
-          <div className='address'>{`${event.address},  ${city}`}</div>
+          <div className='address'>{`${event.address},  ${city.name}`}</div>
             <hr></hr>
           <div className='spots'>{count}</div>
           {displayLink}
