@@ -1,6 +1,40 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+const getDisplayLink = (currentUser, event ,count) => {
+  let displayLink;
+  let signedUpLink = <div className='signed-up-link'>
+                      <Link to={`/events/${event.id}`}> SIGNED UP</Link>
+                    </div>;
+
+  let showLink = <div className='show-link'>
+                    <Link to={`/events/${event.id}`}> THIS ONE → </Link>
+                  </div>;
+
+  let waitlistLink = <div className='waitlist-link'>
+                      <Link to={`/events/${event.id}`}> JOIN WAITLIST</Link>
+                    </div>;
+
+  if (currentUser) {
+    if (currentUser.attending_event_ids !== []) {
+      // console.log('inside if statement');
+      if (currentUser.attending_event_ids.includes(event.id)) {
+        // console.log("MATCHED");
+        displayLink = signedUpLink;
+      } else if (count <= 0){
+        displayLink = waitlistLink;
+      } else {
+        displayLink = showLink;
+      }
+    }
+  }
+  else {
+    displayLink = showLink;
+  }
+
+  return displayLink;
+};
+
 const EventIndexItem = ({event, categories, cities, user, currentUser}) => {
   let date = new Date(event.date_time);
   let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -12,28 +46,11 @@ const EventIndexItem = ({event, categories, cities, user, currentUser}) => {
   let dateArr = date.toString().split(" ");
 
 
+
   if (categories[event.category_id] === undefined || cities[event.city_id] === undefined){
     return <div>Loading....</div>;
   } else {
 
-    let showLink;
-    // console.log(user);
-    // console.log("user attending events", currentUser.attending_event_ids);
-    // console.log("current event id", event.id);
-    if (currentUser) {
-      if (currentUser.attending_event_ids !== []) {
-        // console.log('inside if statement');
-        if (currentUser.attending_event_ids.includes(event.id)) {
-          // console.log("MATCHED");
-          showLink = <div className='signed-up-link'><Link to={`/events/${event.id}`}> SIGNED UP</Link></div>;
-        } else {
-          showLink = <div className='show-link'><Link to={`/events/${event.id}`}> THIS ONE → </Link></div>;
-        }
-      }
-    }
-    else {
-      showLink = <div className='show-link'><Link to={`/events/${event.id}`}> THIS ONE → </Link></div>;
-    }
 
     let count = event.num_of_members - event.joinedCount;
     if (count <= 0) {
@@ -41,6 +58,14 @@ const EventIndexItem = ({event, categories, cities, user, currentUser}) => {
     } else {
       count = `${count} SPOTS LEFT!`;
     }
+
+    let displayLink = getDisplayLink(currentUser, event, count);
+    // console.log(user);
+    // console.log("user attending events", currentUser.attending_event_ids);
+    // console.log("current event id", event.id);
+
+
+
 
     const category = categories[event.category_id].name;
     const city = cities[event.city_id].name;
@@ -62,7 +87,7 @@ const EventIndexItem = ({event, categories, cities, user, currentUser}) => {
           <div className='address'>{`${event.address},  ${city}`}</div>
             <hr></hr>
           <div className='spots'>{count}</div>
-          {showLink}
+          {displayLink}
       </div>
     );
   }
