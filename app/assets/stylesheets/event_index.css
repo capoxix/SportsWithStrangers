@@ -1,5 +1,5 @@
 .index-container{
-  background: #f5ebd0;
+  background: #fffaeb;
 }
 
 .index-wrapper {
@@ -12,6 +12,42 @@
   padding-bottom: 25px;
   grid-row-gap: 60px;
   font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
+}
+
+.month-info{
+  width: 800px;
+  margin: 0 auto;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.month-info .current-month{
+  padding: .25em 1em .25em 0;
+  text-align: left;
+  color: #333;
+  font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
+  line-height: 1.625;
+  font-weight: 600;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+.month-info .days-left{
+  color: #bfbfbf;
+  border-color: #cccccc;
+  border-radius: 10px;
+  text-transform: uppercase;
+  border: 1px solid;
+  padding: .25em;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-right: 10px;
+
 }
 
 .city-container {
