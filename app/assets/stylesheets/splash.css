@@ -4,6 +4,10 @@
 
 .splash [class^="row"] {
   margin: 0 auto;
+  font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
+  color: #333;
+  font-size: 18px;
+  line-height: 1.625;
 }
 
 .splash [class^="row"] img{
@@ -15,10 +19,12 @@
 
 
 [class^="row"] h2 {
-  color: #fd5e3e;
-  font-size: 20px;
-  font-weight: 900;
-  margin-bottom: 15px;
+  color: #EF6236;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 9px;
+  font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
 }
 
 [class^="row"] span {
@@ -27,8 +33,7 @@
 }
 
 .splash .row-1{
-  background-color: rgb(253,187,94);
-  opacity: 0.8;
+  background-color: rgb(255, 206, 137);
   color: white;
   height: 400px;
   background-image: url("/assets/sports-3cd8fc97f017d07bcf0f8658ad6403ad878d3cfb714b31b9cb82c7633def1b90.png");
@@ -39,12 +44,23 @@
 
 .splash .row-1 h2{
   color: white;
-  font-size: 30px;
-  margin-bottom:10px;
+  font-size: 2.5em;
+  margin-bottom:9px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
+  display: block;
+
 }
 
 .splash .row-1 span{
-  margin-bottom: 30px;
+  margin-bottom: 36px;
+  color: #FEFEFE;
+  text-align: center;
+  font-size: 1.125em;
+  font-weight: 400;
+  display:block;
+  line-height: 1.625;
 }
 
 .splash .row-1 .inner{
@@ -60,14 +76,17 @@
 
 .splash a{
   background-color: #EF6236;
-  padding: 1em;
-  border-radius: 5px;
+  border: 2px solid #EF6236;
+  font-size: 18px;
+  border-radius: 10px;
   width: 500px;
   text-align: center;
   color: white;
   letter-spacing: 3px;
-  font-weight: 400;
   margin: 0 auto;
+  padding: 1em 1.5em;
+  line-height: 1;
+  text-decoration: none;
 }
 
 .splash .row-2 {
@@ -91,7 +110,12 @@
 
 .splash .row-3 h3{
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 1.25;
+  font-weight: 600;
+  font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
 }
 
 .splash .row-3 .inner {

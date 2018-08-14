@@ -18,18 +18,18 @@ class Header extends React.Component{
           <nav className="right">
             <Link to='/events'>SPORT EVENTS</Link>
             <Link to='/about'>ABOUT</Link>
+            <button onClick={() => this.props.login()}>DEMO LOGIN</button>
             <Link onClick={() => this.props.clearErrors()} to='/login'>SIGN IN</Link>
             <Link onClick={() => this.props.clearErrors()} to='/signup' className='signup-button'>SIGN UP</Link>
-            <button onClick={() => this.props.login()}>DEMO LOGIN</button>
           </nav>
           <nav className="right">
             <ul className= "hamburger-dropdown">
               <li><Link to='/events'>SPORT EVENTS</Link></li>
               <li><Link to='/events/new'>HOSTING</Link></li>
               <li><Link to='/about'>ABOUT</Link></li>
+              <li><button onClick={() => this.props.login()}>DEMO LOGIN</button></li>
               <li><Link onClick={() => this.props.clearErrors()} to='/login'>SIGN IN</Link></li>
               <li><Link onClick={() => this.props.clearErrors()} to='/signup' className='signup-button'>SIGN UP</Link></li>
-              <li><button onClick={() => this.props.login()}>DEMO LOGIN</button></li>
             </ul>
             </nav>
 
@@ -44,10 +44,10 @@ class Header extends React.Component{
               <p>Hello, {this.props.currentUser.name}</p>
             </nav>
             <nav className="right">
-              <Link to='/events/new'>HOSTING</Link>
               <Link to='/events'>SPORT EVENTS</Link>
+              <Link to='/events/new'>HOSTING</Link>
               <Link to='/users/dashboard'>DASHBOARD</Link>
-              <button onClick={this.props.logout}>LOGOUT</button>
+              <button onClick={this.props.logout}>SIGN OUT</button>
             </nav>
           </div>
         </header>

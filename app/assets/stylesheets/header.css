@@ -1,5 +1,7 @@
 .header{
-  background-color: #fdbb5e
+  background-color: #fdbb5e;
+  font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
+
 }
 
 div .header-nav{
@@ -49,15 +51,22 @@ div .header-nav{
 .header-nav a {
   padding: 10px;
   letter-spacing: 1px;
-  font-size: 15px;
+  font-size: 0.8em;
+  text-transform: uppercase;
   font-weight: 500;
 }
 
 .header-nav button {
   letter-spacing: 1px;
-  font-size: 15px;
+  font-size: 0.8em;
   font-weight: 500;
   margin-left: 5px;
+}
+
+p {
+  font-size: 0.8em;
+  font-weight: 500;
+
 }
 
 .header-nav .right .hamburger-dropdown {
