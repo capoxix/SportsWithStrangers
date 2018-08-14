@@ -200,16 +200,7 @@ r2 = Event.create!(
   num_of_members: 2
 )
 
-JoinedEvent.create!({user_id: garbo.id, event_id: r2.id})
-JoinedEvent.create!({user_id: lebron.id, event_id: r2.id})
 
-JoinedEvent.create!({user_id: beckham.id, event_id: r3.id})
-JoinedEvent.create({user_id: serena.id, event_id: r3.id})
-
-Waitlist.create!({user_id: garbo.id, event_id: r3.id})
-
-JoinedEvent.create!({user_id: roger.id, event_id: s1.id})
-JoinedEvent.create!({user_id:messi.id, event_id: s1.id})
 
 
 r3 = Event.create!(
@@ -233,6 +224,17 @@ s1 = Event.create!(
   description: "Looking to play singles match",
   num_of_members: 2
 )
+
+JoinedEvent.create!({user_id: garbo.id, event_id: r2.id})
+JoinedEvent.create!({user_id: lebron.id, event_id: r2.id})
+
+JoinedEvent.create!({user_id: beckham.id, event_id: r3.id})
+JoinedEvent.create({user_id: serena.id, event_id: r3.id})
+
+Waitlist.create!({user_id: garbo.id, event_id: r3.id})
+
+JoinedEvent.create!({user_id: roger.id, event_id: s1.id})
+JoinedEvent.create!({user_id:messi.id, event_id: s1.id})
 
 s2 = Event.create!(
   user_id: serena.id,
