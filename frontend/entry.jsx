@@ -9,6 +9,7 @@ import * as FilterACTION from './actions/filter_actions';
 import * as JoinedEventAPI from './util/join_event_api_util';
 import * as JoinedEventACTION from './actions/joined_event_actions';
 import * as WaitlistAPI from './util/waitlist_api_util';
+import * as WaitlistACTION from './actions/waitlist_actions';
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   // window.logout = SessionAPI.logout;
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.createJoinedEvent = JoinedEventACTION.createJoinedEvent; //confirmed;
   // window.deleteJoinedEvent = JoinedEventACTION.deleteJoinedEvent; //confirmed
 
-  window.createWaitlist = WaitlistAPI.createWaitlist;
+  window.createWaitlist = WaitlistACTION.createWaitlist;
   let store;
   if (window.currentUser) {
     const preloadedState = {

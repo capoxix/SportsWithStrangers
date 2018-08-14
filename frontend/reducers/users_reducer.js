@@ -8,11 +8,17 @@ import {
   REMOVE_JOINED_EVENT
 } from '../actions/joined_event_actions';
 
+import {
+  RECEIVE_SINGLE_WAITLIST,
+  RECEIVE_WAITLIST_ERRORS
+} from '../actions/waitlist_actions';
+
 
 
 //added default state = {}
 export default (state = {}, action ) => {
   Object.freeze(state);
+  let newState = Object.assign({}, state);
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
       return Object.assign(
@@ -24,20 +30,26 @@ export default (state = {}, action ) => {
       return merge({}, state, action.payload.users);
     case RECEIVE_SINGLE_JOINED_EVENT:
       //get newState
-      let newState = Object.assign({}, state);
+      // let newState = Object.assign({}, state);
       //get array attending_events ids from user and add to it
       let userId = action.joinedEvent.user_id;
       let eventId = action.joinedEvent.event_id;
       newState[userId].attending_event_ids.push(eventId);
       return newState;
     case REMOVE_JOINED_EVENT:
-      let nState = Object.assign({}, state);
+      // let nState = Object.assign({}, state);
       let uId = action.joinedEvent.user_id;
       let eId = action.joinedEvent.event_id;
-      let newArray = nState[uId].attending_event_ids
+      let newArray = newState[uId].attending_event_ids
                   .filter(id => id != eId);
-      nState[uId].attending_event_ids = newArray;
-      return nState;
+      newState[uId].attending_event_ids = newArray;
+      return newState;
+    case RECEIVE_SINGLE_WAITLIST:
+      // let wState = Object.assign({}, state);
+      let wuId = action.waitlist.user_id;
+      let weId = action.waitlist.event_id;
+      newState[wuId].waiting_event_ids.push(weId);
+      return newState;
     default:
       return state;
   }
