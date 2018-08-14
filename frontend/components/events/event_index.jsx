@@ -28,12 +28,20 @@ class EventIndex extends React.Component{
     // currentUser={this.props.currentUser}/>
     if (this.props.events != {} && this.props.users != {}){
     //
-    //   let citiesEvent = {};
-    //   Object.values(this.props.cities).forEach(city =>
-    //     Object.values(this.props.events).forEach(event =>
-    //       if (event.city_id === city.id) ci
-    //     );
-    //   );
+      let citiesEvent = {};
+      Object.values(this.props.cities).forEach(city =>
+        Object.values(this.props.events).forEach(event => {
+          if (event.city_id === city.id) {
+            if (citiesEvent[city.id] === undefined) {
+              citiesEvent[city.id] = [event];
+            } else {
+              citiesEvent[city.id].push(event);
+            }
+          }
+        }
+      )
+    );
+    console.log(citiesEvent);
 
       const eventIndex = Object.values(this.props.events).map(event => (
         <div>

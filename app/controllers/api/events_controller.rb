@@ -2,7 +2,9 @@ class Api::EventsController < ApplicationController
   before_action :require_logged_in, except: [:index]
 
   def index
-    @events = Event.all
+    # @events = Event.all
+    # @events = Event.where("date_time > ?", DateTime.now());
+    @events = Event.where({ date_time: (Time.now())..Time.now.end_of_month})
     render :index
   end
 
