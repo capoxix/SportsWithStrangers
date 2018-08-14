@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'jquery-rails'
 gem 'bcrypt'
-gem 'aws-sdk-s3'
+gem 'aws-sdk-s3', require: false
 gem 'pry-rails'
 
 group :development, :test do
