@@ -24,6 +24,8 @@ const App = () => (
         <ProtectedRoute exact path="/events/:eventId/edit" component={UpdateEventContainer}/>
         <Route exact path="/events/LA" component={EventIndexContainer}/>
         <Route exact path="/events/Oakland" component={EventIndexContainer}/>
+          <Route exact path="/events/London" component={EventIndexContainer}/>
+          <Route exact path="/events/SF" component={EventIndexContainer}/>
         <Route exact path="/events" component={EventIndexContainer}/>
         <ProtectedRoute exact path="/events/:eventId" component={EventShowContainer}/>
 

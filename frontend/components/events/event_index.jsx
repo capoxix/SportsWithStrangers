@@ -32,15 +32,6 @@ class EventIndex extends React.Component{
 
       let citiesEvent = [];
       Object.values(this.props.cities).forEach(city => {
-        // Object.values(this.props.events).forEach(event => {
-        //   if (event.city_id === city.id) {
-        //     if (citiesEvent[city.id] === undefined) {
-        //       citiesEvent[city.id] = [event];
-        //     } else {
-        //       citiesEvent[city.id].push(event);
-        //     }
-        //   }
-        // }
         citiesEvent.push(
           <EventCityIndex
           users={this.props.users}
@@ -53,26 +44,10 @@ class EventIndex extends React.Component{
       }
 
     );
-    // );
-    // console.log(citiesEvent);
-
-      // const eventIndex = Object.values(this.props.events).map(event => (
-      //   <div>
-      //     <EventIndexItem
-      //       key={event.id}
-      //       event={event}
-      //       user={this.props.users[event.user_id]}
-      //       cities={this.props.cities}
-      //       categories={this.props.categories}
-      //       currentUser = {this.props.currentUser}/>
-      //   </div>
-      // ));
-
-
       return(
         <div>
-          <Cities cities={this.props.cities}/>
           <div className= 'index-container'>
+            <Cities cities={this.props.cities}/>
             <div className='index-wrapper'>
               {citiesEvent}
             </div>

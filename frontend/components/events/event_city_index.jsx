@@ -4,7 +4,9 @@ import EventIndexItem from './event_index_item';
 const EventCityIndex = ({users, city, events, categories, currentUser}) =>
   {
     // console.log(categories);
-    let cityIndex = [<div className="city" name={`${city.name}`}> {city.name}</div>];
+    let cityIndex = [<div className="city" name={`${city.name}`}>
+                      <h3>{city.name}<br></br>👉</h3>
+                      </div>];
 
     //
     for(let id in events){

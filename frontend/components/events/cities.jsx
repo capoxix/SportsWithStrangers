@@ -5,8 +5,11 @@ const Cities = ({cities}) => {
   <a href={`#/events/${city.name}`}>{city.name}</a>);
 
   return(
-    <div className="city-list">
-      {cityList}
+    <div className="city-container">
+      <h5>Jump to your city's sports times</h5>
+      <div className="city-list">
+        {cityList}
+      </div>
     </div>
   );
 };
