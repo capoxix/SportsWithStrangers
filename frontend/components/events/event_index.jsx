@@ -1,5 +1,6 @@
 import React from 'react';
 import EventIndexItem from  './event_index_item';
+import Cities from './cities';
 
 class EventIndex extends React.Component{
   constructor(props){
@@ -17,8 +18,18 @@ class EventIndex extends React.Component{
   }
 
   render(){
-
+    // have a group container that takes in city instead of cities
+    // and takes in all events too
+    // <EventIndexGroup
+    //  events={this.props.events}
+    // users={this.props.users}
+    //  city={city} //iterating on cities to create the groups
+    //  categories={this.props.categories}
+    // currentUser={this.props.currentUser}/>
     if (this.props.events != {} && this.props.users != {}){
+
+      // Object.values(this.props.cities)
+
       const eventIndex = Object.values(this.props.events).map(event => (
         <div>
           <EventIndexItem
@@ -33,9 +44,12 @@ class EventIndex extends React.Component{
 
 
       return(
-        <div className= 'index-container'>
-          <div className='index-wrapper'>
-            {eventIndex}
+        <div>
+          <Cities cities={this.props.cities}/>
+          <div className= 'index-container'>
+            <div className='index-wrapper'>
+              {eventIndex}
+            </div>
           </div>
         </div>
       );
