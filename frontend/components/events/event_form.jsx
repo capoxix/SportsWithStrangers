@@ -11,6 +11,9 @@ class EventForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.event;
+    // if (this.props.formType === 'Update Sports Time'){
+    //   this.state.date_time = moment(this.state.date_time).utc().format('MMMM Do YYYY, h a');
+    // }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
     this.handleDate = this.handleDate.bind(this);
@@ -150,7 +153,11 @@ class EventForm extends React.Component {
               </div>
 
             <div className="form-date">
-              <Datetime utc={true} timeConstraints={{seconds: {min:0, max: 0}, minutes: {min: 0, max:0}}}value={this.state.date_time} onChange={this.handleDate}/>
+              <Datetime
+                timeConstraints={{seconds: {min:0, max: 0}, minutes: {min: 0, max:0}}}
+                value={new Date(this.state.date_time)}
+
+                onChange={this.handleDate}/>
             </div>
 
             <div className="form-create-button">

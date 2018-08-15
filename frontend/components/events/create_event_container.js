@@ -3,12 +3,16 @@ import EventForm from './event_form';
 import {createEvent} from '../../actions/event_actions';
 import {clearErrors} from '../../actions/session_actions';
 import {fetchCities, fetchCategories} from  '../../actions/filter_actions';
+var moment = require('moment');
+
+let d = new Date(Date.now('UTC'));
+d.setMinutes(0);
 
 const msp = (state) => ({
   errors: state.errors,
   formType: 'Create Sports Time',
   event: {
-    date_time: new Date(Date.now('UTC')), //moment().format('MMMM Do YYYY, h:mm:ss a'),//need to add datetime
+    date_time: d, //,//need to add datetime
     address: '',
     country: '',
     city_id: '',
