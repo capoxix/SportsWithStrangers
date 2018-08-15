@@ -5,7 +5,7 @@
 .index-wrapper {
   display: grid;
 /*   grid-template-columns: repeat(4, 200px); */
-  grid-template-rows: 180px;
+  /* grid-template-rows: 180px; */
   width: 800px;
   margin: 0 auto;
   padding-top: 25px;
@@ -120,5 +120,10 @@
 
 .city-list a:hover{
   color: white;
+  background-color:#F7BF4D;
+}
+
+.city-list a.active{
+  color:white;
   background-color:#F7BF4D;
 }

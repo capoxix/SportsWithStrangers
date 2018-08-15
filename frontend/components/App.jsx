@@ -26,7 +26,6 @@ const App = () => (
         <ProtectedRoute exact path="/events/:eventId/edit" component={UpdateEventContainer}/>
         <Route exact path="/events" component={EventIndexContainer}/>
         <ProtectedRoute exact path="/events/:eventId" component={EventShowContainer}/>
-
         <Route exact path= "/" component= {SplashContainer} />
         <Redirect to='/'/>
       </Switch>

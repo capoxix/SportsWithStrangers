@@ -1,17 +1,22 @@
 import React from 'react';
 import EventIndexItem from './event_index_item';
+import Cities from './cities';
+
 
 class AllCityEvent extends React.Component {
   constructor(props){
     super(props);
   }
   render(){
-    const {users, city, events, categories, currentUser} = this.props;
+    const {users, city, events, categories, currentUser, cities} = this.props;
     // console.log(categories);
     let cityIndex = [];
-
-    console.log("IN ALL CIITYYY");
-    console.log(events);
+    let date = new Date();
+    let monthArr = ["January", "February", "March", "April", "May",
+  "June", "July", "August", "September", "October", "November", "December"];
+    let month = monthArr[date.getMonth()];
+    let nextMonth = monthArr[date.getMonth() + 1];
+    let day = 30 - date.getDate();
 
     for(let id in events){
       // console.log("id", id);
@@ -31,9 +36,25 @@ class AllCityEvent extends React.Component {
       }
     }
     return (
-      <div className='index-city-wrapper'>
-        {cityIndex}
-      </div>
+        <div className= 'index-container'>
+            <div className="month-info">
+              <div className="current-month">
+                <div className="emoji"><img src={window.images.calendarIcon}></img></div>
+                  <p>TEA TIMES IN {month}</p>
+                </div>
+
+                <div className="days-left">
+                  <p>{`${nextMonth}'s SPORTS TIME AVAILABLE IN ${day} DAYS`}</p>
+                </div>
+              </div>
+
+            <Cities cities={cities} cityId={city.id}/>
+            <div className='index-wrapper'>
+              <div className='index-city-wrapper'>
+                {cityIndex}
+              </div>
+            </div>
+        </div>
     );
   }
 }

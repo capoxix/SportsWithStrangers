@@ -6,10 +6,6 @@ import EventCityIndex from  './event_city_index';
 class EventIndex extends React.Component{
   constructor(props){
     super(props);
-    this.state = {
-      city: '',
-      category: '',
-    };
   }
 
   componentDidMount(){

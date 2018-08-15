@@ -1,8 +1,16 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
-const Cities = ({cities}) => {
-  let cityList = Object.values(cities).map(city =>
-  <a href={`#/events/city/${city.id}`}>{city.name}</a>);
+const Cities = ({cities, cityId}) => {
+  let cityList = Object.values(cities).map(city => {
+    if (cityId === city.id) {
+      return  <NavLink to={`/events/city/${city.id}`}>{city.name}</NavLink>;
+
+    } else {
+      return <NavLink to={`/events/city/${city.id}`}>{city.name}</NavLink>;
+
+    }
+  });
 
   return(
     <div className="city-container">

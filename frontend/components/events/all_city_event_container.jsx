@@ -9,6 +9,7 @@ const msp = (state, ownProps) => ({
   events: state.entities.events,
     // events : state.entities.events, cityId: ownProps.match.params.cityId}
   users: state.entities.users,
+  cities: state.entities.cities,
   city: state.entities.cities[ownProps.match.params.cityId],
   categories: state.entities.categories,
   currentUser: state.entities.users[state.session.id]
