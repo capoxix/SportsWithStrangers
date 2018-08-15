@@ -11,6 +11,9 @@ div .header-nav{
     height: 20px;
     padding: 30px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
 }
 .header-nav .left{
   float: left;
@@ -20,7 +23,8 @@ div .header-nav{
   height: 50px;
   width: 200px;
   float:left;
-  margin-top: -15px;
+  margin-top: -12px;
+  margin-left: -15px;
   margin-right: 15px;
 }
 
@@ -29,7 +33,7 @@ div .header-nav{
 }
 
 .header-nav .right{
-  float: right;
+/*   float: right; */
 }
 
 .header-nav .signup-button{
@@ -69,37 +73,22 @@ p {
 
 }
 
-.header-nav .right .hamburger-dropdown {
+ .header-nav .right .hamburger-dropdown {
   display: none;
+  background: url('/assets/hamburger-23638308073a2fdb616cff4e3733a54f96a7517369063c0901de9a37d6f58420.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  width: 100%;
+  margin: 0 auto;
 }
 /*
-@media all and (max-width: 900px) {
-  .header-nav .right .hamburger-dropdown {
+@media all and (max-width: 920px) {
+    .header-nav .right .hamburger-dropdown {
     display: block;
-
-  }
-  .hamburger-dropdown  li {
-    background-color: lightgray;
+    background: url('/assets/hamburger-23638308073a2fdb616cff4e3733a54f96a7517369063c0901de9a37d6f58420.png');
     background-repeat: no-repeat;
     background-size: 50px 50px;
-    width: 150px;
-    height: 60px;
-    /* nearest relatively positioned parent of absolute positioned child */
-/*
-    position: relative;
-    cursor: pointer;
 
-
-  }
-  .hamburger-dropdown ul {
-    /* Every time we position an element absolutely we should be thinking about
-    which parent element we need to position relatively */
-/*
-    top: 50px;
-    left: 0;
-    flex-direction: column;
-    cursor: pointer;
-    box-shadow: black 5px 5px 10px;
   }
 }
-*/
+ */

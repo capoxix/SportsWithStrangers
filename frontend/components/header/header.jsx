@@ -49,6 +49,16 @@ class Header extends React.Component{
               <Link to='/users/dashboard'>DASHBOARD</Link>
               <button onClick={this.props.logout}>SIGN OUT</button>
             </nav>
+            <nav className="right">
+              <ul className= "hamburger-dropdown">
+                <li><Link to='/events'>SPORT EVENTS</Link></li>
+                <li><Link to='/events/new'>HOSTING</Link></li>
+                <li><Link to='/about'>ABOUT</Link></li>
+                <li><button onClick={() => this.props.login()}>DEMO LOGIN</button></li>
+                <li><Link onClick={() => this.props.clearErrors()} to='/login'>SIGN IN</Link></li>
+                <li><Link onClick={() => this.props.clearErrors()} to='/signup' className='signup-button'>SIGN UP</Link></li>
+              </ul>
+              </nav>
           </div>
         </header>
       );
