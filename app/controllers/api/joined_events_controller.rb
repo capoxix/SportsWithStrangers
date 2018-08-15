@@ -17,6 +17,11 @@ class Api::JoinedEventsController < ApplicationController
     render json: {event_id: event_id, user_id: user_id}
   end
 
+  def index
+    @joined_events = JoinedEvent.all
+    render json: @joined_events
+  end
+
   def joined_params
     params.require(:joined_event).permit(:user_id, :event_id)
   end

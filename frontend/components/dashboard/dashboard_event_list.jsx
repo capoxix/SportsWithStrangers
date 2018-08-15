@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export const getDateInfo= (event) => {
   let date = new Date(event.date_time);
@@ -90,10 +91,12 @@ const DashboardEventList = ({type, events,cities, categories, currentUser,users,
         <div className='user-info'>
           <h3>{hostQuote}</h3>
           <div className='author-img-quote'>
-            <img src={author.imgUrl}></img>
+            <div className='author-photo'>
+              <img src={author.imgUrl}></img>
+            </div>
             <p>{userLook}</p>
-            <div>{author.name} PROFILE</div>
-            <div>EMAIL {author.name}</div>
+            <Link to="">{author.name} PROFILE</Link>
+            <Link to="">EMAIL {author.name}</Link>
           </div>
         </div>
       </div>

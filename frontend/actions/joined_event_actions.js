@@ -3,7 +3,7 @@ import * as API from "../util/join_event_api_util";
 export const RECEIVE_SINGLE_JOINED_EVENT = 'RECEIVE_SINGLE_JOINED_EVENT';
 export const RECEIVE_JOINED_EVENT_ERRORS = 'RECEIVE_JOINED_EVENT_ERRORS';
 export const REMOVE_JOINED_EVENT = 'REMOVE_JOINED_EVENT';
-
+export const RECEIVE_ALL_JOINED_EVENT = 'RECEIVE_ALL_JOINED_EVENT';
 
 const receiveSingleJoinedEvent = (joinedEvent) => ({
   type: RECEIVE_SINGLE_JOINED_EVENT,
@@ -20,6 +20,10 @@ const removeJoinedEvent = (joinedEvent) => ({
   joinedEvent
 });
 
+const receiveAllJoinedEvents = (joinedEvents) => ({
+  type: RECEIVE_ALL_JOINED_EVENT,
+  joinedEvents
+});
 
 export const createJoinedEvent = (joined_event) => dispatch => API.createJoinedEvent(joined_event)
   .then(eventServer => dispatch(receiveSingleJoinedEvent(eventServer)))
@@ -28,3 +32,6 @@ export const createJoinedEvent = (joined_event) => dispatch => API.createJoinedE
 export const deleteJoinedEvent = (eventId) => dispatch => API.deleteJoinedEvent(eventId)
   .then((event) => dispatch(removeJoinedEvent(event)))
   .fail((errors) => dispatch(receiveJoinedEventErrors(errors.responseJSON)));
+
+export const getJoinedEvents = () => dispatch => API.getJoinedEvents()
+  .then((eventServers) => dispatch(receiveAllJoinedEvents(eventServers)));
