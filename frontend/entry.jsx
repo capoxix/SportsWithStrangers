@@ -12,22 +12,12 @@ import * as WaitlistAPI from './util/waitlist_api_util';
 import * as WaitlistACTION from './actions/waitlist_actions';
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
-  // window.logout = SessionAPI.logout;
-  // window.login = SessionAPI.login;
-  // window.updateEvent = EventACTION.updateEvent; //confirmed
-  // window.deleteEvent = EventACTION.deleteEvent; //confirmed
-  //
-  //
-  // window.fetchEvents = EventACTION.fetchEvents; //confirmed
-  // window.fetchEvent = EventACTION.fetchEvent; //confirmed
-  // window.createEvent = EventACTION.createEvent; //confirmed
-  // EventAPI.getAllEvents().then(response => (window.events = response.events));
 
-  // window.fetchCities = FilterACTION.fetchCities; //confirmed
-  // window.fetchCategories = FilterACTION.fetchCategories; //confirmed
+
+
   // window.createJoinedEvent = JoinedEventACTION.createJoinedEvent; //confirmed;
-  // window.deleteJoinedEvent = JoinedEventACTION.deleteJoinedEvent; //confirmed
-  window.getJoinedEvents = JoinedEventAPI.getJoinedEvents;
+    window.deleteJoinedEvent = JoinedEventACTION.deleteJoinedEvent; //confirmed
+  window.getJoinedEvents = JoinedEventACTION.getJoinedEvents;
   // window.createWaitlist = WaitlistACTION.createWaitlist;
   let store;
   if (window.currentUser) {
