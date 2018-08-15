@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+
+
 export const getDateInfo= (event) => {
   let date = new Date(event.date_time);
   let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -85,7 +87,7 @@ const DashboardEventList = ({type, events,cities, categories, currentUser,users,
           <hr></hr>
 
           <div className="action">
-            {actionName}
+            {actionName} eventJoinedId = {event.joinId}
           </div>
         </div>
         <div className='user-info'>

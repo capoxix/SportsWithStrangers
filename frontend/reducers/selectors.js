@@ -18,11 +18,23 @@ export const getHostedEvents = ({events, currentUser}) => {
   return result;
 };
 
-export const getJoinedEvents = ({events, currentUser}) => {
+export const getJoinedEvents = ({events, currentUser, joinedEvents}) => {
   let result = [];
-  for (let id in events){
-    if(currentUser.attending_event_ids.includes(events[id].id))
-    result.push(events[id]);
+  // for (let id in events){
+  //   if(currentUser.attending_event_ids.includes(events[id].id))
+  //   result.push(events[id]);
+  // }
+
+  for (let id in joinedEvents){
+    let joinEvent = joinedEvents[id];
+
+    for(let eventId in events) {
+      if(joinEvent.event_id == eventId){
+        console.log("FOUND MATCH");
+        let eventwithJoinEventId = Object.assign({}, events[eventId], {joinId: id});
+        result.push(eventwithJoinEventId);
+      }
+    }
   }
   return result;
 };

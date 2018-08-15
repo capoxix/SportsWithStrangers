@@ -13,11 +13,12 @@ class Dashboard extends React.Component{
   }
 
   render(){
-    const {joinedEvents, waitlistedEvents, hostedEvents, users
+    const {joinedEventsArr, waitlistedEvents, hostedEvents, users
           ,cities, categories, currentUser,
           deleteJoinedEvent, deleteEvent } = this.props;
           // console.log(joinedEvents);
-
+          console.log('joinedEventsArr', joinedEventsArr);
+    // if (!joinedEvents) return <div>Loading....</div>;
     return (
       <div className='dashboard-container'>
         <div className='dashboard-user'>
@@ -28,7 +29,7 @@ class Dashboard extends React.Component{
         <div className='dashboard-events'>
           <DashboardEventList
             type="joined"
-            events={joinedEvents}
+            events={joinedEventsArr}
             cities={cities}
             categories={categories}
             currentUser= {currentUser}

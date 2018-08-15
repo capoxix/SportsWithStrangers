@@ -12,6 +12,7 @@ class EventIndex extends React.Component{
     this.props.fetchEvents();
     this.props.fetchCities();
     this.props.fetchCategories();
+    this.props.getJoinedEvents();
   }
 
   render(){

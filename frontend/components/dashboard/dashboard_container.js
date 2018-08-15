@@ -7,11 +7,6 @@ import {getHostedEvents,
   getWaitlistedEvents} from '../../reducers/selectors';
 
 const msp = (state) => ({
-  joinedEvents: getJoinedEvents({
-      events: state.entities.events,
-      currentUser: state.entities.users[state.session.id]
-    }
-  ),
   waitlistedEvents: getWaitlistedEvents({
       events: state.entities.events,
       currentUser: state.entities.users[state.session.id]
@@ -25,13 +20,17 @@ const msp = (state) => ({
   users: state.entities.users,
   cities: state.entities.cities,
   categories: state.entities.categories,
-  currentUser: state.entities.users[state.session.id]
+  currentUser: state.entities.users[state.session.id],
+  joinedEventsArr: getJoinedEvents(
+    {events: state.entities.events,
+      currentUser: state.entities.users[state.session.id],
+    joinedEvents: state.entities.joinedEvents})
 });
 
 //deletejoinedEvent needs to be modified
 const mdp = (dispatch) => ({
-  deleteJoinedEvent: () => dispatch(deleteJoinedEvent()),
-  deleteEvent: (id) => dispatch(deleteEvent(id))
+  deleteJoinedEvent: (id) => dispatch(deleteJoinedEvent(id)),
+  deleteEvent: (id) => dispatch(deleteEvent(id)),
 });
 
 export default connect(msp, mdp)(Dashboard);
