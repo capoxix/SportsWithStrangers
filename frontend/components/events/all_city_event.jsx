@@ -1,7 +1,7 @@
 import React from 'react';
 import EventIndexItem from './event_index_item';
 
-class EventCityIndex extends React.Component {
+class AllCityEvent extends React.Component {
   constructor(props){
     super(props);
   }
@@ -16,9 +16,6 @@ class EventCityIndex extends React.Component {
     for(let id in events){
       // console.log("id", id);
       let event = events[id];
-      if (cityIndex.length === 4){
-        break;
-      }
       if (event.city_id === city.id && cityIndex.length < 4) {
         cityIndex.push(
           <div>
@@ -41,4 +38,4 @@ class EventCityIndex extends React.Component {
   }
 }
 
-export default EventCityIndex;
+export default AllCityEvent;

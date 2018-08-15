@@ -64,7 +64,6 @@ class EventShow extends React.Component{
   }
 
   render(){
-    //when i refresh page...sometimes things do not load on time...(if statement not working?)
     const {events, users, cities, categories} = this.props;
     // console.log("IN EVENT SHOW");
     // console.log('SHOW PROPS', this.props.events);

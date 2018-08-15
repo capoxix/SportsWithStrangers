@@ -108,12 +108,17 @@
   padding: .25em;
   border-radius: 10px;
   font-size: 0.8em;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 33px;
+  margin-right: 33px;
   box-sizing: border-box;
 
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
 
+}
+
+.city-list a:hover{
+  color: white;
+  background-color:#F7BF4D;
 }
