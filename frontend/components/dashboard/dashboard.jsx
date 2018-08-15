@@ -52,7 +52,7 @@ class Dashboard extends React.Component{
           categories={categories}
           currentUser= {currentUser}
           users={users}
-          action={deleteJoinedEvent}/>
+          action={deleteEvent}/>
         </div>
       </div>
     );

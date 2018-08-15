@@ -17,7 +17,7 @@ export const getDateInfo= (event) => {
 };
 
 export const getEventInfo = (type, event, users) => {
-  let listName, actionName,hostQuote, userLook;
+  let actionName,hostQuote, userLook, actionId;
   const author = users[event.user_id];
 
   switch (type) {
@@ -26,9 +26,10 @@ export const getEventInfo = (type, event, users) => {
       hostQuote='Get to know your host';
       userLook=`Keep an eye open for ${author.name}! So it's easier,
       here's what they look like :).`;
+      actionId = event.joinId;
       break;
     case 'waitlist':
-      actionName="You'RE STILL ON THE WAITLIST!";
+      actionName="YOU'RE STILL ON THE WAITLIST!";
       hostQuote='Your host(well, maybe)';
       userLook=`This is what ${author.name} looks like in case you need to find them
       if you get off the waitlist).`;
@@ -37,16 +38,16 @@ export const getEventInfo = (type, event, users) => {
       actionName="cancel sport time";
       hostQuote="You are the host";
       userLook=`This is your current picture being displayed`;
+      actionId = event.id;
       break;
     default:
-      listName='';
       actionName='';
   }
 
-  return {listName, actionName, hostQuote, userLook, author};
+  return {actionName, hostQuote, userLook, author, actionId};
 };
 
-const DashboardEventList = ({type, events,cities, categories, currentUser,users, actions}) => {
+const DashboardEventList = ({type, events,cities, categories, currentUser,users, action}) => {
   let listName;
 
   switch (type) {
@@ -65,7 +66,13 @@ const DashboardEventList = ({type, events,cities, categories, currentUser,users,
   }
   const eventList = events.map(event => {
     const {day, dateArr, hour, until} = getDateInfo(event);
-    let  {actionName, hostQuote, userLook, author} = getEventInfo(type,event,users);
+    let  {actionName, hostQuote, userLook, author, actionId} = getEventInfo(type,event,users);
+    let actionButton;
+    if (actionName === "YOU'RE STILL ON THE WAITLIST!"){
+      actionButton = <p>YOU'RE STILL ON THE WAITLIST!</p>;
+    } else {
+      actionButton = <Link to='/dashboard' onClick={()=> action(actionId)}>{actionName}</Link>;
+      }
     return (
       <div className='event-user-info'>
         <div className='event-info'>
@@ -87,7 +94,7 @@ const DashboardEventList = ({type, events,cities, categories, currentUser,users,
           <hr></hr>
 
           <div className="action">
-            {actionName} eventJoinedId = {event.joinId}
+            {actionButton}
           </div>
         </div>
         <div className='user-info'>
