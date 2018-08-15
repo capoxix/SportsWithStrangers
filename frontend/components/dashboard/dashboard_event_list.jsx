@@ -19,23 +19,20 @@ export const getEventInfo = (type, event, users) => {
 
   switch (type) {
     case 'joined':
-      listName="Sport times you're attending";
       actionName="cancel my spot";
       hostQuote='Get to know your host';
       userLook=`Keep an eye open for ${author.name}! So it's easier,
       here's what they look like :).`;
       break;
     case 'waitlist':
-      listName="Sport times for which you're on the waitlist";
-      actionName="";
+      actionName="You'RE STILL ON THE WAITLIST!";
       hostQuote='Your host(well, maybe)';
       userLook=`This is what ${author.name} looks like in case you need to find them
       if you get off the waitlist).`;
       break;
     case 'hosting':
-      listName="Sport times you're hosting";
       actionName="cancel sport time";
-      hostQuote="This is your sport time";
+      hostQuote="You are the host";
       userLook=`This is your current picture being displayed`;
       break;
     default:
@@ -47,36 +44,21 @@ export const getEventInfo = (type, event, users) => {
 };
 
 const DashboardEventList = ({type, events,cities, categories, currentUser,users, actions}) => {
-  let listName;//, actionName,hostQuote, userLook;
-  // // console.log('author',author);
-  // // debugger;
-  // const author = users[event.user_id];
-  // // console.log('type', type);
-  // console.log("IN EVENT LIST DASHBOARD");
+  let listName;
+
   switch (type) {
     case 'joined':
       listName="Sport times you're attending";
-      // actionName="cancel my spot";
-      // hostQuote='Get to know your host';
-      // userLook=`Keep an eye open for ${author.name}! So it's easier,
-      // here's what they look like :).`;
       break;
     case 'waitlist':
       listName="Sport times for which you're on the waitlist";
-      // actionName="";
-      // hostQuote='Your host(well, maybe)';
-      // userLook=`This is what ${author.name} looks like in case you need to find them
-      // if you get off the waitlist).`;
       break;
     case 'hosting':
+      console.log("IN HOSTING");
       listName="Sport times you're hosting";
-      // actionName="cancel sport time";
-      // hostQuote="This is your sport time";
-      // userLook=`This is your current picture being displayed`;
-      // break;
+      break;
     default:
       listName='';
-  //     actionName='';
   }
   const eventList = events.map(event => {
     const {day, dateArr, hour, until} = getDateInfo(event);
