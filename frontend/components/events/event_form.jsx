@@ -150,7 +150,7 @@ class EventForm extends React.Component {
               </div>
 
             <div className="form-date">
-              <Datetime value={this.state.date_time} onChange={this.handleDate}/>
+              <Datetime utc={true} timeConstraints={{seconds: {min:0, max: 0}, minutes: {min: 0, max:0}}}value={this.state.date_time} onChange={this.handleDate}/>
             </div>
 
             <div className="form-create-button">
