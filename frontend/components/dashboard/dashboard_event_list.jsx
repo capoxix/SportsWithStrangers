@@ -13,31 +13,74 @@ export const getDateInfo= (event) => {
   return {day, hour, until, dateArr};
 };
 
-const DashboardEventList = ({type, events,cities, categories, currentUser,users, actions}) => {
-  let listName, actionName;
-  // console.log('type', type);
-  console.log("IN EVENT LIST DASHBOARD");
+export const getEventInfo = (type, event, users) => {
+  let listName, actionName,hostQuote, userLook;
+  const author = users[event.user_id];
+
   switch (type) {
     case 'joined':
       listName="Sport times you're attending";
       actionName="cancel my spot";
+      hostQuote='Get to know your host';
+      userLook=`Keep an eye open for ${author.name}! So it's easier,
+      here's what they look like :).`;
       break;
     case 'waitlist':
       listName="Sport times for which you're on the waitlist";
       actionName="";
+      hostQuote='Your host(well, maybe)';
+      userLook=`This is what ${author.name} looks like in case you need to find them
+      if you get off the waitlist).`;
       break;
     case 'hosting':
       listName="Sport times you're hosting";
       actionName="cancel sport time";
+      hostQuote="This is your sport time";
+      userLook=`This is your current picture being displayed`;
       break;
     default:
-      console.log('type', type);
-      console.log('in default');
       listName='';
       actionName='';
   }
+
+  return {listName, actionName, hostQuote, userLook, author};
+};
+
+const DashboardEventList = ({type, events,cities, categories, currentUser,users, actions}) => {
+  let listName;//, actionName,hostQuote, userLook;
+  // // console.log('author',author);
+  // // debugger;
+  // const author = users[event.user_id];
+  // // console.log('type', type);
+  // console.log("IN EVENT LIST DASHBOARD");
+  switch (type) {
+    case 'joined':
+      listName="Sport times you're attending";
+      // actionName="cancel my spot";
+      // hostQuote='Get to know your host';
+      // userLook=`Keep an eye open for ${author.name}! So it's easier,
+      // here's what they look like :).`;
+      break;
+    case 'waitlist':
+      listName="Sport times for which you're on the waitlist";
+      // actionName="";
+      // hostQuote='Your host(well, maybe)';
+      // userLook=`This is what ${author.name} looks like in case you need to find them
+      // if you get off the waitlist).`;
+      break;
+    case 'hosting':
+      listName="Sport times you're hosting";
+      // actionName="cancel sport time";
+      // hostQuote="This is your sport time";
+      // userLook=`This is your current picture being displayed`;
+      // break;
+    default:
+      listName='';
+  //     actionName='';
+  }
   const eventList = events.map(event => {
     const {day, dateArr, hour, until} = getDateInfo(event);
+    let  {actionName, hostQuote, userLook, author} = getEventInfo(type,event,users);
     return (
       <div className='event-user-info'>
         <div className='event-info'>
@@ -63,6 +106,13 @@ const DashboardEventList = ({type, events,cities, categories, currentUser,users,
           </div>
         </div>
         <div className='user-info'>
+          <h3>{hostQuote}</h3>
+          <div className='author-img-quote'>
+            <img src={author.imgUrl}></img>
+            <p>{userLook}</p>
+            <div>{author.name} PROFILE</div>
+            <div>EMAIL {author.name}</div>
+          </div>
         </div>
       </div>
     );

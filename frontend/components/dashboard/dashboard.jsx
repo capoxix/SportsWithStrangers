@@ -16,7 +16,8 @@ class Dashboard extends React.Component{
     const {joinedEvents, waitlistedEvents, hostedEvents, users
           ,cities, categories, currentUser,
           deleteJoinedEvent, deleteEvent } = this.props;
-          console.log(joinedEvents);
+          // console.log(joinedEvents);
+
     return (
       <div className='dashboard-container'>
         <div className='dashboard-user'>
