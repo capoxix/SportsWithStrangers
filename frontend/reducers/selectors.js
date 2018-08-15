@@ -6,4 +6,5 @@ export const getFilteredEvents = ({events, cityId}) => {
   	}
   }
   return result;
+  //array of events where city matches given city
 };

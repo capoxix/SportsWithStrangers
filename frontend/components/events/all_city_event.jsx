@@ -8,15 +8,15 @@ class AllCityEvent extends React.Component {
   render(){
     const {users, city, events, categories, currentUser} = this.props;
     // console.log(categories);
-    let cityIndex = [<div className="city" href={`${city.name}`}>
-                      <h3>{city.name}<br></br>👉</h3>
-                      </div>];
+    let cityIndex = [];
 
-    //
+    console.log("IN ALL CIITYYY");
+    console.log(events);
+
     for(let id in events){
       // console.log("id", id);
       let event = events[id];
-      if (event.city_id === city.id && cityIndex.length < 4) {
+      if (event.city_id === city.id) {
         cityIndex.push(
           <div>
             <EventIndexItem

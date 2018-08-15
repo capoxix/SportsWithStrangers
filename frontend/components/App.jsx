@@ -10,6 +10,7 @@ import CreateEventContainer from './events/create_event_container';
 import UpdateEventContainer from './events/update_event_container';
 import EventIndexContainer from  './events/event_index_container';
 import EventShowContainer from './events/event_show_container';
+import AllCityEventContainer from './events/all_city_event_container';
 // import SearchContainer from './search_container';
 
 const App = () => (
@@ -20,7 +21,7 @@ const App = () => (
       <Switch>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        // <Route exact path='/events/city/:cityId'/>
+        <Route exact path='/events/city/:cityId' component={AllCityEventContainer}/>
         <ProtectedRoute exact path="/events/new" component={CreateEventContainer}/>
         <ProtectedRoute exact path="/events/:eventId/edit" component={UpdateEventContainer}/>
         <Route exact path="/events" component={EventIndexContainer}/>
