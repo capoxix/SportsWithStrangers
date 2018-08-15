@@ -19,6 +19,14 @@ garbo = User.create!(
   user_description: "I am an ABCD looking to have fun playing sports."
 )
 
+kobe = User.create!(
+  name: "Kobe",
+  password: "123456",
+  email: "kobe@gmail.com",
+  user_catchphrase: "Do you want to understand more about the mamba mentality?",
+  user_description: "Former lakers all star shooting guard. Also, the first guy in the gym and the last guy out."
+)
+
 lebron = User.create!(
   name: "Lebron",
   password: "123456",
