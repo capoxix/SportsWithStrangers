@@ -26,14 +26,31 @@ class Dashboard extends React.Component{
         </div>
         <div className='dashboard-events'>
           <DashboardEventList
-            listName="Sport times you're attending"
+            type="joined"
             events={joinedEvents}
             cities={cities}
             categories={categories}
             currentUser= {currentUser}
             users={users}
-            actionName="cancel my spot"
             action={deleteJoinedEvent}/>
+
+          <DashboardEventList
+            type="waitlist"
+            events={waitlistedEvents}
+            cities={cities}
+            categories={categories}
+            currentUser= {currentUser}
+            users={users}
+            action={deleteJoinedEvent}/>
+
+        <DashboardEventList
+          type="hosting"
+          events={hostedEvents}
+          cities={cities}
+          categories={categories}
+          currentUser= {currentUser}
+          users={users}
+          action={deleteJoinedEvent}/>
         </div>
       </div>
     );

@@ -13,8 +13,29 @@ export const getDateInfo= (event) => {
   return {day, hour, until, dateArr};
 };
 
-const DashboardEventList = ({listName, actionName, events,cities, categories, currentUser,users, actions}) => {
-
+const DashboardEventList = ({type, events,cities, categories, currentUser,users, actions}) => {
+  let listName, actionName;
+  // console.log('type', type);
+  console.log("IN EVENT LIST DASHBOARD");
+  switch (type) {
+    case 'joined':
+      listName="Sport times you're attending";
+      actionName="cancel my spot";
+      break;
+    case 'waitlist':
+      listName="Sport times for which you're on the waitlist";
+      actionName="";
+      break;
+    case 'hosting':
+      listName="Sport times you're hosting";
+      actionName="cancel sport time";
+      break;
+    default:
+      console.log('type', type);
+      console.log('in default');
+      listName='';
+      actionName='';
+  }
   const eventList = events.map(event => {
     const {day, dateArr, hour, until} = getDateInfo(event);
     return (

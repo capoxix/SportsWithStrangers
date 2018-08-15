@@ -46,7 +46,7 @@ class Header extends React.Component{
             <nav className="right">
               <Link to='/events'>SPORT EVENTS</Link>
               <Link to='/events/new'>HOSTING</Link>
-              <Link to='/users/dashboard'>DASHBOARD</Link>
+              <Link to='/dashboard'>DASHBOARD</Link>
               <button onClick={this.props.logout}>SIGN OUT</button>
             </nav>
             <nav className="right">
