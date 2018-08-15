@@ -73,6 +73,11 @@ class EventForm extends React.Component {
     return members;
   }
 
+  valid(current){
+    var today = Datetime.moment();
+    return current.isAfter(today);
+  }
+
   getCategories(){
     let categories = [ <option value="" disabled selected>Select Sports Category</option>];
     Object.values(this.props.categories).forEach((category) => {
@@ -156,7 +161,7 @@ class EventForm extends React.Component {
               <Datetime
                 timeConstraints={{seconds: {min:0, max: 0}, minutes: {min: 0, max:0}}}
                 value={new Date(this.state.date_time)}
-
+                isValidDate={this.valid}
                 onChange={this.handleDate}/>
             </div>
 

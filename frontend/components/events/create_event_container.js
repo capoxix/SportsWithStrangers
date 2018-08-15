@@ -7,6 +7,9 @@ var moment = require('moment');
 
 let d = new Date(Date.now('UTC'));
 d.setMinutes(0);
+if (d.getHours() < 24) {
+  d.setHours(d.getHours() + 1);
+}
 
 const msp = (state) => ({
   errors: state.errors,
