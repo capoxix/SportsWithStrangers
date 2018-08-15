@@ -48,9 +48,9 @@ class EventShow extends React.Component{
     if (currentUser.id != event.user_id) {
       if (!currentUser.attending_event_ids.includes(event.id))
       //add an if statement to allow users to join waitlist if count <= 0
-        if (count <= 0){
+        if (count <= 0 && !currentUser.waiting_event_ids.includes(event.id))
           options = [<input onClick={this.joinWaitlist} type='submit' value='JOIN WAITLIST'/>];
-        } else {
+        else if (count > 0){
         options = [<input onClick={this.joinEvent} type='submit' value='SIGN ME UP'/>];
         }
       } else {
