@@ -1,4 +1,5 @@
 import React from 'react';
+import DashboardEventList from './dashboard_event_list';
 
 class Dashboard extends React.Component{
   constructor(props){
@@ -15,6 +16,7 @@ class Dashboard extends React.Component{
     const {joinedEvents, waitlistedEvents, hostedEvents, users
           ,cities, categories, currentUser,
           deleteJoinedEvent, deleteEvent } = this.props;
+          console.log(joinedEvents);
     return (
       <div className='dashboard-container'>
         <div className='dashboard-user'>
@@ -23,6 +25,15 @@ class Dashboard extends React.Component{
           <input type='submit' onClick={this.sendToEventsIndex}value='FIND ANOTHER SPORTS TIME!'/>
         </div>
         <div className='dashboard-events'>
+          <DashboardEventList
+            listName="Sport times you're attending"
+            events={joinedEvents}
+            cities={cities}
+            categories={categories}
+            currentUser= {currentUser}
+            users={users}
+            actionName="cancel my spot"
+            action={deleteJoinedEvent}/>
         </div>
       </div>
     );

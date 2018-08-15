@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-//import DashBoard from './dashboard';
+import Dashboard from './dashboard';
 import {deleteJoinedEvent} from '../../actions/joined_event_actions';
 import {deleteEvent} from '../../actions/event_actions';
 import {getHostedEvents,
@@ -33,3 +33,5 @@ const mdp = (dispatch) => ({
   deleteJoinedEvent: () => dispatch(deleteJoinedEvent()),
   deleteEvent: (id) => dispatch(deleteEvent(id))
 });
+
+export default connect(msp, mdp)(Dashboard);
