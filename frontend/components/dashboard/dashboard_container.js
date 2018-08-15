@@ -1,0 +1,33 @@
+import {connect} from 'react-redux';
+//import DashBoard from './dashboard';
+import {deleteJoinedEvent} from '../../actions/joined_event_actions';
+import {deleteEvent} from '../../actions/event_actions';
+import {getHostedEvents,
+  getJoinedEvents,
+  getWaitlistedEvents} from '../../reducers/selectors';
+
+const msp = (state) => ({
+  joinedEvents: getJoinedEvents({
+      events: state.entities.events,
+      currentUser: state.entities.users[state.session.id]
+    }
+  ),
+  waitlistedEvents: getWaitlistedEvents({
+      events: state.entities.events,
+      currentUser: state.entities.users[state.session.id]
+    }
+  ),
+  hostedEvents: getHostedEvents({
+    events: state.entities.events,
+    currentUser: state.entities.users[state.session.id]
+    }
+  ),
+  users: state.entities.users,
+  cities: state.entities.cities,
+  categories: state.entities.categories
+});
+
+const mdp = (dispatch) => ({
+  deleteJoinedEvent: () => dispatch(deleteJoinedEvent()),
+  deleteEvent: (id) => dispatch(deleteEvent(id))
+});
