@@ -23,7 +23,6 @@ class Dashboard extends React.Component{
           <input type='submit' onClick={this.sendToEventsIndex}value='FIND ANOTHER SPORTS TIME!'/>
         </div>
         <div className='dashboard-events'>
-          
         </div>
       </div>
     );
@@ -31,3 +30,10 @@ class Dashboard extends React.Component{
 }
 
 export default Dashboard;
+// <DashboardEventList
+// events={joinedEvents},
+// cities={cities},
+// categories={categories},
+// currentUser= {currentUser},
+// users={users},
+// action={deleteJoinedEvent}/>
