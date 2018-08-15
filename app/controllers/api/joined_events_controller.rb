@@ -11,15 +11,15 @@ class Api::JoinedEventsController < ApplicationController
   # modify controller to get event where user_id and event_id match
   def destroy
     joined_event = current_user.joined_events.find(params[:id])
-    event_id = joined_event.event_id;
-    user_id = joined_event.user_id;
+    # event_id = joined_event.event_id;
+    # user_id = joined_event.user_id;
     joined_event.destroy
-    render json: {event_id: event_id, user_id: user_id}
+    render json: joined_event
   end
 
   def index
     @joined_events = JoinedEvent.all
-    render json: @joined_events
+    render :index
   end
 
   def joined_params

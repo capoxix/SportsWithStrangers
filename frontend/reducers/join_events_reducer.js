@@ -11,7 +11,7 @@ export default (state = {}, action) => {
     case RECEIVE_SINGLE_JOINED_EVENT:
       return merge({}, state, {[action.joinedEvent.id] : action.joinedEvent});
     case RECEIVE_ALL_JOINED_EVENT:
-      return merge({}, state, action.payload.joinedEvents);
+      return merge({}, state, action.joinedEvents);
     case REMOVE_JOINED_EVENT:
     let newState = Object.assign({}, state);
     delete newState[action.joinedEvent.id];

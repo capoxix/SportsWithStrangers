@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.fetchCategories = FilterACTION.fetchCategories; //confirmed
   // window.createJoinedEvent = JoinedEventACTION.createJoinedEvent; //confirmed;
   // window.deleteJoinedEvent = JoinedEventACTION.deleteJoinedEvent; //confirmed
-
-  window.createWaitlist = WaitlistACTION.createWaitlist;
+  window.getJoinedEvents = JoinedEventAPI.getJoinedEvents;
+  // window.createWaitlist = WaitlistACTION.createWaitlist;
   let store;
   if (window.currentUser) {
     const preloadedState = {
