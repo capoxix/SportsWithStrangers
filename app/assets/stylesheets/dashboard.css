@@ -1,0 +1,14 @@
+.dashboard-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.dashboard-container .event-user-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.author-img-quote img{
+    width: 100px;
+    height: 100px;
+}
