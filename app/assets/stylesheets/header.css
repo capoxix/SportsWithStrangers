@@ -72,23 +72,35 @@ p {
   font-weight: 500;
 
 }
-
- .header-nav .right .hamburger-dropdown {
+.empty-space{
   display: none;
-  background: url('/assets/hamburger-23638308073a2fdb616cff4e3733a54f96a7517369063c0901de9a37d6f58420.png');
+}
+
+ .header-nav .center{
+  display: none;
   background-repeat: no-repeat;
   background-size: 30px 30px;
   width: 100%;
   margin: 0 auto;
 }
-/*
-@media all and (max-width: 920px) {
-    .header-nav .right .hamburger-dropdown {
+
+@media all and (max-width: 1020px) {
+    .header-nav .right{
+      display: none;
+    }
+
+    .empty-space{
+      display: block;
+    }
+    .header-nav .center{
     display: block;
-    background: url('/assets/hamburger-23638308073a2fdb616cff4e3733a54f96a7517369063c0901de9a37d6f58420.png');
     background-repeat: no-repeat;
     background-size: 50px 50px;
-
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+  }
+  .header{
+    height: 100px;
   }
 }
- */
