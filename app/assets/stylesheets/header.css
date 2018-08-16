@@ -121,3 +121,9 @@ p {
     height: 100px;
   }
 }
+
+@media all and (min-width: 956px){
+  .header-nav .center .hamburger-dropdown{
+    display: none;
+  }
+}
