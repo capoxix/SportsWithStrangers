@@ -6,7 +6,7 @@
   display: grid;
 /*   grid-template-columns: repeat(4, 200px); */
   /* grid-template-rows: 180px; */
-  width: 800px;
+  width: 1000px;
   margin: 0 auto;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -15,7 +15,7 @@
 }
 
 .month-info{
-  width: 800px;
+  width: 1000px;
   margin: 0 auto;
   display: grid;
   justify-content: space-between;
@@ -53,7 +53,7 @@
 .city-container {
   text-align: center;
   background-color: #f1e9c6;
-  width: 800px;
+  width: 1000px;
   margin: 0 auto;
 }
 .city-container h5{
@@ -92,7 +92,7 @@
   display: grid;
   grid-template-columns: repeat(4, 200px);
   margin: 0 auto;
-  width: 800px;
+  width: 1000px;
   color: #eda20b;
   padding: 1em 1em 1em 1em;
   text-align: center;
