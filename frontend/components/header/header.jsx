@@ -22,7 +22,7 @@ class Header extends React.Component{
             <Link onClick={() => this.props.clearErrors()} to='/login'>SIGN IN</Link>
             <Link onClick={() => this.props.clearErrors()} to='/signup' className='signup-button'>SIGN UP</Link>
           </nav>
-          <nav className="right">
+          <nav className="center">
             <div className= "hamburger-dropdown">
               <Link to='/events'>SPORT EVENTS</Link>
               <Link to='/events/new'>HOSTING</Link>
@@ -54,9 +54,8 @@ class Header extends React.Component{
               <div className= "hamburger-dropdown">
                 <Link to='/events'>SPORT EVENTS</Link>
                 <Link to='/events/new'>HOSTING</Link>
-                <Link to='/about'>ABOUT</Link>
-                <Link onClick={() => this.props.clearErrors()} to='/login'>SIGN IN</Link>
-                <Link onClick={() => this.props.clearErrors()} to='/signup' className='signup-button'>SIGN UP</Link>
+                <Link to='/dashboard'>DASHBOARD</Link>
+                <button onClick={this.props.logout}>SIGN OUT</button>
               </div>
             </nav>
           </div>

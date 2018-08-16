@@ -12,7 +12,7 @@ div .header-nav{
     padding: 30px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 4fr;
     justify-content: space-between;
 }
 .header-nav .left{
@@ -29,11 +29,13 @@ div .header-nav{
 }
 
 .header-nav p {
-  float: left;
+  position: absolute;
+  margin-top: -17px;
+  margin-left: 200px;
 }
 
 .header-nav .right{
-/*   float: right; */
+  text-align: right;
 }
 
 .header-nav .signup-button{
@@ -84,10 +86,12 @@ p {
   margin: 0 auto;
 }
 
-@media all and (max-width: 1020px) {
+@media all and (max-width: 920px) {
     .header-nav .right{
       display: none;
     }
+
+    .header-nav .left
 
     .empty-space{
       display: block;
