@@ -86,18 +86,30 @@ p {
   margin: 0 auto;
 }
 
-@media all and (max-width: 920px) {
+@media all and (max-width: 955px) {
     .header-nav .right{
       display: none;
     }
 
-    .header-nav .left
+    .header-nav .left{}
 
     .empty-space{
       display: block;
     }
+
+    .empty-space button{
+      float: right;
+    }
+
+     .empty-space img{
+       width: 60px;
+       height: 40px;
+       float: right;
+       position: relative;
+       margin-top: -10px;
+     }
+
     .header-nav .center{
-    display: block;
     background-repeat: no-repeat;
     background-size: 50px 50px;
     grid-column-start: 1;

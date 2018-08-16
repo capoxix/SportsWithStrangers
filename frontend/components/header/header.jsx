@@ -4,6 +4,16 @@ import {Link} from 'react-router-dom';
 class Header extends React.Component{
   constructor(props){
     super(props);
+    this.showNav = this.showNav.bind(this);
+  }
+
+  showNav(e){
+    // e.preventDefault();
+    if (document.getElementById('center').style.display === "none") {
+      document.getElementById('center').style.display = "block";
+    } else {
+      document.getElementById('center').style.display = "none";
+    }
   }
 
   render(){
@@ -22,7 +32,10 @@ class Header extends React.Component{
             <Link onClick={() => this.props.clearErrors()} to='/login'>SIGN IN</Link>
             <Link onClick={() => this.props.clearErrors()} to='/signup' className='signup-button'>SIGN UP</Link>
           </nav>
-          <nav className="center">
+          <div className="empty-space">
+            <button onClick={() => this.showNav()}><img src={window.images.hamburger}></img></button>
+          </div>
+          <nav className="center" id='center'>
             <div className= "hamburger-dropdown">
               <Link to='/events'>SPORT EVENTS</Link>
               <Link to='/events/new'>HOSTING</Link>
@@ -49,8 +62,10 @@ class Header extends React.Component{
               <Link to='/dashboard'>DASHBOARD</Link>
               <button onClick={this.props.logout}>SIGN OUT</button>
             </nav>
-            <div className="empty-space"></div>
-            <nav className="center">
+            <div className="empty-space">
+              <button onClick={() => this.showNav()}><img src={window.images.hamburger}></img></button>
+            </div>
+            <nav className="center" id='center'>
               <div className= "hamburger-dropdown">
                 <Link to='/events'>SPORT EVENTS</Link>
                 <Link to='/events/new'>HOSTING</Link>
