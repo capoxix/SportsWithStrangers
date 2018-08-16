@@ -16,6 +16,11 @@ class Header extends React.Component{
     }
   }
 
+  clear(){
+    this.props.clearErrors();
+    this.props.clearJoinedEvents();
+  }
+
   render(){
 
     if(this.props.currentUser === undefined){
@@ -28,8 +33,8 @@ class Header extends React.Component{
           <nav className="right">
             <Link to='/events'>SPORT EVENTS</Link>
             <button onClick={() => this.props.login()}>DEMO LOGIN</button>
-            <Link onClick={() => this.props.clearErrors()} to='/login'>SIGN IN</Link>
-            <Link onClick={() => this.props.clearErrors()} to='/signup' className='signup-button'>SIGN UP</Link>
+            <Link onClick={() => this.clear()} to='/login'>SIGN IN</Link>
+            <Link onClick={() => this.clear()} to='/signup' className='signup-button'>SIGN UP</Link>
           </nav>
           <div className="empty-space">
             <button onClick={() => this.showNav()}><img src={window.images.hamburger}></img></button>
@@ -39,8 +44,8 @@ class Header extends React.Component{
               <Link to='/events'>SPORT EVENTS</Link>
               <Link to='/events/new'>HOSTING</Link>
               <button onClick={() => this.props.login()}>DEMO LOGIN</button>
-              <Link onClick={() => this.props.clearErrors()} to='/login'>SIGN IN</Link>
-              <Link onClick={() => this.props.clearErrors()} to='/signup' className='signup-button'>SIGN UP</Link>
+              <Link onClick={() => this.clear()} to='/login'>SIGN IN</Link>
+              <Link onClick={() => this.clear()} to='/signup' className='signup-button'>SIGN UP</Link>
             </div>
             </nav>
 

@@ -2,6 +2,7 @@ import {
   RECEIVE_ALL_JOINED_EVENT,
   RECEIVE_SINGLE_JOINED_EVENT,
   REMOVE_JOINED_EVENT,
+  CLEAR_JOINED_EVENTS
 } from '../actions/joined_event_actions';
 import merge from 'lodash/merge';
 
@@ -13,9 +14,11 @@ export default (state = {}, action) => {
     case RECEIVE_ALL_JOINED_EVENT:
       return merge({}, state, action.joinedEvents);
     case REMOVE_JOINED_EVENT:
-    let newState = Object.assign({}, state);
-    delete newState[action.joinedEvent.id];
-    return newState;
+      let newState = Object.assign({}, state);
+      delete newState[action.joinedEvent.id];
+      return newState;
+    case CLEAR_JOINED_EVENTS:
+      return {};
     default:
       return state;
   }
