@@ -13,9 +13,6 @@ import {
   RECEIVE_WAITLIST_ERRORS
 } from '../actions/waitlist_actions';
 
-
-
-//added default state = {}
 export default (state = {}, action ) => {
   Object.freeze(state);
   let newState = Object.assign({}, state);
@@ -29,15 +26,11 @@ export default (state = {}, action ) => {
     case RECEIVE_ALL_EVENT:
       return merge({}, state, action.payload.users);
     case RECEIVE_SINGLE_JOINED_EVENT:
-      //get newState
-      // let newState = Object.assign({}, state);
-      //get array attending_events ids from user and add to it
       let userId = action.joinedEvent.user_id;
       let eventId = action.joinedEvent.event_id;
       newState[userId].attending_event_ids.push(eventId);
       return newState;
     case REMOVE_JOINED_EVENT:
-      // let nState = Object.assign({}, state);
       let uId = action.joinedEvent.user_id;
       let eId = action.joinedEvent.event_id;
       let newArray = newState[uId].attending_event_ids
@@ -45,7 +38,6 @@ export default (state = {}, action ) => {
       newState[uId].attending_event_ids = newArray;
       return newState;
     case RECEIVE_SINGLE_WAITLIST:
-      // let wState = Object.assign({}, state);
       let wuId = action.waitlist.user_id;
       let weId = action.waitlist.event_id;
       newState[wuId].waiting_event_ids.push(weId);

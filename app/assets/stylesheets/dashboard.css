@@ -172,3 +172,13 @@
     text-align: center;
     color: #929292;
 }
+
+.dashboard-event-list .event-info-box h3{
+    font-size: 11px;
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+
+.dashboard-event-list .event-info-box img{
+    margin-top: -3px;
+}

@@ -15,7 +15,7 @@ class Splash extends React.Component {
           <div className="inner">
             <h2>Everyone is interesting</h2>
             <span>But you don't discover that when you're staring at a screen.</span>
-            <Link to='/'>LET'S PLAY SPORTS TOGETHER</Link>
+            <Link to='/events'>LET'S PLAY SPORTS TOGETHER</Link>
           </div>
         </div>
         <div className='outer-row-2'>

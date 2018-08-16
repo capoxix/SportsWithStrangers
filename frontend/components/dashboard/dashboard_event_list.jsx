@@ -82,7 +82,7 @@ const DashboardEventList = ({type, events,cities, categories, currentUser,users,
           <div className='event-info-box'>
             <div className="event-category">
               <div className="emoji"><img src={window.images[categories[event.category_id].name]}></img></div>
-              <div className=""><h4>{categories[event.category_id].name.toUpperCase()}</h4></div>
+              <div className=""><h3>{categories[event.category_id].name.toUpperCase()}</h3></div>
             </div>
             <div className='event-day'>
                 <h5>{day}</h5>

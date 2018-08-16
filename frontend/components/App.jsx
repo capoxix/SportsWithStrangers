@@ -12,7 +12,6 @@ import EventIndexContainer from  './events/event_index_container';
 import EventShowContainer from './events/event_show_container';
 import AllCityEventContainer from './events/all_city_event_container';
 import DashboardContainer from './dashboard/dashboard_container';
-// import SearchContainer from './search_container';
 
 const App = () => (
   <div>
@@ -27,7 +26,7 @@ const App = () => (
         <ProtectedRoute exact path="/events/:eventId/edit" component={UpdateEventContainer}/>
         <ProtectedRoute exact path="/events/:eventId" component={EventShowContainer}/>
         <ProtectedRoute exact path="/dashboard" component={DashboardContainer}/>
-      <Route exact path="/events" component={EventIndexContainer}/>
+        <Route exact path="/events" component={EventIndexContainer}/>
         <Route exact path= "/" component= {SplashContainer} />
         <Redirect to='/'/>
       </Switch>

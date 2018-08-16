@@ -27,7 +27,6 @@ class Header extends React.Component{
           </nav>
           <nav className="right">
             <Link to='/events'>SPORT EVENTS</Link>
-            <Link to='/about'>ABOUT</Link>
             <button onClick={() => this.props.login()}>DEMO LOGIN</button>
             <Link onClick={() => this.props.clearErrors()} to='/login'>SIGN IN</Link>
             <Link onClick={() => this.props.clearErrors()} to='/signup' className='signup-button'>SIGN UP</Link>
@@ -39,7 +38,6 @@ class Header extends React.Component{
             <div className= "hamburger-dropdown">
               <Link to='/events'>SPORT EVENTS</Link>
               <Link to='/events/new'>HOSTING</Link>
-              <Link to='/about'>ABOUT</Link>
               <button onClick={() => this.props.login()}>DEMO LOGIN</button>
               <Link onClick={() => this.props.clearErrors()} to='/login'>SIGN IN</Link>
               <Link onClick={() => this.props.clearErrors()} to='/signup' className='signup-button'>SIGN UP</Link>
