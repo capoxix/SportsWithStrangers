@@ -21,10 +21,12 @@ class Dashboard extends React.Component{
     // if (!joinedEvents) return <div>Loading....</div>;
     return (
       <div className='dashboard-container'>
-        <div className='dashboard-user'>
-          <h2> Welcome home, {currentUser.name}!</h2>
-          <h3>What are you grateful for today?</h3>
-          <input type='submit' onClick={this.sendToEventsIndex}value='FIND ANOTHER SPORTS TIME!'/>
+        <div>
+          <div className='dashboard-user'>
+            <h2> Welcome home, {currentUser.name}!</h2>
+            <h3>What are you grateful for today?</h3>
+            <input type='submit' onClick={this.sendToEventsIndex}value='FIND ANOTHER SPORTS TIME!'/>
+          </div>
         </div>
         <div className='dashboard-events'>
           <DashboardEventList
