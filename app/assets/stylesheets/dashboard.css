@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin: 0 auto;
-    width: 930px;
+    width: 900px;
     font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
 
 }
@@ -47,7 +47,7 @@
 
 .author-img-quote img{
     width: 100%;
-    height: 100px;
+    height: 125px;
 }
 
 .author-img-quote{

@@ -6,16 +6,16 @@
   display: grid;
 /*   grid-template-columns: repeat(4, 200px); */
   /* grid-template-rows: 180px; */
-  width: 1000px;
+  width: 900px;
   margin: 0 auto;
   padding-top: 25px;
   padding-bottom: 25px;
-  grid-row-gap: 60px;
+  grid-row-gap: 30px;
   font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
 }
 
 .month-info{
-  width: 1000px;
+  width: 900px;
   margin: 0 auto;
   display: grid;
   justify-content: space-between;
@@ -37,6 +37,8 @@
 }
 
 .month-info .days-left{
+    font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
+
   color: #bfbfbf;
   border-color: #cccccc;
   border-radius: 10px;
@@ -46,14 +48,17 @@
   text-align: center;
   font-size: 0.8em;
   font-weight: 600;
-  margin-right: 10px;
+  margin-left: 100px;
+  margin-right: 15px;
+  width: 350px;
+
 
 }
 
 .city-container {
   text-align: center;
   background-color: #f1e9c6;
-  width: 1000px;
+  width: 900px;
   margin: 0 auto;
 }
 .city-container h5{
@@ -90,9 +95,9 @@
 
 .city-list{
   display: grid;
-  grid-template-columns: repeat(5, 200px);
+  grid-template-columns: repeat(5, 180px);
   margin: 0 auto;
-  width: 1000px;
+  width: 900px;
   color: #eda20b;
   padding: 1em 1em 1em 1em;
   text-align: center;
