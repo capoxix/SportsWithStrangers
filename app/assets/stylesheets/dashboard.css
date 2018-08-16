@@ -1,11 +1,28 @@
 .dashboard-container{
     display: grid;
     grid-template-columns: 1fr 2fr;
+    margin: 0 auto;
+    width: 980px;
+    font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
+
 }
 
 .dashboard-container .event-user-info{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 330px;
+    margin-bottom: 50px;
+    grid-gap: 20px;
+}
+
+.dashboard-events h2{
+    margin-bottom: 1em;
+    margin-top: 1em;
+    color: #EF6236;
+    font-weight: 600;
+    line-height: 1.25;
+    font-size: 1.5em;
+
 }
 
 .author-photo{
@@ -19,7 +36,7 @@
 
 .author-img-quote img{
     width: 100%;
-    height: auto;
+    height: 100px;
 }
 
 .author-img-quote{
@@ -31,14 +48,12 @@
 .author-img-quote p {
     font-size: 0.8em;
     color: #333;
-    font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
     line-height: 1.625;
 }
  .user-info h3{
    color: #929292;
    margin-bottom: .75em;
    font-size: 1em;
-    font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
     line-height: 1.25;
     font-weight: 600;
     display: block;
@@ -54,8 +69,67 @@
     letter-spacing: 0;
     text-align: center;
     margin-bottom: 1em;
-    font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
     margin: 0 auto;
     font-weight: 600;
     width: 100%;
+    box-sizing: border-box;
+}
+
+.event-user-info .event-info h5{
+    color: #929292;
+    font-weight: 400;
+    font-size: 0.8em;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.event-user-info .event-info h4{
+    line-height: 1.25;
+    font-weight: 600;
+    margin: 0;
+    font-size: 1em;
+    text-align: left;
+
+}
+
+.event-user-info .event-info .event-time h4{
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.event-user-info .event-info a{
+    color: #EF6236;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .6em;
+}
+
+.event-user-info .user-info h3{
+    margin-top: 0;
+}
+
+.event-user-info .event-info .event-info-box{
+    border: 1px solid #DDD;
+    padding:10px;
+}
+
+.event-user-info .event-info{
+    padding: 0;
+    border: none;
+}
+
+.event-info .event-category h4{
+    font-size: .9m;
+    display: block;
+}
+
+.event-user-info .event-info hr{
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.event-info-box {
+    background-color: white;
 }
