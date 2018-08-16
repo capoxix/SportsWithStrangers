@@ -5,6 +5,9 @@ class Header extends React.Component{
   constructor(props){
     super(props);
     this.showNav = this.showNav.bind(this);
+    this.logoutAndClear = this.logoutAndClear.bind(this);
+    this.clear = this.clear.bind(this);
+    this.loginAndSendToEvents = this.loginAndSendToEvents.bind(this);
   }
 
   showNav(e){
@@ -21,6 +24,17 @@ class Header extends React.Component{
     this.props.clearJoinedEvents();
   }
 
+  logoutAndClear(){
+    console.log("LOGOUT AND CLEAR");
+    this.props.logout()
+    .then(() =>this.props.clearJoinedEvents())
+    .then(() => this.props.history.push('/'));
+  }
+
+  loginAndSendToEvents(){
+    this.props.login().then(() => this.props.history.push('/events'));
+  }
+
   render(){
 
     if(this.props.currentUser === undefined){
@@ -32,7 +46,7 @@ class Header extends React.Component{
           </nav>
           <nav className="right">
             <Link to='/events'>SPORT EVENTS</Link>
-            <button onClick={() => this.props.login()}>DEMO LOGIN</button>
+            <button onClick={() => this.loginAndSendToEvents()}>DEMO LOGIN</button>
             <Link onClick={() => this.clear()} to='/login'>SIGN IN</Link>
             <Link onClick={() => this.clear()} to='/signup' className='signup-button'>SIGN UP</Link>
           </nav>
@@ -43,7 +57,7 @@ class Header extends React.Component{
             <div className= "hamburger-dropdown">
               <Link to='/events'>SPORT EVENTS</Link>
               <Link to='/events/new'>HOSTING</Link>
-              <button onClick={() => this.props.login()}>DEMO LOGIN</button>
+              <button onClick={() => this.loginAndSendToEvents()}>DEMO LOGIN</button>
               <Link onClick={() => this.clear()} to='/login'>SIGN IN</Link>
               <Link onClick={() => this.clear()} to='/signup' className='signup-button'>SIGN UP</Link>
             </div>
@@ -63,7 +77,7 @@ class Header extends React.Component{
               <Link to='/events'>SPORT EVENTS</Link>
               <Link to='/events/new'>HOSTING</Link>
               <Link to='/dashboard'>DASHBOARD</Link>
-              <button onClick={this.props.logout}>SIGN OUT</button>
+              <button onClick={()=> this.logoutAndClear()}>SIGN OUT</button>
             </nav>
             <div className="empty-space">
               <button onClick={() => this.showNav()}><img src={window.images.hamburger}></img></button>
@@ -73,7 +87,7 @@ class Header extends React.Component{
                 <Link to='/events'>SPORT EVENTS</Link>
                 <Link to='/events/new'>HOSTING</Link>
                 <Link to='/dashboard'>DASHBOARD</Link>
-                <button onClick={this.props.logout}>SIGN OUT</button>
+                <button onClick={()=> this.logoutAndClear()}>SIGN OUT</button>
               </div>
             </nav>
           </div>
