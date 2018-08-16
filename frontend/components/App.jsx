@@ -20,14 +20,14 @@ const App = () => (
       <HeaderContainer />
     </header>
       <Switch>
-        <ProtectedRoute exact path="/dashboard" component={DashboardContainer}/>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <Route exact path='/events/city/:cityId' component={AllCityEventContainer}/>
         <ProtectedRoute exact path="/events/new" component={CreateEventContainer}/>
         <ProtectedRoute exact path="/events/:eventId/edit" component={UpdateEventContainer}/>
-        <Route exact path="/events" component={EventIndexContainer}/>
         <ProtectedRoute exact path="/events/:eventId" component={EventShowContainer}/>
+        <ProtectedRoute exact path="/dashboard" component={DashboardContainer}/>
+      <Route exact path="/events" component={EventIndexContainer}/>
         <Route exact path= "/" component= {SplashContainer} />
         <Redirect to='/'/>
       </Switch>
