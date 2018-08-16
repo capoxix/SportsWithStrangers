@@ -44,6 +44,8 @@ curry = User.create!(
   user_description: "One of the splash brothers."
 )
 
+
+
 roger = User.create!(
   name: "Roger",
   password: "123456",
@@ -81,30 +83,36 @@ beckham = User.create!(
 # photo = open('https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/retb8Bj9kqVfQPeQzCiYgTiY');
 
 garbo.photo.attach(
-  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/garbocheng93.png"),filename: "garbocheng93.png")
+  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/garbocheng93-cropped.jpg"),filename: "garbocheng93-cropped.png")
+
+kobe.photo.attach(
+  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/kobe-cropped.jpg", filename: "kobe-cropped.jpg")
+)
 
 lebron.photo.attach(
-  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/lebron.jpg"), filename: "lebron.jpg")
+  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/lebron-cropped.jpg"), filename: "lebron-cropped.jpg")
 
 curry.photo.attach(
-  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/stephen-curry.jpg"), filename: "stephen-curry.jpg")
+  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/stephen-curry-cropped.jpg"), filename: "stephen-curry-cropped.jpg")
+
 
 roger.photo.attach(
-  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/federer.jpg"), filename: "federer.jpg")
+  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/federer-cropped.jpg"), filename: "federer-cropped.jpg")
 
 serena.photo.attach(
-  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/serena.jpg"), filename: "serena.jpg")
+  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/serena-cropped.jpg"), filename: "serena-cropped.jpg")
 
 messi.photo.attach(
-  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/messi.jpg"), filename: "messi.jpg")
+  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/messi-cropped.jpg"), filename: "messi-cropped.jpg")
 
 beckham.photo.attach(
-  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/beckham.jpg"), filename: "beckham.jpg")
+  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/beckham-cropped.jpg"), filename: "beckham-cropped.jpg")
 
 la = City.create!(name: "LA")
 sf = City.create!(name: "SF")
 oakland = City.create!(name: "Oakland")
 london = City.create!(name: "London")
+barcelona = City.create!(name: "Barcelona")
 
 bball = Category.create!(name: "Basketball")
 soccer = Category.create!(name: "Soccer")
@@ -115,7 +123,7 @@ g1 = Event.create!(
   user_id: garbo.id,
   city_id: sf.id,
   category_id: bball.id,
-  date_time: DateTime.new(2018,8,13,15),
+  date_time: DateTime.new(2018,8,18,15),
   address: "1122 street",
   country: "USA",
   description: "Looking to play 1v1 to practice my dribbling skills",
@@ -126,7 +134,7 @@ g2 = Event.create!(
   user_id: garbo.id,
   city_id: sf.id,
   category_id: soccer.id,
-  date_time: DateTime.new(2018,8,16,16),
+  date_time: DateTime.new(2018,8,20,16),
   address: "1400-1598 John F Kennedy Dr",
   country: "USA",
   description: "Looking to play half court soccer to practice my shooting skills",
@@ -137,7 +145,7 @@ g3 = Event.create!(
   user_id: garbo.id,
   city_id: sf.id,
   category_id: tennis.id,
-  date_time: DateTime.new(2018,8,18,18),
+  date_time: DateTime.new(2018,8,23,18),
   address: "Nancy Pelosi Dr & Bowling Green Dr",
   country: "USA",
   description: "Looking to play doubles match",
@@ -148,7 +156,7 @@ l1 =   Event.create!(
   user_id: lebron.id,
   city_id: la.id,
   category_id: bball.id,
-  date_time: DateTime.new(2018,8,13,13),
+  date_time: DateTime.new(2018,8,23,13),
   address: "1111 S Figueroa St",
   country: "USA",
   description: "Looking to play with possible future teammates",
@@ -207,8 +215,6 @@ r2 = Event.create!(
   description: "Looking to play singles match",
   num_of_members: 2
 )
-
-
 
 
 r3 = Event.create!(
@@ -277,11 +283,22 @@ b2 = Event.create!(
   num_of_members: 10
 )
 
+b3 = Event.create!(
+  user_id: beckham.id,
+  city_id: london.id,
+  category_id: soccer.id,
+  date_time: DateTime.new(2018,8,20,20),
+  address: "Hornsey Rd",
+  country: "UK",
+  description: "Looking to play 5v5 soccer",
+  num_of_members: 8
+)
+
 m1 = Event.create!(
   user_id: messi.id,
-  city_id: sf.id,
+  city_id: barcelona.id,
   category_id: soccer.id,
-  date_time: DateTime.new(2018,8,17,13),
+  date_time: DateTime.new(2018,8,18,13),
   address: "701 Oak St",
   country: "USA",
   description: "Looking to play 5v5 soccer",
@@ -290,9 +307,9 @@ m1 = Event.create!(
 
 m2 = Event.create!(
   user_id: messi.id,
-  city_id: sf.id,
+  city_id: barcelona.id,
   category_id: soccer.id,
-  date_time: DateTime.new(2018,8,15,15),
+  date_time: DateTime.new(2018,8,23,15),
   address: "5 Freelon St #200",
   country: "USA",
   description: "Looking to play 5v5 soccer",

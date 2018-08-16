@@ -1,5 +1,7 @@
 .outside-dashboard{
- background-color: #f5ebd0 ;
+ background-color: #f5ebd0;
+ padding-top: 30px;
+ padding-bottom: 30px;
 }
 .dashboard-container{
     display: grid;
