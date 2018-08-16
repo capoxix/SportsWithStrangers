@@ -40,7 +40,9 @@ class Splash extends React.Component {
           <h3>SO WHY ARE THOUSANDS OF PEOPLE DOING IT?</h3>
 
           <div className="inner">
-            <img src={window.images.huddle}></img>
+            <div className="image-container">
+              <img src={window.images.huddle}></img>
+            </div>
             <div className='content-right'>
               <h2>It's weird.</h2>
               <span>Everyone at sport time is stepping a little out of their
@@ -60,11 +62,15 @@ class Splash extends React.Component {
                 we manufacture serendipity.
               </span>
             </div>
-            <img src={window.images.strangers}></img>
+            <div className="image-container">
+              <img src={window.images.strangers}></img>
+            </div>
           </div>
 
           <div className="inner">
-            <img src={window.images.highFive}></img>
+            <div className="image-container">
+              <img src={window.images.highFive}></img>
+            </div>
             <div className='content-right'>
               <h2>Your hands are made for high fiving!</h2>
               <span>And your eyes are made…for eye contact!

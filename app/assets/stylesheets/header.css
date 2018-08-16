@@ -35,6 +35,13 @@ div .header-nav{
   margin-left: 200px;
 }
 
+.header-nav .left p{
+  text-transform: none;
+  color: white;
+  font-size: 16px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
 .header-nav .right{
   text-align: right;
 }
