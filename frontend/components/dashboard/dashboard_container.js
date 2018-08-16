@@ -27,7 +27,6 @@ const msp = (state) => ({
     joinedEvents: state.entities.joinedEvents})
 });
 
-//deletejoinedEvent needs to be modified
 const mdp = (dispatch) => ({
   deleteJoinedEvent: (id) => dispatch(deleteJoinedEvent(id)),
   deleteEvent: (id) => dispatch(deleteEvent(id)),

@@ -9,7 +9,6 @@ export const getDateInfo= (event) => {
   let monthArr = ["January", "February", "March", "April", "May",
   "June", "July", "August", "September", "October", "November", "December"];
   let day = days[date.getDay()];
-  // let hour = date.getHours();
   let hour = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
   let until = date.setHours((date.getHours() + 2) % 24);
    until = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
@@ -61,7 +60,6 @@ const DashboardEventList = ({type, events,cities, categories, currentUser,users,
       listName="Sport times for which you're on the waitlist";
       break;
     case 'hosting':
-      // console.log("IN HOSTING");
       listName="Sport times you're hosting";
       break;
     default:

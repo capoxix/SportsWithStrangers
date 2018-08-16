@@ -48,7 +48,7 @@ class UserForm extends React.Component {
                 />
 
             <input
-              type="text"
+              type="email"
               onChange={this.update("email")}
               value={this.state.email}
               placeholder="Email address"

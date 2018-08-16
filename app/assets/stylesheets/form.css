@@ -16,7 +16,7 @@
   margin-bottom: 10px;
 }
 
-.form input[type="text"], input[type="password"]{
+.form input[type="text"], input[type="password"], input[type="email"]{
   background-color: white;
   width: 500px;
   border: 1px solid lightgray;
