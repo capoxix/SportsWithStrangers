@@ -33,7 +33,7 @@ export const getEventInfo = (type, event, users) => {
       break;
     case 'waitlist':
       actionName="YOU'RE STILL ON THE WAITLIST!";
-      hostQuote='Your host(well, maybe)';
+      hostQuote='Your host (well, maybe)';
       userLook=`This is what ${author.name} looks like in case you need to find them
       if you get off the waitlist).`;
       break;
@@ -61,7 +61,7 @@ const DashboardEventList = ({type, events,cities, categories, currentUser,users,
       listName="Sport times for which you're on the waitlist";
       break;
     case 'hosting':
-      console.log("IN HOSTING");
+      // console.log("IN HOSTING");
       listName="Sport times you're hosting";
       break;
     default:
