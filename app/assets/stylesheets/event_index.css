@@ -90,7 +90,7 @@
 
 .city-list{
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(5, 200px);
   margin: 0 auto;
   width: 1000px;
   color: #eda20b;
