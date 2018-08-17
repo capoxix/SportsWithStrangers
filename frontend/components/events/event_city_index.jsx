@@ -41,9 +41,9 @@ class EventCityIndex extends React.Component {
     }
 
     return (
-      <div className='index-city-wrapper'>
-        {cityIndex}
-      </div>
+        <div className='index-city-wrapper'>
+          {cityIndex}
+        </div>
     );
   }
 }

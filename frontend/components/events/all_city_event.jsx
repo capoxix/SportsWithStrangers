@@ -46,6 +46,13 @@ class AllCityEvent extends React.Component {
       });
 
     return (
+      <div>
+        <div className="banner">
+          <div className="banner-words">
+            <h1>PLAY SPORTS</h1>
+            <span>IT'S GOOD FOR YOU</span>
+          </div>
+        </div>
         <div className= 'index-container'>
             <div className="month-info">
               <div className="current-month">
@@ -64,6 +71,7 @@ class AllCityEvent extends React.Component {
                 {cityIndex}
               </div>
             </div>
+          </div>
         </div>
     );
   }

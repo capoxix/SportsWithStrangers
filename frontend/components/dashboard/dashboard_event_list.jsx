@@ -39,7 +39,7 @@ export const getEventInfo = (type, event, users) => {
     case 'hosting':
       actionName="cancel sport time";
       hostQuote="You are the host";
-      userLook=`This is your current picture being displayed`;
+      userLook=`This is what your current picture looks like.`;
       actionId = event.id;
       break;
     default:

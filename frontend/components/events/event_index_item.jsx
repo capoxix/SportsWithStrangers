@@ -19,8 +19,14 @@ const getDisplayLink = (currentUser, event ,count) => {
   let waitlistedLink = <div className='waitlisted-link'>
                       <Link to={`/events/${event.id}`}> WAITLISTED</Link>
                     </div>;
-  if (currentUser) {
 
+  let yourLink = <div className='show-link'>
+                    <Link to={`/events/${event.id}`}> HOSTING</Link>
+                  </div>;
+  if (currentUser) {
+    if(currentUser.id === event.user_id) {
+      return yourLink;
+    }
     if (currentUser.attending_event_ids.includes(event.id))
       return signedUpLink;
     if (currentUser.waiting_event_ids.includes(event.id))
