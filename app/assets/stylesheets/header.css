@@ -1,20 +1,19 @@
 .header{
   background-color: #fdbb5e;
   font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
-
 }
 
 div .header-nav{
-    background-color:#fdbb5e;
-    width: 80%;
-    max-width: 900px;
-    color: white;
-    height: 20px;
-    padding: 30px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 3fr 4fr;
-    justify-content: space-between;
+  background-color:#fdbb5e;
+  width: 80%;
+  max-width: 900px;
+  color: white;
+  height: 20px;
+  padding: 30px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  justify-content: space-between;
 }
 .header-nav .left{
   float: left;
@@ -95,29 +94,27 @@ p {
 }
 
 @media all and (max-width: 955px) {
-    .header-nav .right{
-      display: none;
-    }
+  .header-nav .right{
+    display: none;
+  }
+  
+  .empty-space{
+    display: block;
+  }
 
-    .header-nav .left{}
+  .empty-space button{
+    float: right;
+  }
 
-    .empty-space{
-      display: block;
-    }
+ .empty-space img{
+   width: 60px;
+   height: 40px;
+   float: right;
+   position: relative;
+   margin-top: -10px;
+ }
 
-    .empty-space button{
-      float: right;
-    }
-
-     .empty-space img{
-       width: 60px;
-       height: 40px;
-       float: right;
-       position: relative;
-       margin-top: -10px;
-     }
-
-    .header-nav .center{
+  .header-nav .center{
     background-repeat: no-repeat;
     background-size: 50px 50px;
     grid-column-start: 1;

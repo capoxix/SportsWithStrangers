@@ -154,7 +154,7 @@ g3 = Event.create!(
   user_id: garbo.id,
   city_id: sf.id,
   category_id: tennis.id,
-  date_time: DateTime.new(2018,8,23,18),
+  date_time: DateTime.new(2018,8,23,19),
   address: "Nancy Pelosi Dr & Bowling Green Dr",
   country: "USA",
   description: "Looking to play doubles match.",
@@ -176,12 +176,57 @@ g5 = Event.create!(
   user_id: garbo.id,
   city_id: barcelona.id,
   category_id: soccer.id,
-  date_time: DateTime.new(2018,8,23,15),
+  date_time: DateTime.new(2018,8,25,15),
   address: "Aristides Maillol 08028",
   country: "Spain",
   description: "Looking to play 1v1 to practice my dribbling skills.",
   num_of_members: 2
 )
+
+g6 = Event.create!(
+  user_id: garbo.id,
+  city_id: oakland.id,
+  category_id: basketball.id,
+  date_time: DateTime.new(2018,8,26,16),
+  address: "JAMTOWN, 31 4th st",
+  country: "USA",
+  description: "Looking to play full court games.",
+  num_of_members: 10
+  )
+
+g7 = Event.create!(
+  user_id: garbo.id,
+  city_id: oakland.id,
+  category_id: basketball.id,
+  date_time: DateTime.new(2018,8,27,16),
+  address: "JAMTOWN, 31 4th st",
+  country: "USA",
+  description: "Looking to play full court games.",
+  num_of_members: 10
+  )
+
+g8 = Event.create!(
+  user_id: garbo.id,
+  city_id: la.id,
+  category_id: basketball.id,
+  date_time: DateTime.new(2018,8,28,16),
+  address: "John Wooden Center, 221 Westwood Plaza",
+  country: "USA",
+  description: "Looking to play full court games.",
+  num_of_members: 10
+  )
+
+g8 = Event.create!(
+  user_id: garbo.id,
+  city_id: la.id,
+  category_id: basketball.id,
+  date_time: DateTime.new(2018,8,29,16),
+  address: "John Wooden Center, 221 Westwood Plaza",
+  country: "USA",
+  description: "Looking to play full court games.",
+  num_of_members: 10
+  )
+
 
 k1 = Event.create!(
   user_id: kobe.id,
@@ -316,6 +361,17 @@ c4 = Event.create!(
   num_of_members: 2
 )
 
+c5 = Event.create!(
+  user_id: curry.id,
+  city_id: oakland.id,
+  category_id: basketball.id,
+  date_time: DateTime.new(2018,8,26,16),
+  address: "JAMTOWN 31 4th st",
+  country: "USA",
+  description: "Looking to play half court games.",
+  num_of_members: 6
+  )
+
 klay1 = Event.create!(
   user_id: klay.id,
   city_id: oakland.id,
@@ -349,7 +405,7 @@ klay3 = Event.create!(
   num_of_members: 2
 )
 
-klay3 = Event.create!(
+klay4 = Event.create!(
   user_id: klay.id,
   city_id: oakland.id,
   category_id: bball.id,
@@ -359,6 +415,17 @@ klay3 = Event.create!(
   description: "Looking to play 3v3 half court games.",
   num_of_members: 6
 )
+
+klay5 = Event.create!(
+  user_id: klay.id,
+  city_id: oakland.id,
+  category_id: basketball.id,
+  date_time: DateTime.new(2018,8,28,16),
+  address: "JAMTOWN 31 4th st",
+  country: "USA",
+  description: "Looking to play half court games.",
+  num_of_members: 6
+  )
 
 r1 = Event.create!(
   user_id: roger.id,

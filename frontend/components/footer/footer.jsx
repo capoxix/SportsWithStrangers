@@ -8,7 +8,7 @@ const Footer = () => (
          <ul>
            <li><Link to='/about'>About</Link></li>
            <li><Link to='/events'>Sport Times</Link></li>
-           <li><Link to='/about'>Facebook</Link></li>
+           <li><a href='https://www.linkedin.com/in/garbo-cheng-ye/'>LinkedIn</a></li>
          </ul>
 
          <ul>
