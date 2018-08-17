@@ -19,6 +19,14 @@ garbo = User.create!(
   user_description: "I am an looking to have fun playing sports."
 )
 
+tony = User.create!(
+  name: "Tony",
+  password: '123456',
+  email: 'tony@gmail.com',
+  user_catchphrase: "You need help? I got you covered.",
+  user_description: "The man with the plan."
+)
+
 kobe = User.create!(
   name: "Kobe",
   password: "123456",
@@ -90,6 +98,9 @@ beckham = User.create!(
 
 garbo.photo.attach(
   io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/garbocheng93-cropped.jpg"), filename: "garbocheng93-cropped.png")
+
+tony.photo.attach(
+  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/tony-cropped.jpg"), filename: "garbocheng93-cropped.png")
 
 kobe.photo.attach(
   io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/kobe-cropped.jpg"), filename: "kobe-cropped.jpg")
@@ -226,6 +237,50 @@ g9 = Event.create!(
   description: "Looking to play full court games.",
   num_of_members: 10
   )
+
+t1 = Event.create!(
+  user_id: tony.id,
+  city_id: sf.id,
+  category_id: soccer.id,
+  date_time: DateTime.new(2018,8,21,16),
+  address: "1400-1598 John F Kennedy Dr",
+  country: "USA",
+  description: "Looking to play half court soccer to practice my shooting skills.",
+  num_of_members: 10
+)
+
+t2 = Event.create!(
+  user_id: tony.id,
+  city_id: sf.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,27,16),
+  address: "Helen Wills Park",
+  country: "USA",
+  description: "Looking to play full court games.",
+  num_of_members: 10
+)
+
+t3 = Event.create!(
+  user_id: tony.id,
+  city_id: sf.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,8,19,19),
+  address: "Nancy Pelosi Dr & Bowling Green Dr",
+  country: "USA",
+  description: "Looking to play doubles match.",
+  num_of_members: 3
+  )
+
+t4 = Event.create!(
+  user_id: tony.id,
+  city_id: sf.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,26,16),
+  address: "Helen Wills Park",
+  country: "USA",
+  description: "Looking to play 1v1 to 50 points.",
+  num_of_members: 2
+)
 
 
 k1 = Event.create!(
