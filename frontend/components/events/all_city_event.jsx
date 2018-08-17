@@ -30,20 +30,20 @@ class AllCityEvent extends React.Component {
     });
 
       eventsArr.forEach(event => {
-          if (event.city_id === city.id) {
-            cityIndex.push(
-              <div>
-                <EventIndexItem
-                  key={event.id}
-                  event={event}
-                  user={users[event.user_id]}
-                  city={city}
-                  categories={categories}
-                  currentUser = {currentUser}/>
-              </div>
-            );
-          }
-        });
+        if (event.city_id === city.id) {
+          cityIndex.push(
+            <div>
+              <EventIndexItem
+                key={event.id}
+                event={event}
+                user={users[event.user_id]}
+                city={city}
+                categories={categories}
+                currentUser = {currentUser}/>
+            </div>
+          );
+        }
+      });
 
     return (
         <div className= 'index-container'>
