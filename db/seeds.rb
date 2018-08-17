@@ -166,7 +166,7 @@ g3 = Event.create!(
   city_id: sf.id,
   category_id: tennis.id,
   date_time: DateTime.new(2018,8,23,19),
-  address: "Nancy Pelosi Dr & Bowling Green Dr",
+  address: "Bowling Green Dr & Nancy Pelosi Dr",
   country: "USA",
   description: "Looking to play doubles match.",
   num_of_members: 3
@@ -265,7 +265,7 @@ t3 = Event.create!(
   city_id: sf.id,
   category_id: tennis.id,
   date_time: DateTime.new(2018,8,19,19),
-  address: "Nancy Pelosi Dr & Bowling Green Dr",
+  address: "Bowling Green Dr & Nancy Pelosi Dr",
   country: "USA",
   description: "Looking to play doubles match.",
   num_of_members: 3
@@ -532,7 +532,7 @@ r3 = Event.create!(
   city_id: sf.id,
   category_id: tennis.id,
   date_time: DateTime.new(2018,8,25,13),
-  address: "Nancy Pelosi Dr & Bowling Green Dr",
+  address: "Bowling Green Dr & Nancy Pelosi Dr",
   country: "USA",
   description: "Looking to play singles match.",
   num_of_members: 2
@@ -587,7 +587,7 @@ s3 = Event.create!(
   city_id: sf.id,
   category_id: tennis.id,
   date_time: DateTime.new(2018,8,28,18),
-  address: "Nancy Pelosi Dr & Bowling Green Dr",
+  address: "Bowling Green Dr & Nancy Pelosi Dr",
   country: "USA",
   description: "Looking to play singles match.",
   num_of_members: 2

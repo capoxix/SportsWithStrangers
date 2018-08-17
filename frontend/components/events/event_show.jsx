@@ -129,7 +129,7 @@ class EventShow extends React.Component{
                 height="250"
                 frameBorder="0"
                 src={
-                `https://www.google.com/maps/embed/v1/search?key=AIzaSyDjW7XIIxfss2vxu6WxWKRfFbX_9TVY9Z8&q=${cities[event.city_id].name}&zoom=10`}
+                `https://www.google.com/maps/embed/v1/search?key=AIzaSyDjW7XIIxfss2vxu6WxWKRfFbX_9TVY9Z8&q=${event.address.split(" ").join("+")},${cities[event.city_id].name}+${event.country}&zoom=10`}
                 allowFullScreen>
               </iframe>
 
