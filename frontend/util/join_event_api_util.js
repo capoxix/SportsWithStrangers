@@ -19,9 +19,3 @@ export const getJoinedEvents = () => {
       url: '/api/joined_events'
   });
 };
-// export const getJoinedEvent = (user_id) => {
-//   return $.ajax({
-//     method: 'GET',
-//     url: `/api/joined_events/${user_id}`,
-//   });
-// };

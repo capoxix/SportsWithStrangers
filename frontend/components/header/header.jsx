@@ -24,7 +24,6 @@ class Header extends React.Component{
   }
 
   logoutAndClear(){
-    console.log("LOGOUT AND CLEAR");
     this.props.logout()
     .then(() =>this.props.clearJoinedEvents())
     .then(() => this.props.history.push('/'));

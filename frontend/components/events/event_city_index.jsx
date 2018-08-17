@@ -12,8 +12,6 @@ class EventCityIndex extends React.Component {
                       <h3>{city.name}<br></br>👉</h3>
                       </div>];
 
-
-
     let eventsArr = Object.values(events).sort(function(a, b) {
       if (Date.parse(a.date_time) < Date.parse(b.date_time)) {
         return -1;
@@ -21,7 +19,6 @@ class EventCityIndex extends React.Component {
         return 1;
       }
     });
-
 
     for (let id in eventsArr) {
       let event = eventsArr[id];

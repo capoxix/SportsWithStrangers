@@ -3,22 +3,9 @@ import ReactDOM from 'react-dom';
 import * as SessionAPI from './util/session_api_util';
 import configureStore from './store/store';
 import Root from './components/root';
-import * as EventAPI from './util/event_api_util';
-import * as EventACTION from  './actions/event_actions';
-import * as FilterACTION from './actions/filter_actions';
-import * as JoinedEventAPI from './util/join_event_api_util';
-import * as JoinedEventACTION from './actions/joined_event_actions';
-import * as WaitlistAPI from './util/waitlist_api_util';
-import * as WaitlistACTION from './actions/waitlist_actions';
+
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
-
-
-
-  // window.createJoinedEvent = JoinedEventACTION.createJoinedEvent; //confirmed;
-    window.deleteJoinedEvent = JoinedEventACTION.deleteJoinedEvent; //confirmed
-  window.getJoinedEvents = JoinedEventACTION.getJoinedEvents;
-  // window.createWaitlist = WaitlistACTION.createWaitlist;
   let store;
   if (window.currentUser) {
     const preloadedState = {
@@ -37,17 +24,4 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dispatch = store.dispatch;
   ReactDOM.render(<Root store={store}/>, root);
 
-  // ReactDOM.render(<h1>WELCOME!!!!!! </h1>, root);
 });
-
-/*
-  {
-  city_id: 2,
-  category_id: 1,
-  date_time: String(new Date(Date.now())).slice(0,24),
-  address: '1122 street',
-  country: 'USA',
-  description: 'Testing',
-  num_of_members: 3
-  }
-*/

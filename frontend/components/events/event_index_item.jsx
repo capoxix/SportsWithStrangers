@@ -45,13 +45,9 @@ const EventIndexItem = ({event, categories, city, user, currentUser}) => {
    until = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
   let dateArr = date.toString().split(" ");
 
-
-
   if (categories[event.category_id] === undefined || city === undefined){
     return <div>Loading....</div>;
   } else {
-
-
     let count = event.num_of_members - event.joinedCount;
     let displayLink = getDisplayLink(currentUser, event, count);
 

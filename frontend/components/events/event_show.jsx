@@ -47,7 +47,6 @@ class EventShow extends React.Component{
     let options;
     if (currentUser.id != event.user_id) {
       if (!currentUser.attending_event_ids.includes(event.id))
-      //add an if statement to allow users to join waitlist if count <= 0
         if (count <= 0 && !currentUser.waiting_event_ids.includes(event.id))
           options = [<input onClick={this.joinWaitlist} type='submit' value='JOIN WAITLIST'/>];
         else if (count > 0){
@@ -65,19 +64,15 @@ class EventShow extends React.Component{
 
   render(){
     const {events, users, cities, categories} = this.props;
-    // console.log("IN EVENT SHOW");
-    // console.log('SHOW PROPS', this.props.events);
-    // console.log(this.props.match.params.eventId);
+
     if (events[this.props.match.params.eventId] && cities != {} && categories !== {}) {
       const event = events[this.props.match.params.eventId];
       const user = users[event.user_id];
       const currentUser = users[this.props.currentUserId];
 
-
       let date = new Date(event.date_time);
       let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
       let day = days[date.getDay()];
-      // let hour = date.getHours();
       let hour = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
       let until = date.setHours((date.getHours() + 2) % 24);
        until = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
@@ -91,8 +86,6 @@ class EventShow extends React.Component{
       } else {
         count = `${count} SPOTS LEFT!`;
       }
-
-
 
       return(
         <div className= "event-show-container">

@@ -2,8 +2,6 @@ class Api::EventsController < ApplicationController
   before_action :require_logged_in, except: [:index]
 
   def index
-    # @events = Event.all
-    # @events = Event.where("date_time > ?", DateTime.now());
     @events = Event.where({ date_time: (Time.now())..Time.now.end_of_month})
     render :index
   end
@@ -11,7 +9,6 @@ class Api::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.user_id = current_user.id
-    # debugger
     if @event.save
       render json: @event
     else
@@ -31,7 +28,6 @@ class Api::EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     if @event
-      #render json: @event
       render :show
     else
       render json: @event.errors.full_messages, status: 422
@@ -40,7 +36,6 @@ class Api::EventsController < ApplicationController
 
   def destroy
     event = current_user.events.find(params[:id])
-    # event = Event.find(params[:id])
     event.destroy
   end
 
