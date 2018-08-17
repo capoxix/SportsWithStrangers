@@ -186,7 +186,7 @@ g5 = Event.create!(
 g6 = Event.create!(
   user_id: garbo.id,
   city_id: oakland.id,
-  category_id: basketball.id,
+  category_id: bball.id,
   date_time: DateTime.new(2018,8,26,16),
   address: "JAMTOWN, 31 4th st",
   country: "USA",
@@ -197,7 +197,7 @@ g6 = Event.create!(
 g7 = Event.create!(
   user_id: garbo.id,
   city_id: oakland.id,
-  category_id: basketball.id,
+  category_id: bball.id,
   date_time: DateTime.new(2018,8,27,16),
   address: "JAMTOWN, 31 4th st",
   country: "USA",
@@ -208,7 +208,7 @@ g7 = Event.create!(
 g8 = Event.create!(
   user_id: garbo.id,
   city_id: la.id,
-  category_id: basketball.id,
+  category_id: bball.id,
   date_time: DateTime.new(2018,8,28,16),
   address: "John Wooden Center, 221 Westwood Plaza",
   country: "USA",
@@ -216,10 +216,10 @@ g8 = Event.create!(
   num_of_members: 10
   )
 
-g8 = Event.create!(
+g9 = Event.create!(
   user_id: garbo.id,
   city_id: la.id,
-  category_id: basketball.id,
+  category_id: bball.id,
   date_time: DateTime.new(2018,8,29,16),
   address: "John Wooden Center, 221 Westwood Plaza",
   country: "USA",
@@ -272,6 +272,17 @@ k4 = Event.create!(
   num_of_members: 4
 )
 
+k5 = Event.create!(
+  user_id: kobe.id,
+  city_id: la.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,30,16),
+  address: "John Wooden Center, 221 Westwood Plaza",
+  country: "USA",
+  description: "Looking to play full court games.",
+  num_of_members: 10
+  )
+
 
 l1 =   Event.create!(
   user_id: lebron.id,
@@ -315,6 +326,17 @@ l4 = Event.create!(
   country: "USA",
   description: "Looking to play 2v2 half court game.",
   num_of_members: 4
+)
+
+l5 = Event.create!(
+  user_id: lebron.id,
+  city_id: la.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,21,12),
+  address: "1111 S Figueroa St",
+  country: "USA",
+  description: "Looking to play full court games.",
+  num_of_members: 10
 )
 
 c1 = Event.create!(
@@ -364,7 +386,7 @@ c4 = Event.create!(
 c5 = Event.create!(
   user_id: curry.id,
   city_id: oakland.id,
-  category_id: basketball.id,
+  category_id: bball.id,
   date_time: DateTime.new(2018,8,26,16),
   address: "JAMTOWN 31 4th st",
   country: "USA",
@@ -419,7 +441,7 @@ klay4 = Event.create!(
 klay5 = Event.create!(
   user_id: klay.id,
   city_id: oakland.id,
-  category_id: basketball.id,
+  category_id: bball.id,
   date_time: DateTime.new(2018,8,28,16),
   address: "JAMTOWN 31 4th st",
   country: "USA",
