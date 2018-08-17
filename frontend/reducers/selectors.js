@@ -6,7 +6,6 @@ export const getFilteredEvents = ({events, cityId}) => {
   	}
   }
   return result;
-  //array of events where city matches given city
 };
 
 export const getHostedEvents = ({events, currentUser}) => {
@@ -14,16 +13,11 @@ export const getHostedEvents = ({events, currentUser}) => {
   for (let id in events){
     if(events[id].user_id === currentUser.id) result.push(events[id]);
   }
-
   return result;
 };
 
 export const getJoinedEvents = ({events, currentUser, joinedEvents}) => {
   let result = [];
-  // for (let id in events){
-  //   if(currentUser.attending_event_ids.includes(events[id].id))
-  //   result.push(events[id]);
-  // }
 
   for (let id in joinedEvents){
     let joinEvent = joinedEvents[id];
