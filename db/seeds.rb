@@ -41,10 +41,16 @@ curry = User.create!(
   email: "scurry30@gmail.com",
   user_catchphrase: "You ever wonder what's it like to defend someone who
     can make half court shots like layups?",
-  user_description: "One of the splash brothers."
+  user_description: "One of the splash brothers. Also redefining the 3pt line."
 )
 
-
+klay = User.create!(
+  name: "Klay",
+  password: "123456",
+  email: "klay@gmail.com",
+  user_catchphrase: "You ever wonder what's it like to play with a splash brother?",
+  user_description: "The other splash brother and the 2016 3 point contest winner."
+)
 
 roger = User.create!(
   name: "Roger",
@@ -94,6 +100,9 @@ lebron.photo.attach(
 
 curry.photo.attach(
   io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/stephen-curry-cropped.jpg"), filename: "stephen-curry-cropped.jpg")
+
+klay.photo.attach(
+  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/klay-cropped.jpg"), filename: "klay-cropped.jpg")
 
 
 roger.photo.attach(
@@ -152,27 +161,27 @@ g3 = Event.create!(
   num_of_members: 4
   )
 
-  k1 = Event.create!(
-    user_id: kobe.id,
-    city_id: la.id,
-    category_id: bball.id,
-    date_time: DateTime.new(2018,8,23,16),
-    address: "1111 S Figueroa St",
-    country: "USA",
-    description: "Looking to play 1v1 to 100 points.",
-    num_of_members: 2
-    )
-
-  k2 = Event.create!(
-    user_id: kobe.id,
-    city_id: la.id,
-    category_id: bball.id,
-    date_time: DateTime.new(2018,8,28,16),
-    address: "1111 S Figueroa St",
-    country: "USA",
-    description: "Looking to play full court game to 300 points.",
-    num_of_members: 10
+k1 = Event.create!(
+  user_id: kobe.id,
+  city_id: la.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,23,16),
+  address: "1111 S Figueroa St",
+  country: "USA",
+  description: "Looking to play 1v1 to 100 points.",
+  num_of_members: 2
   )
+
+k2 = Event.create!(
+  user_id: kobe.id,
+  city_id: la.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,28,16),
+  address: "1111 S Figueroa St",
+  country: "USA",
+  description: "Looking to play full court game to 300 points.",
+  num_of_members: 10
+)
 
 l1 =   Event.create!(
   user_id: lebron.id,
@@ -183,7 +192,7 @@ l1 =   Event.create!(
   country: "USA",
   description: "Looking to play with possible future teammates.",
   num_of_members: 10
-  )
+)
 
 l2 = Event.create!(
   user_id: lebron.id,
@@ -194,7 +203,7 @@ l2 = Event.create!(
   country: "USA",
   description: "Looking to play with possible future teammates.",
   num_of_members: 10
-  )
+)
 
 c1 = Event.create!(
   user_id: curry.id,
@@ -205,7 +214,7 @@ c1 = Event.create!(
   country: "USA",
   description: "Looking to play full court games.",
   num_of_members: 10
-  )
+)
 
 c2 = Event.create!(
   user_id: curry.id,
@@ -216,7 +225,29 @@ c2 = Event.create!(
   country: "USA",
   description: "Looking to play 3v3 half court games.",
   num_of_members: 6
-  )
+)
+
+klay1 = Event.create!(
+  user_id: klay.id,
+  city_id: oakland.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,23,20),
+  address: "7000 Coliseum Way",
+  country: "USA",
+  description: "Looking to practice for the 3 point contest.",
+  num_of_members: 2
+)
+
+klay2 = Event.create!(
+  user_id: klay.id,
+  city_id: oakland.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,23,20),
+  address: "7000 Coliseum Way",
+  country: "USA",
+  description: "Looking to play HORSE.",
+  num_of_members: 2
+)
 
 r1 = Event.create!(
   user_id: roger.id,
@@ -227,7 +258,8 @@ r1 = Event.create!(
   country: "USA",
   description: "Looking to play doubles match.",
   num_of_members: 4
-  )
+)
+
 r2 = Event.create!(
   user_id: roger.id,
   city_id: london.id,
