@@ -124,6 +124,16 @@ class EventShow extends React.Component{
                 </div>
               </div>
 
+              <iframe
+                width="300"
+                height="250"
+                frameBorder="0"
+                src={
+                `https://www.google.com/maps/embed/v1/search?key=AIzaSyDjW7XIIxfss2vxu6WxWKRfFbX_9TVY9Z8&q=${cities[event.city_id].name}&zoom=10`}
+                allowFullScreen>
+              </iframe>
+
+
               <div className="current-user">
                 <div className="user-info">
                   <label className="show-label">NAME</label>
