@@ -24,7 +24,6 @@ export const getJoinedEvents = ({events, currentUser, joinedEvents}) => {
 
     for(let eventId in events) {
       if(joinEvent.event_id == eventId){
-        console.log("FOUND MATCH");
         let eventwithJoinEventId = Object.assign({}, events[eventId], {joinId: id});
         result.push(eventwithJoinEventId);
       }
