@@ -88,6 +88,11 @@
     box-sizing: border-box;
 }
 
+.author-img-quote a:hover{
+  color: white;
+  background-color: #EF6236
+}
+
 .event-user-info .event-info h5{
     color: #929292;
     font-weight: 400;

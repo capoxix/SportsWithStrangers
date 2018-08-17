@@ -50,6 +50,12 @@ class EventIndex extends React.Component{
     let day = 30 - date.getDate();
       return(
         <div>
+          <div className="banner">
+            <div className="banner-words">
+              <h1>PLAY SPORTS</h1>
+              <span>They're GOOD FOR YOUR HEALTH</span>
+            </div>
+          </div>
           <div className= 'index-container'>
             <div className="month-info">
               <div className="current-month">

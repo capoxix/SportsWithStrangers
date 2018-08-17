@@ -1,3 +1,32 @@
+.banner{
+ font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
+ background: rgb(255, 206, 137);
+ height: 250px;
+ color: #FEFEFE;
+ text-align: center;
+ text-transform: uppercase;
+}
+
+.banner h1 {
+  font-size:2.3em;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.banner .banner-words{
+  margin: 0 auto;
+  width: 700px;
+  padding: 75px;
+}
+
+.banner span{
+  text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
 .index-container{
   background: #fffaeb;
 }
@@ -79,8 +108,8 @@
 .city{
   border: 2px solid #f5997d;
   margin-right: 15px;
-  margin-top: 10px;
-  margin-bottom: 8px;
+  margin-top: 13px;
+  margin-bottom: 13px;
   font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
   line-height: 1.25;
   font-weight: 600;
