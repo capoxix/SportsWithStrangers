@@ -13,7 +13,7 @@ const msp = (state, ownProps) => ({
   cities: state.entities.cities,
   categories: state.entities.categories,
 });
-//call fetchAllEvents(index page) => call fetchEvent (show page)
+
 const mdp = (dispatch) => ({
   processForm: (event) => dispatch(updateEvent(event)),
   clearErrors: () => dispatch(clearErrors()),

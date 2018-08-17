@@ -11,7 +11,6 @@ class Header extends React.Component{
   }
 
   showNav(e){
-    // e.preventDefault();
     if (document.getElementById('center').style.display === "none") {
       document.getElementById('center').style.display = "block";
     } else {

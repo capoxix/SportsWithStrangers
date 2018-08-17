@@ -1,19 +1,13 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import Datetime from 'react-datetime';
-var moment = require('moment');
-
-//Npm install -- save react-datetime
-// Npm installl moment -- save
+const moment = require('moment');
 
 class EventForm extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = this.props.event;
-    // if (this.props.formType === 'Update Sports Time'){
-    //   this.state.date_time = moment(this.state.date_time).utc().format('MMMM Do YYYY, h a');
-    // }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
     this.handleDate = this.handleDate.bind(this);
@@ -21,13 +15,12 @@ class EventForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    // console.log("SUBMIT BUTTON HIT");
     this.state.date_time = this.state.date_time.toString();
     if (this.props.formType === 'Update Sports Time') {
       let id = this.props.match.params.eventId;
       this.props.processForm(this.state).then(() => this.props.history.push(`/events/${id}`));
     } else {
-    this.props.processForm(this.state).then(() => this.props.history.push('/events'));
+    this.props.processForm(this.state).then(() => this.props.history.push('/dashboard'));
     }
   }
 
@@ -74,7 +67,7 @@ class EventForm extends React.Component {
   }
 
   valid(current){
-    var today = Datetime.moment();
+    let today = Datetime.moment();
     return current.isAfter(today);
   }
 
@@ -93,16 +86,14 @@ class EventForm extends React.Component {
   }
 
   render(){
-    // console.log("event form, event props", this.props.event);
     let members = this.getMembers();
     let cities = this.getCities();
     let categories = this.getCategories();
-    // console.log(this.state.date_time, "datetime");
-    // console.log("cities",cities);
-    // console.log("categories", categories);
+
     const errorsList = this.props.errors.event.map((error) =>
       <li>{error}</li>
     );
+
     while (this.props.event === undefined || this.props.cities === {} || this.props.categories === {}){
       return(<div>Loading......</div>);
     }

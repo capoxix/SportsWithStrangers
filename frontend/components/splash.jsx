@@ -10,7 +10,6 @@ class Splash extends React.Component {
   render(){
     return(
       <div className="splash">
-
         <div className="row-1">
           <div className="inner">
             <h2>Everyone is interesting</h2>

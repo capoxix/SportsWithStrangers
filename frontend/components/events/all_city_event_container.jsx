@@ -7,7 +7,6 @@ import {getFilteredEvents} from '../../reducers/selectors';
 const msp = (state, ownProps) => ({
   errors: state.errors,
   events: state.entities.events,
-    // events : state.entities.events, cityId: ownProps.match.params.cityId}
   users: state.entities.users,
   cities: state.entities.cities,
   city: state.entities.cities[ownProps.match.params.cityId],

@@ -5,17 +5,17 @@ import {clearErrors} from '../../actions/session_actions';
 import {fetchCities, fetchCategories} from  '../../actions/filter_actions';
 var moment = require('moment');
 
-let d = new Date(Date.now('UTC'));
-d.setMinutes(0);
-if (d.getHours() < 24) {
-  d.setHours(d.getHours() + 1);
+let date = new Date(Date.now('UTC'));
+date.setMinutes(0);
+if (date.getHours() < 24) {
+  date.setHours(date.getHours() + 1);
 }
 
 const msp = (state) => ({
   errors: state.errors,
   formType: 'Create Sports Time',
   event: {
-    date_time: d, //,//need to add datetime
+    date_time: date,
     address: '',
     country: '',
     city_id: '',
@@ -35,14 +35,3 @@ const mdp = (dispatch, ownProps) => ({
 });
 
 export default connect(msp, mdp)(EventForm);
-
-// cities: Object.values({
-//   1 : {id: 1, name: 'San Francisco'},
-//   2 : {id: 2, name: 'Oakland'},
-//   3 : {id: 3, name: 'Los Angeles'}
-// }),
-// categories: Object.values({
-//   2: {id: 2, name: 'Basketball'},
-//   3: {id: 3, name: 'Soccer'},
-//   4: {id: 4, name: 'Tennis'}
-// }),

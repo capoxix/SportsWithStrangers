@@ -20,7 +20,7 @@ const getDisplayLink = (currentUser, event ,count) => {
                       <Link to={`/events/${event.id}`}> WAITLISTED</Link>
                     </div>;
   if (currentUser) {
-    // console.log('inside if statement');
+
     if (currentUser.attending_event_ids.includes(event.id))
       return signedUpLink;
     if (currentUser.waiting_event_ids.includes(event.id))
@@ -34,14 +34,12 @@ const getDisplayLink = (currentUser, event ,count) => {
       return showLink;
   }
 
-  // return displayLink;
 };
 
 const EventIndexItem = ({event, categories, city, user, currentUser}) => {
   let date = new Date(event.date_time);
   let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   let day = days[date.getDay()];
-  // let hour = date.getHours();
   let hour = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
   let until = date.setHours((date.getHours() + 2) % 24);
    until = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
@@ -62,13 +60,6 @@ const EventIndexItem = ({event, categories, city, user, currentUser}) => {
     } else {
       count = `${count} SPOTS LEFT!`;
     }
-
-    // console.log(user);
-    // console.log("user attending events", currentUser.attending_event_ids);
-    // console.log("current event id", event.id);
-
-
-
 
     const category = categories[event.category_id].name;
     return(

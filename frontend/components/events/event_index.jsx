@@ -16,21 +16,12 @@ class EventIndex extends React.Component{
   }
 
   render(){
-    // have a group container that takes in city instead of cities
-    // and takes in all events too
-    // <EventIndexGroup
-    //  events={this.props.events}
-    // users={this.props.users}
-    //  city={city} //iterating on cities to create the groups
-    //  categories={this.props.categories}
-    // currentUser={this.props.currentUser}/>
     if (this.props.events != {} && this.props.users != {}){
-    //
-
       let citiesEvent = [];
       Object.values(this.props.cities).forEach(city => {
         citiesEvent.push(
           <EventCityIndex
+          key={city.id}
           users={this.props.users}
           city={city}
           events={this.props.events}
@@ -48,6 +39,7 @@ class EventIndex extends React.Component{
     let month = monthArr[date.getMonth()];
     let nextMonth = monthArr[date.getMonth() + 1];
     let day = 30 - date.getDate();
+    
       return(
         <div>
           <div className="banner">
