@@ -189,3 +189,9 @@
 .dashboard-event-list .event-info-box img{
     margin-top: -3px;
 }
+
+.event-info-box .action{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 15px;
+}

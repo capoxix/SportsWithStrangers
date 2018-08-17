@@ -71,8 +71,11 @@ const DashboardEventList = ({type, events,cities, categories, currentUser,users,
     let actionButton;
     if (actionName === "YOU'RE STILL ON THE WAITLIST!"){
       actionButton = <p>YOU'RE STILL ON THE WAITLIST!</p>;
-    } else {
+    } else if(actionName === "cancel my spot"){
       actionButton = <Link to='/dashboard' onClick={()=> action(actionId)}>{actionName}</Link>;
+      } else {
+        actionButton = [<Link to={`/events/${event.id}`}>EDIT SPORT TIME</Link>,
+          <Link to='/dashboard' onClick={()=> action(actionId)}>{actionName}</Link>];
       }
     return (
       <div className='event-user-info'>
