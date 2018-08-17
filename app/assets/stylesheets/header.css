@@ -124,9 +124,6 @@ p {
     grid-column-end: 3;
     text-align: center;
   }
-  .header{
-    height: 100px;
-  }
 }
 
 @media all and (min-width: 956px){

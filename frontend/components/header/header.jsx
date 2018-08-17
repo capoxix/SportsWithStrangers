@@ -12,9 +12,11 @@ class Header extends React.Component{
 
   showNav(e){
     if (document.getElementById('center').style.display === "none") {
+      document.getElementById('header').style.height = '100px';
       document.getElementById('center').style.display = "block";
     } else {
       document.getElementById('center').style.display = "none";
+      document.getElementById('header').style.height = '80px';
     }
   }
 
@@ -65,7 +67,7 @@ class Header extends React.Component{
       );
     } else {
       return (
-        <header>
+        <header id='header'>
           <div className='header-nav'>
             <nav className="left">
               <Link to ='/'><img src={window.images.logo}></img></Link>
