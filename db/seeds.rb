@@ -353,7 +353,7 @@ klay3 = Event.create!(
   user_id: klay.id,
   city_id: oakland.id,
   category_id: bball.id,
-  date_time: DateTime.new(2018,8,226,20),
+  date_time: DateTime.new(2018,8,26,20),
   address: "7000 Coliseum Way",
   country: "USA",
   description: "Looking to play 3v3 half court games.",
@@ -550,22 +550,33 @@ m4 = Event.create!(
 
 b4 = Event.create!(
   user_id: beckham.id,
-  city_id: london.id,
+  city_id: barcelona.id,
   category_id: soccer.id,
   date_time: DateTime.new(2018,8,26,20),
-  address: "Hornsey Rd",
-  country: "UK",
+  address: "Aristides Maillol 08028",
+  country: "Spain",
   description: "Looking to practice my corner kicks",
   num_of_members: 5
 )
 
 b5 = Event.create!(
   user_id: beckham.id,
-  city_id: london.id,
+  city_id: barcelona.id,
   category_id: soccer.id,
   date_time: DateTime.new(2018,8,28,20),
-  address: "Hornsey Rd",
-  country: "UK",
+  address: "Aristides Maillol 08028",
+  country: "Spain",
   description: "Looking to practice my penalty kicks",
   num_of_members: 2
+)
+
+b6 = Event.create!(
+  user_id: beckham.id,
+  city_id: barcelona.id,
+  category_id: soccer.id,
+  date_time: DateTime.new(2018,8,22,20),
+  address: "Aristides Maillol 08028",
+  country: "Spain",
+  description: "Looking to play 5v5 soccer",
+  num_of_members: 10
 )
