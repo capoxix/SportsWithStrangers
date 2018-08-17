@@ -53,7 +53,7 @@ class EventIndex extends React.Component{
           <div className="banner">
             <div className="banner-words">
               <h1>PLAY SPORTS</h1>
-              <span>They're GOOD FOR YOUR HEALTH</span>
+              <span>IT'S GOOD FOR YOU</span>
             </div>
           </div>
           <div className= 'index-container'>
