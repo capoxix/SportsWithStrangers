@@ -7,7 +7,6 @@ class EventCityIndex extends React.Component {
   }
   render(){
     const {users, city, events, categories, currentUser} = this.props;
-    // console.log(categories);
     let cityIndex = [<div className="city" href={`${city.name}`}>
                       <h3>{city.name}<br></br>👉</h3>
                       </div>];
