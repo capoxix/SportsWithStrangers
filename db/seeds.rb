@@ -133,7 +133,7 @@ g1 = Event.create!(
   city_id: sf.id,
   category_id: bball.id,
   date_time: DateTime.new(2018,8,18,15),
-  address: "1122 street",
+  address: "Helen Wills Park",
   country: "USA",
   description: "Looking to play 1v1 to practice my dribbling skills.",
   num_of_members: 2
@@ -158,8 +158,30 @@ g3 = Event.create!(
   address: "Nancy Pelosi Dr & Bowling Green Dr",
   country: "USA",
   description: "Looking to play doubles match.",
-  num_of_members: 4
+  num_of_members: 3
   )
+
+g4 = Event.create!(
+  user_id: garbo.id,
+  city_id: sf.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,23,15),
+  address: "Helen Wills Park",
+  country: "USA",
+  description: "Looking to play 1v1 to practice my defensive skills.",
+  num_of_members: 2
+)
+
+g5 = Event.create!(
+  user_id: garbo.id,
+  city_id: barcelona.id,
+  category_id: soccer.id,
+  date_time: DateTime.new(2018,8,23,15),
+  address: "Aristides Maillol 08028",
+  country: "Spain",
+  description: "Looking to play 1v1 to practice my dribbling skills.",
+  num_of_members: 2
+)
 
 k1 = Event.create!(
   user_id: kobe.id,
@@ -183,11 +205,34 @@ k2 = Event.create!(
   num_of_members: 10
 )
 
+k3 = Event.create!(
+  user_id: kobe.id,
+  city_id: la.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,29,16),
+  address: "1111 S Figueroa St",
+  country: "USA",
+  description: "Looking to play 3v3 half court games.",
+  num_of_members: 6
+)
+
+k4 = Event.create!(
+  user_id: kobe.id,
+  city_id: la.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,27,16),
+  address: "1111 S Figueroa St",
+  country: "USA",
+  description: "Looking to play 2v2.",
+  num_of_members: 4
+)
+
+
 l1 =   Event.create!(
   user_id: lebron.id,
   city_id: la.id,
   category_id: bball.id,
-  date_time: DateTime.new(2018,8,23,13),
+  date_time: DateTime.new(2018,8,22,13),
   address: "1111 S Figueroa St",
   country: "USA",
   description: "Looking to play with possible future teammates.",
@@ -203,6 +248,28 @@ l2 = Event.create!(
   country: "USA",
   description: "Looking to play with possible future teammates.",
   num_of_members: 10
+)
+
+l3 = Event.create!(
+  user_id: lebron.id,
+  city_id: la.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,25,12),
+  address: "1111 S Figueroa St",
+  country: "USA",
+  description: "Looking to play 1v1 to 50 points.",
+  num_of_members: 2
+)
+
+l4 = Event.create!(
+  user_id: lebron.id,
+  city_id: la.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,26,12),
+  address: "1111 S Figueroa St",
+  country: "USA",
+  description: "Looking to play 2v2.",
+  num_of_members: 4
 )
 
 c1 = Event.create!(
@@ -227,6 +294,28 @@ c2 = Event.create!(
   num_of_members: 6
 )
 
+c3 = Event.create!(
+  user_id: curry.id,
+  city_id: oakland.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,21,20),
+  address: "7000 Coliseum Way",
+  country: "USA",
+  description: "Looking to play do a 3 point shooting contest.",
+  num_of_members: 6
+)
+
+c4 = Event.create!(
+  user_id: curry.id,
+  city_id: oakland.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,22,20),
+  address: "7000 Coliseum Way",
+  country: "USA",
+  description: "Looking to practice my dribbling skills.",
+  num_of_members: 2
+)
+
 klay1 = Event.create!(
   user_id: klay.id,
   city_id: oakland.id,
@@ -242,11 +331,33 @@ klay2 = Event.create!(
   user_id: klay.id,
   city_id: oakland.id,
   category_id: bball.id,
-  date_time: DateTime.new(2018,8,23,20),
+  date_time: DateTime.new(2018,8,19,20),
   address: "7000 Coliseum Way",
   country: "USA",
   description: "Looking to play HORSE.",
   num_of_members: 2
+)
+
+klay3 = Event.create!(
+  user_id: klay.id,
+  city_id: oakland.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,25,20),
+  address: "7000 Coliseum Way",
+  country: "USA",
+  description: "Looking to play 1v1 to practice my isolation moves.",
+  num_of_members: 2
+)
+
+klay3 = Event.create!(
+  user_id: klay.id,
+  city_id: oakland.id,
+  category_id: bball.id,
+  date_time: DateTime.new(2018,8,226,20),
+  address: "7000 Coliseum Way",
+  country: "USA",
+  description: "Looking to play 3v3 half court games.",
+  num_of_members: 6
 )
 
 r1 = Event.create!(
@@ -255,7 +366,7 @@ r1 = Event.create!(
   category_id: tennis.id,
   date_time: DateTime.new(2018,8,20,19),
   address: "The All England Lawn Tennis Club",
-  country: "USA",
+  country: "UK",
   description: "Looking to play doubles match.",
   num_of_members: 4
 )
@@ -266,7 +377,7 @@ r2 = Event.create!(
   category_id: tennis.id,
   date_time: DateTime.new(2018,8,21,20),
   address: "The All England Lawn Tennis Club",
-  country: "USA",
+  country: "UK",
   description: "Looking to play singles match.",
   num_of_members: 2
 )
@@ -276,18 +387,29 @@ r3 = Event.create!(
   user_id: roger.id,
   city_id: sf.id,
   category_id: tennis.id,
-  date_time: DateTime.new(2018,8,22,13),
+  date_time: DateTime.new(2018,8,25,13),
   address: "Nancy Pelosi Dr & Bowling Green Dr",
   country: "USA",
   description: "Looking to play singles match.",
   num_of_members: 2
 )
 
+r4 = Event.create!(
+  user_id: roger.id,
+  city_id: london.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,8,26,20),
+  address: "The All England Lawn Tennis Club",
+  country: "UK",
+  description: "Looking to play doubles match.",
+  num_of_members: 4
+)
+
 s1 = Event.create!(
   user_id: serena.id,
   city_id: london.id,
   category_id: tennis.id,
-  date_time: DateTime.new(2018,8,23,15),
+  date_time: DateTime.new(2018,8,22,15),
   address: "The All England Lawn Tennis Club",
   country: "UK",
   description: "Looking to play singles match.",
@@ -316,6 +438,39 @@ s2 = Event.create!(
   num_of_members: 4
 )
 
+s3 = Event.create!(
+  user_id: serena.id,
+  city_id: sf.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,8,28,18),
+  address: "Nancy Pelosi Dr & Bowling Green Dr",
+  country: "USA",
+  description: "Looking to play singles match",
+  num_of_members: 2
+)
+
+s4 = Event.create!(
+  user_id: serena.id,
+  city_id: london.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,8,27,18),
+  address: "The All England Lawn Tennis Club",
+  country: "UK",
+  description: "Looking to play singles match",
+  num_of_members: 2
+)
+
+s5 = Event.create!(
+  user_id: serena.id,
+  city_id: london.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,8,29,18),
+  address: "The All England Lawn Tennis Club",
+  country: "UK",
+  description: "Looking to play doubles match",
+  num_of_members: 4
+)
+
 b1 = Event.create!(
   user_id: beckham.id,
   city_id: sf.id,
@@ -331,7 +486,7 @@ b2 = Event.create!(
   user_id: beckham.id,
   city_id: sf.id,
   category_id: soccer.id,
-  date_time: DateTime.new(2018,8,18,20),
+  date_time: DateTime.new(2018,8,18,21),
   address: "5 Freelon St #200",
   country: "USA",
   description: "Looking to play 5v5 soccer",
@@ -354,8 +509,8 @@ m1 = Event.create!(
   city_id: barcelona.id,
   category_id: soccer.id,
   date_time: DateTime.new(2018,8,18,13),
-  address: "701 Oak St",
-  country: "USA",
+  address: "Aristides Maillol 08028",
+  country: "Spain",
   description: "Looking to play 5v5 soccer",
   num_of_members: 10
 )
@@ -365,8 +520,52 @@ m2 = Event.create!(
   city_id: barcelona.id,
   category_id: soccer.id,
   date_time: DateTime.new(2018,8,23,15),
-  address: "5 Freelon St #200",
-  country: "USA",
-  description: "Looking to play 5v5 soccer",
-  num_of_members: 10
+  address: "Aristides Maillol 08028",
+  country: "Spain",
+  description: "Looking to practice my penalty kicks",
+  num_of_members: 2
+)
+
+m3 = Event.create!(
+  user_id: messi.id,
+  city_id: barcelona.id,
+  category_id: soccer.id,
+  date_time: DateTime.new(2018,8,25,15),
+  address: "Aristides Maillol 08028",
+  country: "Spain",
+  description: "Looking to practice my dribbling skills",
+  num_of_members: 5
+)
+
+m4 = Event.create!(
+  user_id: messi.id,
+  city_id: barcelona.id,
+  category_id: soccer.id,
+  date_time: DateTime.new(2018,8,27,15),
+  address: "Aristides Maillol 08028",
+  country: "Spain",
+  description: "Looking to practice my defensive skills",
+  num_of_members: 3
+)
+
+b4 = Event.create!(
+  user_id: beckham.id,
+  city_id: london.id,
+  category_id: soccer.id,
+  date_time: DateTime.new(2018,8,26,20),
+  address: "Hornsey Rd",
+  country: "UK",
+  description: "Looking to practice my corner kicks",
+  num_of_members: 5
+)
+
+b5 = Event.create!(
+  user_id: beckham.id,
+  city_id: london.id,
+  category_id: soccer.id,
+  date_time: DateTime.new(2018,8,28,20),
+  address: "Hornsey Rd",
+  country: "UK",
+  description: "Looking to practice my penalty kicks",
+  num_of_members: 2
 )
