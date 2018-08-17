@@ -21,11 +21,11 @@ class Splash extends React.Component {
           <div className="row-2">
             <div className="inner">
               <h2>Show up for sport time</h2>
-              <span>You and a few others join a host at a location</span>
+              <span>You and a few others join a host at a location.</span>
             </div>
             <div className="inner">
               <h2>Have a real game</h2>
-              <span>You play sports for two hours</span>
+              <span>You play sports for two hours.</span>
             </div>
             <div className="inner">
               <h2> See what happens</h2>

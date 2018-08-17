@@ -223,7 +223,7 @@ k4 = Event.create!(
   date_time: DateTime.new(2018,8,27,16),
   address: "1111 S Figueroa St",
   country: "USA",
-  description: "Looking to play 2v2.",
+  description: "Looking to play 2v2 half court games.",
   num_of_members: 4
 )
 
@@ -268,7 +268,7 @@ l4 = Event.create!(
   date_time: DateTime.new(2018,8,26,12),
   address: "1111 S Figueroa St",
   country: "USA",
-  description: "Looking to play 2v2.",
+  description: "Looking to play 2v2 half court game.",
   num_of_members: 4
 )
 
@@ -434,7 +434,7 @@ s2 = Event.create!(
   date_time: DateTime.new(2018,8,23,18),
   address: "The All England Lawn Tennis Club",
   country: "UK",
-  description: "Looking to play doubles match",
+  description: "Looking to play doubles match.",
   num_of_members: 4
 )
 
@@ -445,7 +445,7 @@ s3 = Event.create!(
   date_time: DateTime.new(2018,8,28,18),
   address: "Nancy Pelosi Dr & Bowling Green Dr",
   country: "USA",
-  description: "Looking to play singles match",
+  description: "Looking to play singles match.",
   num_of_members: 2
 )
 
@@ -456,7 +456,7 @@ s4 = Event.create!(
   date_time: DateTime.new(2018,8,27,18),
   address: "The All England Lawn Tennis Club",
   country: "UK",
-  description: "Looking to play singles match",
+  description: "Looking to play singles match.",
   num_of_members: 2
 )
 
@@ -467,7 +467,7 @@ s5 = Event.create!(
   date_time: DateTime.new(2018,8,29,18),
   address: "The All England Lawn Tennis Club",
   country: "UK",
-  description: "Looking to play doubles match",
+  description: "Looking to play doubles match.",
   num_of_members: 4
 )
 
@@ -478,7 +478,7 @@ b1 = Event.create!(
   date_time: DateTime.new(2018,8,18,19),
   address: "701 Oak St",
   country: "USA",
-  description: "Looking to do shooting drills",
+  description: "Looking to do shooting drills.",
   num_of_members: 6
 )
 
@@ -489,7 +489,7 @@ b2 = Event.create!(
   date_time: DateTime.new(2018,8,18,21),
   address: "5 Freelon St #200",
   country: "USA",
-  description: "Looking to play 5v5 soccer",
+  description: "Looking to play 5v5 soccer.",
   num_of_members: 10
 )
 
@@ -500,7 +500,7 @@ b3 = Event.create!(
   date_time: DateTime.new(2018,8,20,20),
   address: "Hornsey Rd",
   country: "UK",
-  description: "Looking to play 5v5 soccer",
+  description: "Looking to play 5v5 soccer.",
   num_of_members: 8
 )
 
@@ -511,7 +511,7 @@ m1 = Event.create!(
   date_time: DateTime.new(2018,8,18,13),
   address: "Aristides Maillol 08028",
   country: "Spain",
-  description: "Looking to play 5v5 soccer",
+  description: "Looking to play 5v5 soccer.",
   num_of_members: 10
 )
 
@@ -522,7 +522,7 @@ m2 = Event.create!(
   date_time: DateTime.new(2018,8,23,15),
   address: "Aristides Maillol 08028",
   country: "Spain",
-  description: "Looking to practice my penalty kicks",
+  description: "Looking to practice my penalty kicks.",
   num_of_members: 2
 )
 
@@ -533,7 +533,7 @@ m3 = Event.create!(
   date_time: DateTime.new(2018,8,25,15),
   address: "Aristides Maillol 08028",
   country: "Spain",
-  description: "Looking to practice my dribbling skills",
+  description: "Looking to practice my dribbling skills.",
   num_of_members: 5
 )
 
@@ -544,7 +544,7 @@ m4 = Event.create!(
   date_time: DateTime.new(2018,8,27,15),
   address: "Aristides Maillol 08028",
   country: "Spain",
-  description: "Looking to practice my defensive skills",
+  description: "Looking to practice my defensive skills.",
   num_of_members: 3
 )
 
@@ -555,7 +555,7 @@ b4 = Event.create!(
   date_time: DateTime.new(2018,8,26,20),
   address: "Aristides Maillol 08028",
   country: "Spain",
-  description: "Looking to practice my corner kicks",
+  description: "Looking to practice my corner kicks.",
   num_of_members: 5
 )
 
@@ -566,7 +566,7 @@ b5 = Event.create!(
   date_time: DateTime.new(2018,8,28,20),
   address: "Aristides Maillol 08028",
   country: "Spain",
-  description: "Looking to practice my penalty kicks",
+  description: "Looking to practice my penalty kicks.",
   num_of_members: 2
 )
 
