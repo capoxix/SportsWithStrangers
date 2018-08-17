@@ -36,7 +36,7 @@ SportsWithStrangers is a website that helps users find others to play sports wit
 ![link](readme-images/event-index.png)
 
 * Dashboard
-  * Users can view joined, hosted, or waitlisted.
+  * Users can view joined, hosted, or waitlisted events.
   * Users can cancel hosted events and cancel spot on joined events
 
 ![link](readme-images/dashboards.png)
