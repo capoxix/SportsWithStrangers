@@ -53,6 +53,8 @@
   line-height: 1.25;
   text-align: center;
   display: block;
+   text-shadow: 1px 1px gray;
+
 
 }
 
@@ -64,6 +66,8 @@
   font-weight: 400;
   display:block;
   line-height: 1.625;
+  text-shadow: 1px 1px gray;
+
 }
 
 .splash .row-1 .inner{

@@ -3,6 +3,7 @@
  background: rgb(255, 206, 137);
  height: 250px;
  color: #FEFEFE;
+ text-shadow: 1px 1px gray;
  text-align: center;
  text-transform: uppercase;
   background-image: url("/assets/event-index-1ff9e7412d8f374f6edce7976fc400acfd2e4460e150556ca53015676deea47f.png");
