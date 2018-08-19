@@ -3,7 +3,7 @@
 
 [Live Demo](https://exercise-with-strangers.herokuapp.com/#/)
 
-SportsWithStrangers is a website that helps users find others to play sports with modeled after TeaWithStrangers. The website was built using Rails/PostgreSQL for the backend and React.js and Redux for the front end. It was built and designed within a two-week time period.
+SportsWithStrangers is a website modeled after TeaWithStrangers that helps users find others to play sports with.  It was built and designed within a two-week time period.
 
 ## Technologies used:
 ### Backend:
@@ -24,7 +24,7 @@ SportsWithStrangers is a website that helps users find others to play sports wit
 * Babel for transpiling JSX into JavaScript.
 
 ## Features
-* Hosted Events
+* Host Events
   * Users can create, update, and delete their own sports events.
 
 ![link](readme-images/hosted-event.png)
