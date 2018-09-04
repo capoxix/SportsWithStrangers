@@ -24,18 +24,18 @@ SportsWithStrangers is a website modeled after TeaWithStrangers that helps users
 * Babel for transpiling JSX into JavaScript.
 
 ## Features
-* Host Events
+* **Host Events**
   * Users can create, update, and delete their own sports events.
 
 ![link](readme-images/hosted-event.png)
 
-* Events
+* **Events**
   * Users can join or waitlist on other users hosted events
   * Users can view all events and filter them by cities
 
 ![link](readme-images/event-index.png)
 
-* Dashboard
+* **Dashboard**
   * Users can view joined, hosted, or waitlisted events.
   * Users can cancel hosted events and cancel spot on joined events
 
