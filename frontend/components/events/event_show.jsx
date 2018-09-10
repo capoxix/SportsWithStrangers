@@ -19,6 +19,7 @@ class EventShow extends React.Component{
     this.props.fetchEvent(this.props.match.params.eventId);
     this.props.fetchCities();
     this.props.fetchCategories();
+    window.scrollTo(0,0);
   }
 
   sendToEditPage(id){

@@ -90,7 +90,8 @@
 
 .author-img-quote a:hover{
   color: white;
-  background-color: #EF6236
+  background-color: #EF6236;
+  cursor: default;
 }
 
 .event-user-info .event-info h5{
