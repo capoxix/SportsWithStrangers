@@ -113,8 +113,8 @@ const DashboardEventList = ({type, events,cities, categories, currentUser,users,
               <img src={author.imgUrl}></img>
             </div>
             <p>{userLook}</p>
-            <Link to="">{author.name} PROFILE</Link>
-            <Link to="">EMAIL {author.name}</Link>
+            <a>{author.name} PROFILE</a>
+            <a>EMAIL {author.name}</a>
           </div>
         </div>
       </div>
