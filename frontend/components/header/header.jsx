@@ -39,6 +39,8 @@ class Header extends React.Component{
 
     if(this.props.currentUser === undefined){
       return(
+        <header id='header'>
+
         <div className='header-nav'>
           <nav className="left">
 
@@ -64,6 +66,8 @@ class Header extends React.Component{
             </nav>
 
         </div>
+        </header>
+
       );
     } else {
       return (
