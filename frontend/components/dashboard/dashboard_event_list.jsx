@@ -65,6 +65,7 @@ const DashboardEventList = ({type, events,cities, categories, currentUser,users,
     default:
       listName='';
   }
+  console.log("events:" ,events);
   const eventList = events.map(event => {
     const {day, dateArr, hour, until, month} = getDateInfo(event);
     let  {actionName, hostQuote, userLook, author, actionId} = getEventInfo(type,event,users);
@@ -128,7 +129,6 @@ const DashboardEventList = ({type, events,cities, categories, currentUser,users,
     <div className='dashboard-event-list'>
       <h2>{listName}</h2>
       {eventList}
-
     </div>
   );
 };

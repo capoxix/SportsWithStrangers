@@ -13,7 +13,10 @@ export const getHostedEvents = ({events, currentUser}) => {
   for (let id in events){
     if(events[id].user_id === currentUser.id) result.push(events[id]);
   }
-  return result;
+
+  return result.sort(function (a,b){
+    return new Date(a.date_time).getTime() - new Date(b.date_time).getTime();
+  });
 };
 
 export const getJoinedEvents = ({events, currentUser, joinedEvents}) => {
@@ -29,7 +32,9 @@ export const getJoinedEvents = ({events, currentUser, joinedEvents}) => {
       }
     }
   }
-  return result;
+  return result.sort(function (a,b){
+    return new Date(a.date_time).getTime() - new Date(b.date_time).getTime();
+  });
 };
 
 export const getWaitlistedEvents = ({events, currentUser}) => {
@@ -38,5 +43,7 @@ export const getWaitlistedEvents = ({events, currentUser}) => {
     if(currentUser.waiting_event_ids.includes(events[id].id))
     result.push(events[id]);
   }
-  return result;
+  return result.sort(function (a,b){
+    return new Date(a.date_time).getTime() - new Date(b.date_time).getTime();
+  });
 };
