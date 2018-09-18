@@ -1,7 +1,7 @@
 # Sports With Strangers
 
 
-[Live Demo](https://exercise-with-strangers.herokuapp.com/#/)
+[Live Demo](https://sports-with-strangers.herokuapp.com/#/)
 
 SportsWithStrangers is a website modeled after TeaWithStrangers that helps users find others to play sports with.  It was built and designed within a two-week time period.
 
