@@ -6,15 +6,14 @@ const Footer = () => (
      <div className="container">
        <div className="footer-links">
          <ul>
-           <li><Link to='/about'>About</Link></li>
            <li><Link to='/events'>Sport Times</Link></li>
+           <li><a href='https://garbocheng.netlify.com'>About</a></li>
            <li><a href='https://www.linkedin.com/in/garbo-cheng-ye/'>LinkedIn</a></li>
+           <li><a href='https://github.com/capoxix'>Github</a></li>
+
          </ul>
 
-         <ul>
-           <li><Link to= '/service'>Terms of Service</Link></li>
-           <li><Link to= '/privacy'>Privacy Policy</Link></li>
-         </ul>
+
        </div>
        <div className="footer-info">
          <span>
