@@ -49,14 +49,14 @@ div .header-nav{
   background-color: white;
   color: #fdbb5e;
   border-radius: 5px;
-  border: 2px solid #fdbb5e;
+  /* border: 2px solid #fdbb5e; */
   padding: 8px;
 }
 
 .header-nav .signup-button:hover{
   background-color:#fdbb5e;
   color: white;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   border-radius: 5px;
   padding: 8px;
 }

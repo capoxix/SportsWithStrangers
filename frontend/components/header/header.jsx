@@ -48,9 +48,10 @@ class Header extends React.Component{
           </nav>
           <nav className="right">
             <Link to='/events'>SPORT EVENTS</Link>
-            <button onClick={() => this.loginAndSendToEvents()}>DEMO LOGIN</button>
             <Link onClick={() => this.clear()} to='/login'>SIGN IN</Link>
-            <Link onClick={() => this.clear()} to='/signup' className='signup-button'>SIGN UP</Link>
+            <Link onClick={() => this.clear()} to='/signup'>SIGN UP</Link>
+            <button onClick={() => this.loginAndSendToEvents()} className='signup-button'>DEMO</button>
+
           </nav>
           <div className="empty-space">
             <button onClick={() => this.showNav()}><img src={window.images.hamburger}></img></button>
@@ -58,10 +59,9 @@ class Header extends React.Component{
           <nav className="center" id='center'>
             <div className= "hamburger-dropdown">
               <Link to='/events'>SPORT EVENTS</Link>
-              <Link to='/events/new'>HOSTING</Link>
-              <button onClick={() => this.loginAndSendToEvents()}>DEMO LOGIN</button>
               <Link onClick={() => this.clear()} to='/login'>SIGN IN</Link>
-              <Link onClick={() => this.clear()} to='/signup' className='signup-button'>SIGN UP</Link>
+              <Link onClick={() => this.clear()} to='/signup'>SIGN UP</Link>
+              <button onClick={() => this.loginAndSendToEvents()} className='signup-button'>DEMO</button>
             </div>
             </nav>
 
