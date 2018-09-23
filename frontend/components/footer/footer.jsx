@@ -9,7 +9,7 @@ const Footer = () => (
            <li><Link to='/events'>Sport Times</Link></li>
            <li><a href='https://garbocheng.netlify.com'>About</a></li>
            <li><a href='https://www.linkedin.com/in/garbo-cheng-ye/'>LinkedIn</a></li>
-           <li><a href='https://github.com/capoxix'>Github</a></li>
+           <li><a href='https://github.com/capoxix'>GitHub</a></li>
 
          </ul>
 
