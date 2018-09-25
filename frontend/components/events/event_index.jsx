@@ -52,11 +52,11 @@ class EventIndex extends React.Component{
             <div className="month-info">
               <div className="current-month">
                 <div className="emoji"><img src={window.images.calendarIcon}></img></div>
-                  <p>TEA TIMES IN {month}</p>
+                  <p>SPORT TIMES IN {month}</p>
                 </div>
 
                 <div className="days-left">
-                  <p>{`${nextMonth}'s SPORTS TIME AVAILABLE IN ${day} DAYS`}</p>
+                  <p>{`${nextMonth}'s SPORT TIMES AVAILABLE IN ${day} DAYS`}</p>
                 </div>
               </div>
 
