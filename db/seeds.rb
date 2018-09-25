@@ -16,7 +16,7 @@ garbo = User.create!(
   password: "123456",
   email: "garbocheng93@gmail.com",
   user_catchphrase: "If you like to play sports with a team player, I'm your guy!",
-  user_description: "I am an looking to have fun playing sports."
+  user_description: "I am looking to have fun playing sports."
 )
 
 tony = User.create!(
