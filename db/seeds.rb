@@ -758,4 +758,90 @@ b6 = Event.create!(
   num_of_members: 10
 )
 
+n1 = Event.create!(
+  user_id: nadal.id,
+  city_id: barcelona.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,month,26,18),
+  address: "Real Club de Tenis Barcelona",
+  country: "Spain",
+  description: "Looking to play singles match.",
+  num_of_members: 2
+)
 
+n2 = Event.create!(
+  user_id: nadal.id,
+  city_id: barcelona.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,month,28,18),
+  address: "Real Club de Tenis Barcelona",
+  country: "Spain",
+  description: "Looking to play singles match.",
+  num_of_members: 2
+)
+
+n3 = Event.create!(
+  user_id: nadal.id,
+  city_id: barcelona.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,month,27,18),
+  address: "Real Club de Tenis Barcelona",
+  country: "Spain",
+  description: "Looking to play doubles match.",
+  num_of_members: 4
+)
+
+n4 = Event.create!(
+  user_id: nadal.id,
+  city_id: barcelona.id,
+  category_id: tennis.id,
+  date_time: DateTime.new(2018,month,29,18),
+  address: "Real Club de Tenis Barcelona",
+  country: "Spain",
+  description: "Looking to play doubles match.",
+  num_of_members: 4
+)
+
+ro1 = Event.create!(
+  user_id: rooney.id,
+  city_id: london.id,
+  category_id: soccer.id,
+  date_time: DateTime.new(2018,month,26,19),
+  address: "Emirates Stadium",
+  country: "UK",
+  description: "Looking to do shooting drills.",
+  num_of_members: 6
+)
+
+ro2 = Event.create!(
+  user_id: rooney.id,
+  city_id: london.id,
+  category_id: soccer.id,
+  date_time: DateTime.new(2018,month,27,19),
+  address: "Emirates Stadium",
+  country: "UK",
+  description: "Looking to practice my penalty kicks.",
+  num_of_members: 6
+)
+
+ro3 = Event.create!(
+  user_id: rooney.id,
+  city_id: london.id,
+  category_id: soccer.id,
+  date_time: DateTime.new(2018,month,28,21),
+  address: "Emirates Stadium",
+  country: "UK",
+  description: "Looking to play 5v5 soccer.",
+  num_of_members: 10
+)
+
+ro4 = Event.create!(
+  user_id: rooney.id,
+  city_id: london.id,
+  category_id: soccer.id,
+  date_time: DateTime.new(2018,month,29,20),
+  address: "Emirates Stadium",
+  country: "UK",
+  description: "Looking to practice my corner kicks.",
+  num_of_members: 5
+)
