@@ -96,14 +96,6 @@ beckham = User.create!(
   Spain, the United States and France."
 )
 
-serena = User.create!(
-  name: "Serena",
-  password: "123456",
-  email: "serenawilliams@hotmail.com",
-  user_catchphrase: "You like watching me play on TV? Would you like to play against me?",
-  user_description: "The queen of tennis."
-)
-
 nadal = User.create!(
   name: "Nadal",
   password: "123456",
