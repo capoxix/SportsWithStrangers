@@ -96,6 +96,31 @@ beckham = User.create!(
   Spain, the United States and France."
 )
 
+serena = User.create!(
+  name: "Serena",
+  password: "123456",
+  email: "serenawilliams@hotmail.com",
+  user_catchphrase: "You like watching me play on TV? Would you like to play against me?",
+  user_description: "The queen of tennis."
+)
+
+nadal = User.create!(
+  name: "Nadal",
+  password: "123456",
+  email: "nadal@hotmail.com",
+  user_catchphrase: "Do you want to learn how to become beat a legend in tennis?",
+  user_description: "Roger Federer's biggest rival of all time."
+)
+
+rooney = User.create!(
+  name: "Rooney",
+  password: "123456",
+  email: "rooney@hotmail.com",
+  user_catchphrase: "Want to learn how to score goals like a master?",
+  user_description: "England's top goal scorer of all time."
+)
+
+
 # photo = open('https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/retb8Bj9kqVfQPeQzCiYgTiY');
 
 garbo.photo.attach(
@@ -129,6 +154,12 @@ messi.photo.attach(
 
 beckham.photo.attach(
   io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/beckham-cropped.jpg"), filename: "beckham-cropped.jpg")
+
+nadal.photo.attach(
+  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/nadal-cropped.jpg"), filename: "nadal-cropped.jpg")
+
+rooney.photo.attach(
+  io: open("https://s3-us-west-1.amazonaws.com/sports-with-strangers-dev/rooney-cropped.jpg"), filename: "rooney-cropped.jpg")
 
 la = City.create!(name: "LA")
 sf = City.create!(name: "SF")
@@ -726,3 +757,5 @@ b6 = Event.create!(
   description: "Looking to play 5v5 soccer",
   num_of_members: 10
 )
+
+
