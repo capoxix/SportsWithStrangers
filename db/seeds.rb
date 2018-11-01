@@ -11,7 +11,7 @@ City.destroy_all
 Category.destroy_all
 Event.destroy_all
 
-month = 10
+month = 11
 
 garbo = User.create!(
   name: "Garbo",
