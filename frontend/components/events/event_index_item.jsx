@@ -45,7 +45,7 @@ const getDisplayLink = (currentUser, event ,count) => {
 const EventIndexItem = ({event, categories, city, user, currentUser}) => {
   let date = new Date(event.date_time);
   let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-  let day = days[date.getDay()];
+  let day = days[date.getDay() - 1];
   let hour = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
   let until = date.setHours((date.getHours() + 2) % 24);
    until = date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
