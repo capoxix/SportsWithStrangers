@@ -3,7 +3,7 @@ class Api::EventsController < ApplicationController
 
   def index
     @events = Event.where({ date_time: (Time.now())..Time.now.end_of_month})
-    render :index
+    @events = @events.includes(:user, :joined_users)
   end
 
   def create
@@ -27,6 +27,8 @@ class Api::EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @event = @event.includes(:user, :joined_users)
+
     if @event
       render :show
     else

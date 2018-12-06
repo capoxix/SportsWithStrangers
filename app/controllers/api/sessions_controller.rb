@@ -4,6 +4,7 @@ class Api::SessionsController < ApplicationController
 
     if @user
       login!(@user)
+      @user = @user.includes(:attending_event_ids, :waiting_event_ids)
       render "api/users/show"
     else
       render json: ["Invalid credentials"], status: 401
