@@ -19,4 +19,5 @@ class Event < ApplicationRecord
   has_many :waiting_users,
     through: :waitlists,
     source: :user
+
 end
